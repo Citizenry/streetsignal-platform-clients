@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  backend_url: 'https://tuxpiper.api.ushahidi.io/',
+  backend_url: 'http://localhost:8081/',
   api_v3: 'api/v3/',
   api_v5: 'api/v5/',
   mapbox_api_key:

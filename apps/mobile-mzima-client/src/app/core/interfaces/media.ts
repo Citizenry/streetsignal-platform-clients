@@ -13,6 +13,7 @@ export interface VideoFile {
   url?: string;
   thumbnail?: string;
   duration?: number;
+  caption?: string;
   uploadProgress?: number;
   uploadError?: string;
 }

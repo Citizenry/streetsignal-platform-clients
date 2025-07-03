@@ -5,7 +5,7 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { ActionSheetController, AlertController } from '@ionic/angular';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MediaFile, MediaUploadResponse } from '../../core/interfaces/media';
+import { VideoFile, MediaUploadResponse } from '../../core/interfaces/media';
 
 @Component({
   selector: 'app-video-uploader',
@@ -27,7 +27,7 @@ export class VideoUploaderComponent implements OnInit, OnDestroy, ControlValueAc
   private destroy$ = new Subject<void>();
   private uploadProgress$ = new BehaviorSubject<number>(0);
 
-  videoFile: MediaFile | null = null;
+  videoFile: VideoFile | null = null;
   caption = '';
   isUploading = false;
   uploadError: string | null = null;
@@ -151,7 +151,7 @@ export class VideoUploaderComponent implements OnInit, OnDestroy, ControlValueAc
         return;
       }
 
-      const mediaFile: MediaFile = {
+      const mediaFile: VideoFile = {
         file,
         url: videoPath,
         caption: this.caption,
@@ -165,7 +165,7 @@ export class VideoUploaderComponent implements OnInit, OnDestroy, ControlValueAc
     }
   }
 
-  private uploadVideo(mediaFile: MediaFile) {
+  private uploadVideo(mediaFile: VideoFile) {
     this.isUploading = true;
     this.uploadError = null;
 
@@ -239,6 +239,15 @@ export class VideoUploaderComponent implements OnInit, OnDestroy, ControlValueAc
 
   get hasVideo(): boolean {
     return !!this.videoFile;
+  }
+
+  formatDuration(seconds: number): string {
+    if (!seconds || seconds < 0) return '0:00';
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   }
 
   private async showError(message: string) {
