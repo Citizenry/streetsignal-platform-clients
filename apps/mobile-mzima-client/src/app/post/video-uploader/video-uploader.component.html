@@ -1,0 +1,73 @@
+<div class="video-uploader">
+  <!-- Upload Area -->
+  <div class="upload-area" *ngIf="!videoFile" (click)="selectVideo()">
+    <ion-icon name="videocam" class="upload-icon"></ion-icon>
+    <p class="upload-hint">
+      {{ 'post.media.video_upload_hint' | translate }}
+      <br />
+      {{ 'post.media.max_size' | translate: { size: maxUploadSize } }}
+    </p>
+    <p class="upload-formats">
+      {{ 'post.media.supported_formats' | translate: { formats: acceptedFormats } }}
+    </p>
+    <ion-button fill="outline" color="primary">
+      {{ 'post.media.select_video' | translate }}
+    </ion-button>
+  </div>
+
+  <!-- Video Preview -->
+  <div class="video-preview" *ngIf="videoFile && !isUploading">
+    <div class="video-container">
+      <video 
+        *ngIf="videoFile.url" 
+        [src]="videoFile.url" 
+        controls 
+        preload="metadata"
+        class="video-player">
+      </video>
+      <div class="video-info" *ngIf="videoFile.duration">
+        <ion-chip color="dark">
+          <ion-icon name="time"></ion-icon>
+          <ion-label>{{ formatDuration(videoFile.duration) }}</ion-label>
+        </ion-chip>
+      </div>
+    </div>
+    
+    <div class="video-actions">
+      <ion-button fill="clear" color="danger" (click)="removeVideo()">
+        <ion-icon name="trash" slot="start"></ion-icon>
+        {{ 'post.media.remove_video' | translate }}
+      </ion-button>
+      <ion-button fill="clear" color="primary" (click)="selectVideo()">
+        <ion-icon name="refresh" slot="start"></ion-icon>
+        {{ 'post.media.replace_video' | translate }}
+      </ion-button>
+    </div>
+  </div>
+
+  <!-- Upload Progress -->
+  <div class="upload-progress" *ngIf="isUploading">
+    <div class="progress-content">
+      <ion-icon name="cloud-upload" class="upload-icon"></ion-icon>
+      <p>{{ 'post.media.uploading_video' | translate }}</p>
+      <ion-progress-bar [value]="((uploadProgressValue | async) || 0) / 100"></ion-progress-bar>
+      <p class="progress-text">{{ uploadProgressValue | async }}%</p>
+    </div>
+  </div>
+
+  <!-- Upload Error -->
+  <div class="upload-error" *ngIf="uploadError">
+    <ion-icon name="alert-circle" color="danger"></ion-icon>
+    <p>{{ uploadError }}</p>
+    <ion-button fill="outline" color="primary" (click)="selectVideo()">
+      {{ 'post.media.try_again' | translate }}
+    </ion-button>
+  </div>
+
+  <!-- Required Field Indicator -->
+  <div class="field-requirements" *ngIf="required">
+    <ion-text color="danger">
+      <small>{{ 'post.media.required_field' | translate }}</small>
+    </ion-text>
+  </div>
+</div>

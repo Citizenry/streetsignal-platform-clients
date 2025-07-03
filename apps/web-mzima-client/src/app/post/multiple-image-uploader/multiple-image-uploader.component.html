@@ -1,0 +1,181 @@
+<div class="multiple-image-uploader-container">
+  <!-- File Input -->
+  <input
+    #fileInput
+    type="file"
+    accept="image/*"
+    multiple
+    (change)="onFileSelected($event)"
+    [disabled]="isDisabled"
+    style="display: none"
+  />
+
+  <!-- Upload Area -->
+  <div
+    class="upload-area"
+    [class.drag-over]="dragOver"
+    [class.disabled]="isDisabled || !canAddMore()"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave($event)"
+    (drop)="onDrop($event)"
+    (click)="canAddMore() && !isDisabled ? fileInput.click() : null"
+  >
+    <div class="upload-content">
+      <mat-icon class="upload-icon">{{ mediaType.icon }}</mat-icon>
+      <h3 class="upload-title">{{ mediaType.buttonText | translate }}</h3>
+      <p class="upload-description">
+        {{ 'post.media.drag_drop_images' | translate }}
+        <br />
+        {{ 'post.media.or_click_to_browse' | translate }}
+      </p>
+      <div class="upload-limits">
+        <span>{{ 'post.media.max_files' | translate: { count: maxFiles } }}</span>
+        <span>{{ 'post.media.max_size' | translate: { size: maxUploadSize } }}</span>
+      </div>
+      <div class="remaining-slots" *ngIf="mediaFiles.length > 0">
+        {{ 'post.media.remaining_slots' | translate: { count: getRemainingSlots() } }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Images Grid -->
+  <div class="images-grid" *ngIf="mediaFiles.length > 0">
+    <div
+      *ngFor="let image of mediaFiles; trackBy: trackByFn; let i = index"
+      class="image-item"
+      [class.uploading]="image.status === MediaFileStatus.UPLOADING"
+      [class.error]="image.status === MediaFileStatus.ERROR"
+      [class.ready]="image.status === MediaFileStatus.READY"
+    >
+      <!-- Image Preview -->
+      <div class="image-preview">
+        <img
+          *ngIf="image.url && image.status !== MediaFileStatus.ERROR"
+          [src]="image.url"
+          [alt]="image.filename"
+          class="preview-image"
+        />
+        <div
+          *ngIf="image.status === MediaFileStatus.ERROR"
+          class="error-placeholder"
+        >
+          <mat-icon>broken_image</mat-icon>
+        </div>
+
+        <!-- Upload Progress Overlay -->
+        <div
+          *ngIf="image.status === MediaFileStatus.UPLOADING"
+          class="upload-overlay"
+        >
+          <mat-spinner diameter="40"></mat-spinner>
+          <span class="upload-text">{{ 'post.media.uploading' | translate }}</span>
+        </div>
+
+        <!-- Status Overlay -->
+        <div class="status-overlay">
+          <mat-icon
+            *ngIf="image.status === MediaFileStatus.READY"
+            class="status-icon success"
+          >
+            check_circle
+          </mat-icon>
+          <mat-icon
+            *ngIf="image.status === MediaFileStatus.ERROR"
+            class="status-icon error"
+          >
+            error
+          </mat-icon>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button
+            mat-icon-button
+            class="action-button remove-button"
+            (click)="removeImage(image.generatedId)"
+            [disabled]="isDisabled"
+            matTooltip="{{ 'post.media.remove_image' | translate }}"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Image Info -->
+      <div class="image-info">
+        <div class="filename" [title]="image.filename">
+          {{ image.filename }}
+        </div>
+        <div class="filesize">{{ image.fileSize }}</div>
+
+        <!-- Error Message -->
+        <div class="error-message" *ngIf="image.status === MediaFileStatus.ERROR">
+          <span *ngIf="image.error === MediaFileError.TOO_BIG">
+            {{ 'post.media.messages.max_size' | translate: { size: maxUploadSize } }}
+          </span>
+          <span *ngIf="image.error === MediaFileError.INVALID_TYPE">
+            {{ 'post.media.messages.invalid_type' | translate }}
+          </span>
+          <span *ngIf="image.error === MediaFileError.UNKNOWN">
+            {{ 'post.media.messages.upload_error' | translate }}
+          </span>
+        </div>
+
+        <!-- Caption Input -->
+        <div class="caption-section" *ngIf="hasCaption && image.status === MediaFileStatus.READY">
+          <mat-form-field appearance="outline" class="caption-field">
+            <mat-label>{{ 'post.media.caption' | translate }}</mat-label>
+            <input
+              matInput
+              [value]="image.caption"
+              (blur)="updateCaption(image, $event)"
+              [disabled]="isDisabled"
+              placeholder="{{ 'post.media.caption_placeholder' | translate }}"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add More Button -->
+    <div
+      class="add-more-item"
+      *ngIf="canAddMore()"
+      (click)="fileInput.click()"
+      [class.disabled]="isDisabled"
+    >
+      <div class="add-more-content">
+        <mat-icon class="add-icon">add</mat-icon>
+        <span class="add-text">{{ 'post.media.add_more' | translate }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Messages -->
+  <div class="error-messages" *ngIf="error !== MediaUploaderError.NONE">
+    <mat-error *ngIf="error === MediaUploaderError.MAX_FILES">
+      {{ 'post.media.messages.max_files' | translate: { count: maxFiles } }}
+    </mat-error>
+    <mat-error *ngIf="error === MediaUploaderError.MAX_SIZE">
+      {{ 'post.media.messages.max_size' | translate: { size: maxUploadSize } }}
+    </mat-error>
+    <mat-error *ngIf="error === MediaUploaderError.INVALID_TYPE">
+      {{ 'post.media.messages.invalid_type' | translate }}
+    </mat-error>
+    <mat-error *ngIf="error === MediaUploaderError.REQUIRED">
+      {{ 'post.media.messages.required' | translate }}
+    </mat-error>
+  </div>
+
+  <!-- Summary -->
+  <div class="upload-summary" *ngIf="mediaFiles.length > 0">
+    <div class="summary-stats">
+      <span class="stat">
+        {{ 'post.media.total_images' | translate: { count: mediaFiles.length } }}
+      </span>
+      <span class="stat" *ngIf="mediaFiles.length < maxFiles">
+        {{ 'post.media.can_add_more' | translate: { count: getRemainingSlots() } }}
+      </span>
+    </div>
+  </div>
+</div>

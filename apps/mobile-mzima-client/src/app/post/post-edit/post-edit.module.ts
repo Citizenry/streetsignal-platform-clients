@@ -11,6 +11,8 @@ import { DateSelectModule } from '../../map/components/date-select/date-select.m
 import { PostComponentsModule } from '../components/post-components.module';
 import { PostEditPage } from './post-edit.page';
 import { PostEditRoutingModule } from './post-edit.routing.module';
+import { VideoUploaderComponent } from '../video-uploader/video-uploader.component';
+import { MultipleImageUploaderComponent } from '../multiple-image-uploader/multiple-image-uploader.component';
 
 @NgModule({
   imports: [
@@ -28,6 +30,6 @@ import { PostEditRoutingModule } from './post-edit.routing.module';
     TranslateModule,
     MatProgressBarModule,
   ],
-  declarations: [PostEditPage],
+  declarations: [PostEditPage, VideoUploaderComponent, MultipleImageUploaderComponent],
 })
 export class PostEditModule {}

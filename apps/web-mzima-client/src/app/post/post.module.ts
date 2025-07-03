@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -35,6 +37,8 @@ import { PostHeadComponent } from './post-head/post-head.component';
 import { MzimaUiModule } from '@mzima-client/mzima-ui';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
 import { MediaUploaderComponent } from './media-uploader/media-uploader.component';
+import { VideoUploaderComponent } from './video-uploader/video-uploader.component';
+import { MultipleImageUploaderComponent } from './multiple-image-uploader/multiple-image-uploader.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { PostNotFoundComponent } from './post-not-found/post-not-found.component';
 import { PostNotAllowedComponent } from './post-not-allowed/post-not-allowed.component';
@@ -53,6 +57,8 @@ import { PostTranslatedComponent } from './post-translated/post-translated.compo
     PostHeadComponent,
     ImageUploaderComponent,
     MediaUploaderComponent,
+    VideoUploaderComponent,
+    MultipleImageUploaderComponent,
     PostNotFoundComponent,
     PostNotAllowedComponent,
     PostConversationComponent,
@@ -84,6 +90,8 @@ import { PostTranslatedComponent } from './post-translated/post-translated.compo
     NgxMatDatetimePickerModule,
     MatRadioModule,
     MatListModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
     MatSelectModule,
     MatMenuModule,
     PipeModule,

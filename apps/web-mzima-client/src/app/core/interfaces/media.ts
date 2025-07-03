@@ -38,6 +38,22 @@ const mediaTypes = new Map<string, MediaType>([
         'application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     },
   ],
+  [
+    'video_upload',
+    {
+      icon: 'videocam',
+      buttonText: 'post.media.add_video',
+      fileTypes: 'video/mp4, video/webm, video/quicktime',
+    },
+  ],
+  [
+    'multiple_images',
+    {
+      icon: 'add_photo_alternate',
+      buttonText: 'post.media.add_multiple_photos',
+      fileTypes: 'image/jpeg, image/png, image/webp',
+    },
+  ],
 ]);
 
 export { MediaType, MediaUploaderError, mediaTypes };

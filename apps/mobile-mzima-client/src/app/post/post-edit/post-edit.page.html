@@ -554,6 +554,35 @@
               ></app-textarea-control>
             </div>
           </ng-container>
+
+          <!-- multiple images -->
+          <ng-container *ngIf="field.input === 'multiple_images'">
+            <div class="form-control--section">
+              <ion-label class="field-label">
+                {{ field?.label }}
+                <span class="color-accent" *ngIf="field?.required">*</span>
+              </ion-label>
+              <app-multiple-image-uploader
+                [formControlName]="field.key"
+                [maxFiles]="field.config?.maxFiles || 10"
+                [required]="field?.required"
+              ></app-multiple-image-uploader>
+            </div>
+          </ng-container>
+
+          <!-- video upload -->
+          <ng-container *ngIf="field.input === 'video_upload'">
+            <div class="form-control--section">
+              <ion-label class="field-label">
+                {{ field?.label }}
+                <span class="color-accent" *ngIf="field?.required">*</span>
+              </ion-label>
+              <app-video-uploader
+                [formControlName]="field.key"
+                [required]="field?.required"
+              ></app-video-uploader>
+            </div>
+          </ng-container>
           <div
             class="field-error"
             *ngIf="form.get(field.key)?.invalid && form.get(field.key)?.touched"

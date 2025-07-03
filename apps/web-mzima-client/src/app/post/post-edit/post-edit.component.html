@@ -468,6 +468,51 @@
                 >
                 </app-media-uploader>
               </div>
+              <div *ngIf="field.input === 'video_upload'">
+                <span class="form-row__instruction" *ngIf="field.config.maxUploadSize">
+                  {{
+                    'post.modify.max_size'
+                      | translate
+                        : {
+                            size: field.config.maxUploadSize,
+                            format: 'post.modify.format.video' | translate
+                          }
+                  }}
+                </span>
+                <app-video-uploader
+                  [formControlName]="field.key"
+                  [maxUploadSize]="field.config.maxUploadSize"
+                  [allowedTypes]="field.config.allowedTypes"
+                  (change)="maxSizeError = false"
+                  [requiredError]="
+                    form.get(field.key)?.touched && form.get(field.key)?.hasError('mediaRequired')
+                  "
+                >
+                </app-video-uploader>
+              </div>
+              <div *ngIf="field.input === 'multiple_images'">
+                <span class="form-row__instruction" *ngIf="field.config.maxUploadSize">
+                  {{
+                    'post.modify.max_size'
+                      | translate
+                        : {
+                            size: field.config.maxUploadSize,
+                            format: 'post.modify.format.image' | translate
+                          }
+                  }}
+                </span>
+                <app-multiple-image-uploader
+                  [formControlName]="field.key"
+                  [maxFiles]="field.config.maxFiles"
+                  [maxUploadSize]="field.config.maxUploadSize"
+                  [allowedTypes]="field.config.allowedTypes"
+                  (change)="maxSizeError = false"
+                  [requiredError]="
+                    form.get(field.key)?.touched && form.get(field.key)?.hasError('mediaRequired')
+                  "
+                >
+                </app-multiple-image-uploader>
+              </div>
             </ng-container>
 
             <ng-container *ngIf="field.input === 'video'">

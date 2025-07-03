@@ -1,0 +1,101 @@
+<div class="multiple-image-uploader">
+  <!-- Upload Area -->
+  <div class="upload-area" *ngIf="canAddMore" (click)="selectImages()">
+    <ion-icon name="images" class="upload-icon"></ion-icon>
+    <p class="upload-description">
+      {{ 'post.media.drag_drop_images' | translate }}
+      <br />
+      {{ 'post.media.or_click_to_browse' | translate }}
+    </p>
+    <div class="upload-limits">
+      <span>{{ 'post.media.max_files' | translate: { count: maxFiles } }}</span>
+      <span>{{ 'post.media.max_size' | translate: { size: maxUploadSize } }}</span>
+    </div>
+    <p class="upload-formats">
+      {{ 'post.media.supported_formats' | translate: { formats: acceptedFormats } }}
+    </p>
+    <ion-button fill="outline" color="primary">
+      {{ 'post.media.select_images' | translate }}
+    </ion-button>
+  </div>
+
+  <!-- Image Grid -->
+  <div class="image-grid" *ngIf="imageFiles.length > 0">
+    <div class="image-item" *ngFor="let image of imageFiles; let i = index">
+      <div class="image-container">
+        <img [src]="image.url" [alt]="'Image ' + (i + 1)" class="image-preview" />
+        
+        <!-- Upload Progress Overlay -->
+        <div class="upload-overlay" *ngIf="isUploading">
+          <ion-progress-bar [value]="((uploadProgressValue | async)?.[('file_' + i)] || 0) / 100"></ion-progress-bar>
+          <span class="progress-text">{{ (uploadProgressValue | async)?.[('file_' + i)] || 0 }}%</span>
+        </div>
+
+        <!-- Image Actions -->
+        <div class="image-actions">
+          <ion-button fill="clear" size="small" color="danger" (click)="removeImage(i)">
+            <ion-icon name="trash" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+      <!-- Caption Input -->
+      <div class="caption-input">
+        <ion-item lines="none">
+          <ion-input
+            [value]="image.caption || ''"
+            (ionInput)="updateCaption(i, $event)"
+            placeholder="{{ 'post.media.add_caption' | translate }}"
+            fill="outline"
+          ></ion-input>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add More Button -->
+  <div class="add-more-section" *ngIf="imageFiles.length > 0 && canAddMore">
+    <ion-button fill="outline" color="primary" (click)="selectImages()">
+      <ion-icon name="add" slot="start"></ion-icon>
+      {{ 'post.media.add_more_images' | translate }} ({{ remainingSlots }} {{ 'post.media.remaining' | translate }})
+    </ion-button>
+  </div>
+
+  <!-- Upload Progress -->
+  <div class="upload-status" *ngIf="isUploading">
+    <div class="status-content">
+      <ion-icon name="cloud-upload" class="upload-icon"></ion-icon>
+      <p>{{ 'post.media.uploading_images' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Upload Errors -->
+  <div class="upload-errors" *ngIf="uploadErrors.length > 0">
+    <ion-item color="danger" *ngFor="let error of uploadErrors">
+      <ion-icon name="alert-circle" slot="start"></ion-icon>
+      <ion-label>{{ error }}</ion-label>
+    </ion-item>
+  </div>
+
+  <!-- Empty State -->
+  <div class="empty-state" *ngIf="imageFiles.length === 0 && !canAddMore">
+    <ion-icon name="images" class="empty-icon"></ion-icon>
+    <p>{{ 'post.media.no_images_selected' | translate }}</p>
+  </div>
+
+  <!-- File Count Info -->
+  <div class="file-info" *ngIf="imageFiles.length > 0">
+    <ion-text color="medium">
+      <small>
+        {{ imageFiles.length }} {{ 'post.media.of' | translate }} {{ maxFiles }} {{ 'post.media.images_selected' | translate }}
+      </small>
+    </ion-text>
+  </div>
+
+  <!-- Required Field Indicator -->
+  <div class="field-requirements" *ngIf="required">
+    <ion-text color="danger">
+      <small>{{ 'post.media.required_field' | translate }}</small>
+    </ion-text>
+  </div>
+</div>

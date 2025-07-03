@@ -1,0 +1,158 @@
+<div class="video-uploader-container">
+  <!-- File Input -->
+  <input
+    #fileInput
+    type="file"
+    accept="video/*"
+    (change)="onVideoSelected($event)"
+    [disabled]="isDisabled"
+    style="display: none"
+  />
+
+  <!-- Upload Area -->
+  <div class="upload-area" *ngIf="!videoFile">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="fileInput.click()"
+      [disabled]="isDisabled"
+      class="upload-button"
+    >
+      <mat-icon>{{ mediaType.icon }}</mat-icon>
+      {{ mediaType.buttonText | translate }}
+    </button>
+    <p class="upload-hint">
+      {{ 'post.media.video_upload_hint' | translate }}
+      <br />
+      {{ 'post.media.max_size' | translate: { size: maxUploadSize } }}
+    </p>
+  </div>
+
+  <!-- Video Preview -->
+  <div class="video-preview" *ngIf="videoFile">
+    <div class="video-container">
+      <!-- Video Player -->
+      <video
+        *ngIf="videoPreviewUrl && videoFile.status !== MediaFileStatus.ERROR"
+        [src]="videoPreviewUrl"
+        controls
+        preload="metadata"
+        class="video-player"
+      >
+        {{ 'post.media.video_not_supported' | translate }}
+      </video>
+
+      <!-- Video Thumbnail for Error State -->
+      <div
+        *ngIf="videoFile.status === MediaFileStatus.ERROR"
+        class="video-error-thumbnail"
+      >
+        <mat-icon class="error-icon">error</mat-icon>
+        <p>{{ 'post.media.video_error' | translate }}</p>
+      </div>
+
+      <!-- Upload Progress -->
+      <div
+        *ngIf="isUploading && videoFile.status === MediaFileStatus.UPLOADING"
+        class="upload-progress"
+      >
+        <mat-progress-bar
+          mode="determinate"
+          [value]="uploadProgress"
+          class="progress-bar"
+        ></mat-progress-bar>
+        <span class="progress-text">{{ uploadProgress }}%</span>
+      </div>
+
+      <!-- Video Info -->
+      <div class="video-info">
+        <div class="file-details">
+          <span class="filename">{{ videoFile.filename }}</span>
+          <span class="filesize">{{ formatFileSize(videoFile.size) }}</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="fileInput.click()"
+            [disabled]="isDisabled || isUploading"
+            matTooltip="{{ 'post.media.replace_video' | translate }}"
+          >
+            <mat-icon>swap_horiz</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="removeVideo()"
+            [disabled]="isDisabled || isUploading"
+            matTooltip="{{ 'post.media.remove_video' | translate }}"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caption Input -->
+    <div class="caption-section" *ngIf="hasCaption">
+      <mat-form-field appearance="outline" class="caption-field">
+        <mat-label>{{ 'post.media.caption' | translate }}</mat-label>
+        <input
+          matInput
+          [formControl]="captionControl"
+          (blur)="onCaptionChange()"
+          [disabled]="isDisabled"
+          placeholder="{{ 'post.media.caption_placeholder' | translate }}"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Error Messages -->
+  <div class="error-messages" *ngIf="error !== MediaUploaderError.NONE">
+    <mat-error *ngIf="error === MediaUploaderError.MAX_SIZE">
+      {{ 'post.media.messages.max_size' | translate: { size: maxUploadSize } }}
+    </mat-error>
+    <mat-error *ngIf="error === MediaUploaderError.INVALID_TYPE">
+      {{ 'post.media.messages.invalid_video_type' | translate }}
+    </mat-error>
+    <mat-error *ngIf="error === MediaUploaderError.REQUIRED">
+      {{ 'post.media.messages.required' | translate }}
+    </mat-error>
+  </div>
+
+  <!-- Status Messages -->
+  <div class="status-messages" *ngIf="videoFile">
+    <div
+      *ngIf="videoFile.status === MediaFileStatus.UPLOADING"
+      class="status-uploading"
+    >
+      <mat-icon class="status-icon">cloud_upload</mat-icon>
+      {{ 'post.media.uploading' | translate }}
+    </div>
+    <div
+      *ngIf="videoFile.status === MediaFileStatus.READY"
+      class="status-ready"
+    >
+      <mat-icon class="status-icon">check_circle</mat-icon>
+      {{ 'post.media.upload_complete' | translate }}
+    </div>
+    <div
+      *ngIf="videoFile.status === MediaFileStatus.ERROR"
+      class="status-error"
+    >
+      <mat-icon class="status-icon">error</mat-icon>
+      <span *ngIf="videoFile.error === MediaFileError.TOO_BIG">
+        {{ 'post.media.messages.max_size' | translate: { size: maxUploadSize } }}
+      </span>
+      <span *ngIf="videoFile.error === MediaFileError.INVALID_TYPE">
+        {{ 'post.media.messages.invalid_video_type' | translate }}
+      </span>
+      <span *ngIf="videoFile.error === MediaFileError.UNKNOWN">
+        {{ 'post.media.messages.upload_error' | translate }}
+      </span>
+    </div>
+  </div>
+</div>

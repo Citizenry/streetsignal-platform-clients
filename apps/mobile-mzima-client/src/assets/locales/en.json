@@ -79,5 +79,30 @@
         "posts_uploading" : "<b>Uploading {{num_posts}} Posts</b><br/>We are currently uploading your posts",
         "posts_uploaded" : "<b>{{num_posts}} Posts Uploaded Successfully!</b><br/>Your posts were successfully uploaded. You can see them under \"My Posts\""
       }
+    },
+    "post": {
+      "media": {
+        "drag_drop_images": "Drag and drop images here",
+        "or_click_to_browse": "or click to browse",
+        "max_files": "Maximum {{count}} files",
+        "max_size": "Maximum size: {{size}}",
+        "supported_formats": "Supported formats: {{formats}}",
+        "select_images": "Select Images",
+        "add_more_images": "Add More Images",
+        "remaining": "remaining",
+        "uploading_images": "Uploading images...",
+        "no_images_selected": "No images selected",
+        "of": "of",
+        "images_selected": "images selected",
+        "add_caption": "Add caption...",
+        "remove_image": "Remove image",
+        "video_upload_hint": "Select a video to upload",
+        "select_video": "Select Video",
+        "uploading_video": "Uploading video...",
+        "remove_video": "Remove video",
+        "replace_video": "Replace video",
+        "try_again": "Try again",
+        "required_field": "This field is required"
+      }
     }
 }

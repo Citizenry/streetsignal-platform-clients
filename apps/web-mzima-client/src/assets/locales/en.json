@@ -1118,7 +1118,44 @@
         "upload_complete" : "Upload Complete!",
         "upload_failed" : "Upload failed!"
       },
-      "special_char": "This field contains special characters"
+      "special_char": "This field contains special characters",
+      "video_upload_hint": "Drag and drop a video file here, or click to select",
+      "drag_drop_images": "Drag and drop images here",
+      "or_click_to_browse": "or click to browse",
+      "max_files": "Maximum {{count}} files",
+      "max_size": "Maximum {{size}}MB per file",
+      "remaining_slots": "{{count}} slots remaining",
+      "add_more": "Add more",
+      "remove_image": "Remove image",
+      "remove_video": "Remove video",
+      "replace_video": "Replace video",
+      "caption": "Caption",
+      "caption_placeholder": "Enter caption...",
+      "uploading": "Uploading...",
+      "upload_complete": "Upload complete",
+      "video_not_supported": "Your browser does not support the video tag",
+      "video_error": "Error loading video",
+      "total_images": "{{count}} images",
+      "can_add_more": "Can add {{count}} more",
+      "video_uploader": {
+        "select_video": "Select video file",
+        "drag_drop_video": "Drag and drop a video file here, or click to select",
+        "video_selected": "Video selected",
+        "remove_video": "Remove video",
+        "upload_progress": "Upload progress",
+        "video_preview": "Video preview",
+        "supported_formats": "Supported formats: MP4, AVI, MOV, WMV (max {{maxSize}}MB)"
+      },
+      "multiple_image_uploader": {
+        "select_images": "Select images",
+        "drag_drop_images": "Drag and drop images here, or click to select",
+        "add_more_images": "Add more images",
+        "remove_image": "Remove image",
+        "upload_progress": "Upload progress",
+        "images_selected": "{{count}} images selected",
+        "max_files_reached": "Maximum number of files reached ({{max}})",
+        "supported_formats": "Supported formats: JPG, PNG, GIF (max {{maxSize}}MB each)"
+      }
     },
     "video": {
       "enter_a_url": "Enter a video URL from Youtube or Vimeo."

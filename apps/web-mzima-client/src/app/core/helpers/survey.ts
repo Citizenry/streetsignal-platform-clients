@@ -114,6 +114,32 @@ export const surveyFields = [
     },
   },
   {
+    label: 'survey.upload_multiple_images',
+    type: 'media',
+    input: 'multiple_images',
+    instructions: 'survey.upload_multiple_images_desc',
+    config: {
+      hasCaption: true,
+      maxUploadSize: 10,
+      maxFiles: 10,
+      allowedTypes: ['image/jpeg', 'image/png', 'image/webp'],
+      generateThumbnails: true,
+    },
+  },
+  {
+    label: 'survey.upload_video',
+    type: 'media',
+    input: 'video_upload',
+    instructions: 'survey.upload_video_desc',
+    config: {
+      hasCaption: true,
+      maxUploadSize: 100,
+      maxFiles: 1,
+      allowedTypes: ['video/mp4', 'video/webm', 'video/quicktime'],
+      generateThumbnails: true,
+    },
+  },
+  {
     label: 'survey.embed_video',
     type: 'varchar',
     input: 'video',
