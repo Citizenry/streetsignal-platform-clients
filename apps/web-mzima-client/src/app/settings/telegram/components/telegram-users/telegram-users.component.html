@@ -1,0 +1,70 @@
+<div class="telegram-users">
+  <div class="users-header">
+    <h3>Bot Users</h3>
+    <button mat-raised-button color="primary" (click)="onRefresh()" [disabled]="loading">
+      <mat-icon>refresh</mat-icon>
+      Refresh
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Loading users...</p>
+  </div>
+
+  <div *ngIf="!loading && users.length > 0" class="users-table">
+    <mat-table [dataSource]="users" class="mat-elevation-z8">
+      <ng-container matColumnDef="username">
+        <mat-header-cell *matHeaderCellDef>Username</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span *ngIf="user.username; else noUsername">@{{ user.username }}</span>
+          <ng-template #noUsername>
+            <span class="no-data">No username</span>
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="first_name">
+        <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{ user.first_name || 'N/A' }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="last_name">
+        <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{ user.last_name || 'N/A' }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="created_at">
+        <mat-header-cell *matHeaderCellDef>Joined</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{ user.created_at | date : 'short' }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="last_active">
+        <mat-header-cell *matHeaderCellDef>Last Active</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span *ngIf="user.last_active; else neverActive">
+            {{ user.last_active | date : 'short' }}
+          </span>
+          <ng-template #neverActive>
+            <span class="no-data">Never</span>
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </div>
+
+  <div *ngIf="!loading && users.length === 0" class="no-data">
+    <mat-icon>people_outline</mat-icon>
+    <p>No users found</p>
+    <small>Users will appear here once they start interacting with your bot</small>
+  </div>
+</div>

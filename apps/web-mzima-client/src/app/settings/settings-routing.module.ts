@@ -112,6 +112,15 @@ const routes: Routes = [
           guards: [AdminGuard, ManageSettingsGuard],
         },
       },
+      {
+        path: 'telegram',
+        loadChildren: () => import('./telegram/telegram.module').then((m) => m.TelegramModule),
+        canActivate: [CombinedGuard],
+        data: {
+          breadcrumb: 'Telegram Bot',
+          guards: [AdminGuard, ManageSettingsGuard],
+        },
+      },
     ],
   },
 ];

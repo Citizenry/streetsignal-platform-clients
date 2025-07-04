@@ -8,7 +8,7 @@ import {
   ValidationErrors,
 } from '@angular/forms';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { formHelper } from '@helpers';
+
 import { MediaFile, MediaFileError, MediaFileStatus, MediaService } from '@mzima-client/sdk';
 import { TranslateService } from '@ngx-translate/core';
 import { catchError, last, Observable, tap, throwError } from 'rxjs';
@@ -103,14 +103,14 @@ export class VideoUploaderComponent implements ControlValueAccessor, OnInit {
 
     if (inputElement.files && inputElement.files.length > 0) {
       const file = inputElement.files[0];
-      
+
       // Reset previous state
       this.error = MediaUploaderError.NONE;
       this.uploadProgress = 0;
-      
+
       const videoUrl = URL.createObjectURL(file);
       this.videoPreviewUrl = this.sanitizer.bypassSecurityTrustUrl(videoUrl);
-      
+
       const mediaFile = new MediaFile(file, videoUrl);
 
       // Validate file size
@@ -118,13 +118,13 @@ export class VideoUploaderComponent implements ControlValueAccessor, OnInit {
         mediaFile.status = MediaFileStatus.ERROR;
         mediaFile.error = MediaFileError.TOO_BIG;
         this.error = MediaUploaderError.MAX_SIZE;
-      } 
+      }
       // Validate file type
       else if (!this.mediaType.fileTypes.split(', ').includes(mediaFile.mimeType)) {
         mediaFile.status = MediaFileStatus.ERROR;
         mediaFile.error = MediaFileError.INVALID_TYPE;
         this.error = MediaUploaderError.INVALID_TYPE;
-      } 
+      }
       // Start upload
       else {
         mediaFile.status = MediaFileStatus.UPLOADING;
@@ -152,7 +152,7 @@ export class VideoUploaderComponent implements ControlValueAccessor, OnInit {
             mediaFile.value = uploadEvent.body.result.id;
             this.isUploading = false;
             this.uploadProgress = 100;
-            
+
             // Set to ready after a short delay
             setTimeout(() => {
               if (this.videoFile) {
@@ -179,7 +179,10 @@ export class VideoUploaderComponent implements ControlValueAccessor, OnInit {
   async removeVideo() {
     if (!this.videoFile) return;
 
-    if (this.videoFile.status === MediaFileStatus.READY || this.videoFile.status === MediaFileStatus.UPLOADED) {
+    if (
+      this.videoFile.status === MediaFileStatus.READY ||
+      this.videoFile.status === MediaFileStatus.UPLOADED
+    ) {
       const confirmed = await this.confirm.open({
         title: this.translate.instant('notify.default.are_you_sure_you_want_to_delete_this'),
         description: this.translate.instant('notify.default.proceed_warning'),

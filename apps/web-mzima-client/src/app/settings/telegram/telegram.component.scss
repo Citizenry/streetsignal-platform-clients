@@ -1,0 +1,20 @@
+.telegram-settings {
+  padding: 20px;
+
+  mat-card {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  mat-card-header {
+    margin-bottom: 20px;
+  }
+
+  mat-tab-group {
+    margin-top: 20px;
+  }
+
+  ::ng-deep .mat-tab-body-content {
+    padding: 20px 0;
+  }
+}

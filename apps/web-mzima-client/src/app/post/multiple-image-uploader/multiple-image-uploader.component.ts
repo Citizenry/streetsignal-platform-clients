@@ -2,7 +2,6 @@ import { HttpErrorResponse, HttpEventType } from '@angular/common/http';
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import {
   ControlValueAccessor,
-  FormControl,
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
   ValidationErrors,
@@ -145,12 +144,12 @@ export class MultipleImageUploaderComponent implements ControlValueAccessor, OnI
         if (mediaFile.size > this.maxUploadSize * 1000000) {
           mediaFile.status = MediaFileStatus.ERROR;
           mediaFile.error = MediaFileError.TOO_BIG;
-        } 
+        }
         // Validate file type
         else if (!this.mediaType.fileTypes.split(', ').includes(mediaFile.mimeType)) {
           mediaFile.status = MediaFileStatus.ERROR;
           mediaFile.error = MediaFileError.INVALID_TYPE;
-        } 
+        }
         // Ready for upload
         else {
           mediaFile.status = MediaFileStatus.UPLOADING;
@@ -162,7 +161,7 @@ export class MultipleImageUploaderComponent implements ControlValueAccessor, OnI
     }
 
     // Start uploads for valid files
-    this.startUploads(newFiles.filter(f => f.status === MediaFileStatus.UPLOADING));
+    this.startUploads(newFiles.filter((f) => f.status === MediaFileStatus.UPLOADING));
     this.onChange(this.mediaFiles);
   }
 
@@ -187,14 +186,10 @@ export class MultipleImageUploaderComponent implements ControlValueAccessor, OnI
 
               // Set to ready after delay
               setTimeout(() => {
-                this.updateMediaFileById(
-                  mediaFile.generatedId,
-                  uploadEvent.body,
-                  (file) => {
-                    file.status = MediaFileStatus.READY;
-                    return file;
-                  },
-                );
+                this.updateMediaFileById(mediaFile.generatedId, uploadEvent.body, (file) => {
+                  file.status = MediaFileStatus.READY;
+                  return file;
+                });
               }, 1000);
             }
           }),
@@ -230,12 +225,15 @@ export class MultipleImageUploaderComponent implements ControlValueAccessor, OnI
   }
 
   async removeImage(generatedId: number) {
-    const index = this.mediaFiles.findIndex(f => f.generatedId === generatedId);
+    const index = this.mediaFiles.findIndex((f) => f.generatedId === generatedId);
     if (index === -1) return;
 
     const mediaFile = this.mediaFiles[index];
 
-    if (mediaFile.status === MediaFileStatus.READY || mediaFile.status === MediaFileStatus.UPLOADED) {
+    if (
+      mediaFile.status === MediaFileStatus.READY ||
+      mediaFile.status === MediaFileStatus.UPLOADED
+    ) {
       const confirmed = await this.confirm.open({
         title: this.translate.instant('notify.default.are_you_sure_you_want_to_delete_this'),
         description: this.translate.instant('notify.default.proceed_warning'),

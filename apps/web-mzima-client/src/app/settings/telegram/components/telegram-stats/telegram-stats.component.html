@@ -1,0 +1,87 @@
+<div class="telegram-stats">
+  <div class="stats-header">
+    <h3>Bot Statistics</h3>
+    <button mat-raised-button color="primary" (click)="onRefresh()" [disabled]="loading">
+      <mat-icon>refresh</mat-icon>
+      Refresh
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Loading statistics...</p>
+  </div>
+
+  <div *ngIf="!loading && stats" class="stats-grid">
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-card-title>Total Users</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ stats.total_users }}</div>
+        <div class="stat-description">Registered bot users</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-card-title>Active Conversations</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ stats.active_conversations }}</div>
+        <div class="stat-description">Currently active chats</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-card-title>Messages Today</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ stats.messages_today }}</div>
+        <div class="stat-description">Messages processed today</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-card-title>Total Messages</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ stats.total_messages }}</div>
+        <div class="stat-description">All-time message count</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-card-title>Surveys Completed</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ stats.surveys_completed }}</div>
+        <div class="stat-description">Successfully completed surveys</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-card-title>Bot Status</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div
+          class="stat-value"
+          [class.online]="stats.bot_status === 'online'"
+          [class.offline]="stats.bot_status !== 'online'"
+        >
+          {{ stats.bot_status | titlecase }}
+        </div>
+        <div class="stat-description">Current bot status</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div *ngIf="!loading && !stats" class="no-data">
+    <mat-icon>info</mat-icon>
+    <p>No statistics available</p>
+  </div>
+</div>
