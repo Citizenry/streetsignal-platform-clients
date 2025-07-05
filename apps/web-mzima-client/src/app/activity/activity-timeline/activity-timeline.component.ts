@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { LegendPosition, ScaleType } from '@swimlane/ngx-charts';
 import { Color } from '@swimlane/ngx-charts/lib/utils/color-sets';
 import { ManipulateType } from 'dayjs';
+import { LoggingService } from '../../core/services/logging.service';
 
 @Component({
   selector: 'app-activity-timeline',
@@ -36,7 +37,11 @@ export class ActivityTimelineComponent implements OnInit {
   public dateRange: ManipulateType;
   public filters: { displayName: string; value: string }[] = [];
 
-  constructor(private postsService: PostsService, private translate: TranslateService) {
+  constructor(
+    private postsService: PostsService,
+    private translate: TranslateService,
+    private logger: LoggingService,
+  ) {
     this.initializeFilters();
   }
 
@@ -61,7 +66,7 @@ export class ActivityTimelineComponent implements OnInit {
     // let series: any[] = [];
     this.postsService.getPostStatistics({ ...params, group_by: value }).subscribe({
       next: (response) => {
-        console.log('Response', response);
+        this.logger.debug('Post statistics response', response);
 
         // this.data = response.result.group_by_total_posts.map(post => {
         //   const time = new Date(parseInt(post.label) * 1000);

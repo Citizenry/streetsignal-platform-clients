@@ -7,6 +7,7 @@
     "web:build": "nx run web-mzima-client:build:production",
     "web:devbuild": "nx run web-mzima-client:build:development",
     "web:cypress": "nx e2e web-mzima-client-e2e --watch",
+    "web:cypress:ci": "nx e2e web-mzima-client-e2e",
     "lint": "nx lint web-mzima-client --cache --cacheStrategy content --cacheLocation .eslintcache",
     "mobile:serve": "nx run mobile-mzima-client:serve",
     "mobile:build": "nx run mobile-mzima-client:build",

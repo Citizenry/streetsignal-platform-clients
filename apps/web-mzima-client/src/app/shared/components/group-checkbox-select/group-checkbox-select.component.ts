@@ -48,9 +48,8 @@ export class GroupCheckboxSelectComponent implements ControlValueAccessor {
 
   onTouched = () => {};
 
-  onChange = (values: any) => {
-    console.log(values);
-  };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  onChange = (_values: any) => {};
 
   registerOnChange(onChange: any) {
     this.onChange = onChange;

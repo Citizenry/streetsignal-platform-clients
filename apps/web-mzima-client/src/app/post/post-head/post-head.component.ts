@@ -3,7 +3,13 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CollectionsComponent } from '../../shared/components';
 import { TranslateService } from '@ngx-translate/core';
-import { BreakpointService, EventBusService, EventType, SessionService } from '@services';
+import {
+  BreakpointService,
+  EventBusService,
+  EventType,
+  SessionService,
+  LoggingService,
+} from '@services';
 import { BaseComponent } from '../../base.component';
 import { ShareModalComponent } from '../../shared/components';
 import { PostResult, PostsService, PostStatus, postHelpers } from '@mzima-client/sdk';
@@ -37,6 +43,7 @@ export class PostHeadComponent extends BaseComponent implements OnInit {
     private translate: TranslateService,
     private eventBusService: EventBusService,
     private snackBar: MatSnackBar,
+    private logger: LoggingService,
   ) {
     super(sessionService, breakpointService);
     this.checkDesktop();
@@ -66,7 +73,9 @@ export class PostHeadComponent extends BaseComponent implements OnInit {
       next: (response) => {
         this.postsService.unlockPost(this.post.id).subscribe();
         this.refresh.emit();
-        response ? console.log(response) : null;
+        if (response) {
+          this.logger.info('Collection dialog closed with response', response);
+        }
       },
     });
   }

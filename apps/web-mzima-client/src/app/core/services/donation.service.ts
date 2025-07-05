@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import 'types-wm';
 import { SessionService } from './session.service';
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,18 +15,18 @@ export class DonationService {
   private donate = new BehaviorSubject<any>({});
   donate$ = this.donate.asObservable();
 
-  constructor(private session: SessionService) {}
+  constructor(private session: SessionService, private logger: LoggingService) {}
 
   setupMonetization() {
     if (document.monetization) {
       document.monetization.addEventListener('monetizationpending', () => {
-        console.log('Initializing Web Monetization .');
+        this.logger.info('Initializing Web Monetization');
       });
 
       document.monetization.addEventListener('monetizationstart', (event) => {
         if (event.detail.paymentPointer === this.session.getSiteConfigurations().donation?.wallet) {
           // $rootScope.$broadcast('event:donation:started');
-          console.log('Web Monetization Started.');
+          this.logger.info('Web Monetization Started');
           this.isMonetizationStarted = true;
         }
       });
@@ -44,7 +45,7 @@ export class DonationService {
       });
 
       document.monetization.addEventListener('monetizationstop', () => {
-        console.log('Web Monetization Stopped.');
+        this.logger.info('Web Monetization Stopped');
         this.isMonetizationStarted = false;
       });
     }

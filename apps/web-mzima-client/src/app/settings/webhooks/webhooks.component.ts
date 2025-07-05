@@ -3,6 +3,7 @@ import { takeUntilDestroy$ } from '@helpers';
 import { WebhooksService, WebhookResultInterface } from '@mzima-client/sdk';
 import { Observable } from 'rxjs';
 import { BreakpointService } from '@services';
+import { LoggingService } from '../../core/services/logging.service';
 
 @Component({
   selector: 'app-webhooks',
@@ -17,6 +18,7 @@ export class WebhooksComponent implements OnInit {
   constructor(
     private webhooksService: WebhooksService,
     private breakpointService: BreakpointService,
+    private logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(takeUntilDestroy$());
     this.webhookState$ = this.webhooksService.changeWebhookState$.pipe(takeUntilDestroy$());
@@ -28,7 +30,7 @@ export class WebhooksComponent implements OnInit {
       next: (value) => {
         if (value) this.getWebhookList();
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to subscribe to webhook state changes', err),
     });
   }
 
@@ -38,7 +40,7 @@ export class WebhooksComponent implements OnInit {
         this.webhookList = response.results;
         this.webhooksService.setState(false);
       },
-      error: (err: any) => console.log(err),
+      error: (err: any) => this.logger.error('Failed to fetch webhook list', err),
     });
   }
 }

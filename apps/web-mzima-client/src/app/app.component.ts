@@ -106,9 +106,7 @@ export class AppComponent extends BaseComponent implements OnInit {
         filter((configLoaded) => configLoaded === true),
       )
       .subscribe(() => {
-        if (this.sessionService.siteFound) {
-          this.deploymentFound = true;
-        }
+        this.deploymentFound = this.sessionService.siteFound;
       });
 
     const isOnboardingDone = localStorage.getItem(

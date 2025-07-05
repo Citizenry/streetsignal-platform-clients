@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GeoJsonFilter, UsersService, UserResult } from '@mzima-client/sdk';
 import { TranslateService } from '@ngx-translate/core';
-import { BreakpointService } from '@services';
+import { BreakpointService, LoggingService } from '@services';
 import { LazyLoadEvent } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { debounceTime, forkJoin, Observable, Subject } from 'rxjs';
@@ -25,7 +25,6 @@ export class UsersComponent implements OnInit {
   public params: GeoJsonFilter = {
     limit: 10,
     offset: this.currentPage * 10,
-    // created_before_by_id: '',
     order: 'asc',
     q: '',
     page: 1,
@@ -41,6 +40,7 @@ export class UsersComponent implements OnInit {
     private cdr: ChangeDetectorRef,
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    private logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(untilDestroyed(this));
     this.currentPage = Number(this.activatedRoute.snapshot.queryParams['page'] ?? 1) - 1;
@@ -61,7 +61,7 @@ export class UsersComponent implements OnInit {
 
   public getUsers(event?: LazyLoadEvent) {
     this.currentPage = (event?.first ?? 0) / 10;
-    this.params.order = event?.sortOrder === 1 ? 'asc' : 'desc' || 'asc';
+    this.params.order = event?.sortOrder === 1 ? 'asc' : event?.sortOrder === -1 ? 'desc' : 'asc';
     this.params.q = event?.globalFilter || '';
     this.params.page = this.currentPage + 1;
 
@@ -78,7 +78,7 @@ export class UsersComponent implements OnInit {
         this.users = response.results;
         this.cdr.detectChanges();
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to get users', err),
     });
   }
 

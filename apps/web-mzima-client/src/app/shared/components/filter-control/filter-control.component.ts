@@ -169,13 +169,11 @@ export class FilterControlComponent implements ControlValueAccessor, OnChanges, 
   );
   public dataSource: any;
 
-  onChange = (value: any) => {
-    console.log(value);
-  };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  onChange = (_value: any) => {};
 
-  onTouched = (value?: any) => {
-    console.log(value);
-  };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  onTouched = (_value?: any) => {};
 
   public hasChild = (_: number, node: CategoryFlatNode) => node.expandable;
 

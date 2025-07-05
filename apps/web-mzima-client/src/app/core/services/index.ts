@@ -3,6 +3,7 @@ export { EnvService } from './env.service';
 export { ConfigService } from './config.service';
 export { LanguageService } from './language.service';
 export { LoaderService } from './loader.service';
+export { LoggingService } from './logging.service';
 export { EventBusService, EventType } from './event-bus.service';
 export { BreakpointService } from './breakpoint.service';
 export { IconService } from './icon.service';

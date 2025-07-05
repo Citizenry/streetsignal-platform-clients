@@ -27,8 +27,8 @@ const routes: Routes = [
     loadChildren: () => import('./map/map.module').then((m) => m.MapModule),
     canActivate: [AccessDeniedGuard, DeploymentFoundGuard],
     data: {
-      breadcrumb: 'nav.map',
-      ogTitle: 'nav.map',
+      breadcrumb: 'views.map',
+      ogTitle: 'views.map',
     },
   },
   {

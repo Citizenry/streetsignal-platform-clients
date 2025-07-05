@@ -13,6 +13,7 @@ import {
   apiHelpers,
 } from '@mzima-client/sdk';
 import { NotificationService } from '@services';
+import { LoggingService } from '../../../core/services/logging.service';
 import _ from 'lodash';
 
 @Component({
@@ -44,6 +45,7 @@ export class CreateFieldModalComponent implements OnInit {
     private categoriesService: CategoriesService,
     private surveysService: SurveysService,
     private notificationService: NotificationService,
+    private logger: LoggingService,
   ) {}
 
   ngOnInit() {
@@ -143,7 +145,7 @@ export class CreateFieldModalComponent implements OnInit {
         next: (response) => {
           this.availableCategories = response;
         },
-        error: (err) => console.log(err),
+        error: (err) => this.logger.error('Failed to load categories', err),
       });
   }
 

@@ -272,7 +272,6 @@ export class AccountSettingsModalComponent implements OnInit {
       dialogRef.afterClosed().subscribe((changedContacts: ContactsInterface[]) => {
         if (!changedContacts) return;
 
-        // TODO: This should be a batch update.
         const requests = changedContacts.map((contact) =>
           this.contactsService.update(contact.id, contact),
         );

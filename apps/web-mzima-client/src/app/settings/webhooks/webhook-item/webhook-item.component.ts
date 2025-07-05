@@ -15,6 +15,7 @@ import {
   WebhookResultInterface,
 } from '@mzima-client/sdk';
 import { Observable } from 'rxjs';
+import { LoggingService } from '../../../core/services/logging.service';
 
 @UntilDestroy()
 @Component({
@@ -50,6 +51,7 @@ export class WebhookItemComponent implements OnInit {
     private translate: TranslateService,
     private breakpointService: BreakpointService,
     private location: Location,
+    private logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(untilDestroyed(this));
     this.isDesktop$.subscribe({
@@ -93,7 +95,7 @@ export class WebhookItemComponent implements OnInit {
       next: (surveyId) => {
         if (surveyId) this.getSurveyAttributes(surveyId);
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to handle form ID changes', err),
     });
   }
 
@@ -103,7 +105,7 @@ export class WebhookItemComponent implements OnInit {
         this.webhook = webhook.result;
         this.fillInForm(webhook.result);
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to fetch webhook by ID', err),
     });
   }
 
@@ -131,7 +133,7 @@ export class WebhookItemComponent implements OnInit {
           },
         ];
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to fetch surveys', err),
     });
   }
 
@@ -144,7 +146,7 @@ export class WebhookItemComponent implements OnInit {
           source_field_key: this.checkKeyFields(this.webhook?.source_field_key!),
         });
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to fetch survey attributes', err),
     });
   }
 
@@ -189,7 +191,7 @@ export class WebhookItemComponent implements OnInit {
     this.webhooksService.post(this.form.value).subscribe({
       next: () => this.navigateToWebhooks(),
       error: (err) => {
-        console.log(err);
+        this.logger.error('Failed to create webhook', err);
         this.submitted = false;
       },
     });
@@ -199,7 +201,7 @@ export class WebhookItemComponent implements OnInit {
     this.webhooksService.update(this.form.controls['id'].value, this.form.value).subscribe({
       next: () => this.navigateToWebhooks(),
       error: (err) => {
-        console.log(err);
+        this.logger.error('Failed to update webhook', err);
         this.submitted = false;
       },
     });
@@ -239,7 +241,7 @@ export class WebhookItemComponent implements OnInit {
   public deleteWebhook() {
     this.webhooksService.delete(this.form.controls['id'].value).subscribe({
       next: () => this.navigateToWebhooks(),
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to delete webhook', err),
     });
   }
 

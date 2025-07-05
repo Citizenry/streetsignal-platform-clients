@@ -74,7 +74,6 @@ export class DataSourceItemComponent extends BaseComponent implements AfterConte
   loadData(): void {}
 
   private getAvailableProviders(providers: any) {
-    // TODO: REWORK
     const tempProviders: any[] = [];
     for (const key in providers) {
       tempProviders.push({
@@ -100,7 +99,6 @@ export class DataSourceItemComponent extends BaseComponent implements AfterConte
     //       this.providersData = arrayHelpers.sortArray(providers, 'name');
     //       this.cloneProviders = _.cloneDeep(this.providersData);
     //       // this.availableProviders = this.getAvailableProviders(this.providersData);
-    //       console.log('providers: ', this.providersData);
     //     },
     //   });
 

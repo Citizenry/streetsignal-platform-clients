@@ -61,7 +61,7 @@ export class CreateCategoryFormComponent extends BaseComponent implements OnInit
     this.checkDesktop();
 
     this.languages = this.languageService.getLanguages();
-    this.defaultLanguage = this.languages.find((lang) => lang.code === 'en'); // FIXME
+    this.defaultLanguage = this.languages.find((lang) => lang.code === 'en') || this.languages[0];
 
     this.form = this.fb.group({
       id: [''],
