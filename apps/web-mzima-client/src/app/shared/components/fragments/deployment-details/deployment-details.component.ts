@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { NavToolbarService } from '../../../helpers/navtoolbar.service';
 import { BaseComponent } from '../../../../base.component';
 import { BreakpointService, SessionService } from '@services';
+import { UntilDestroy } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-deployment-details',
   templateUrl: './deployment-details.component.html',

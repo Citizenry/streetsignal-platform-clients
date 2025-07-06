@@ -121,34 +121,24 @@ export class GeneralComponent implements OnInit {
     this.submitted = true;
     this.loader.show();
     if (this.uploadedFile) {
-      console.log('Uploading file:', this.uploadedFile.name);
       this.mediaService
         .uploadFile(this.uploadedFile)
         .pipe(
           mergeMap((newImage: any) => {
-            console.log('Upload response:', newImage);
             if (!newImage?.result?.original_file_url) {
               throw new Error('Invalid upload response: missing original_file_url');
             }
-            this.siteConfig.image_header = newImage.result.original_file_url;
+            this.siteConfig.image_header = this.fixImageUrl(newImage.result.original_file_url);
             return this.updateSettings();
           }),
         )
         .subscribe({
-          next: (updateResult) => {
-            console.log('Settings update result:', updateResult);
+          next: () => {
             this.showSnackbar('Deployment logo saved successfully');
             // Clear the uploaded file after successful save
             this.uploadedFile = undefined;
             // Refresh siteConfig from session service to ensure UI shows the updated image
-            const oldImageHeader = this.siteConfig.image_header;
             this.siteConfig = this.sessionService.getSiteConfigurations();
-            console.log(
-              'General: Updated siteConfig.image_header from',
-              oldImageHeader,
-              'to',
-              this.siteConfig.image_header,
-            );
           },
           complete: () => {
             this.loader.hide();
@@ -156,7 +146,6 @@ export class GeneralComponent implements OnInit {
             this.changesMade = false;
           },
           error: (error) => {
-            console.error('Save error:', error);
             this.loader.hide();
             this.submitted = false;
             this.notificationService.showError(error.message || 'Failed to save deployment logo');
@@ -164,8 +153,7 @@ export class GeneralComponent implements OnInit {
         });
     } else {
       this.updateSettings().subscribe({
-        next: (updateResult: any) => {
-          console.log('Settings update result (no upload):', updateResult);
+        next: () => {
           this.showSnackbar('Settings saved successfully');
         },
         complete: () => {
@@ -174,7 +162,6 @@ export class GeneralComponent implements OnInit {
           this.changesMade = false;
         },
         error: (error: any) => {
-          console.error('Settings update error:', error);
           this.submitted = false;
           this.loader.hide();
           this.notificationService.showError(error.message || 'Failed to save settings');
@@ -235,5 +222,16 @@ export class GeneralComponent implements OnInit {
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
     });
+  }
+
+  private fixImageUrl(imageUrl: string): string {
+    if (!imageUrl) return '';
+
+    // Fix URLs that point to localhost:3000 to use the correct API port 8081
+    if (imageUrl.includes('localhost:3000')) {
+      return imageUrl.replace('localhost:3000', 'localhost:8081');
+    }
+
+    return imageUrl;
   }
 }

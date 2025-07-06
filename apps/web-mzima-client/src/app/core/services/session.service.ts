@@ -100,11 +100,22 @@ export class SessionService {
     this._deploymentInfo.next({
       title: this.currentConfig['site']?.name ?? '',
       description: this.currentConfig['site']?.description ?? '',
-      logo: this.currentConfig['site']?.image_header ?? '',
+      logo: this.fixImageUrl(this.currentConfig['site']?.image_header ?? ''),
       private: this.currentConfig['site']?.private ?? false,
       email: this.currentConfig['site']?.email ?? '',
     });
     this.configLoaded = true;
+  }
+
+  private fixImageUrl(imageUrl: string): string {
+    if (!imageUrl) return '';
+
+    // Fix URLs that point to localhost:3000 to use the correct API port 8081
+    if (imageUrl.includes('localhost:3000')) {
+      return imageUrl.replace('localhost:3000', 'localhost:8081');
+    }
+
+    return imageUrl;
   }
 
   loadSessionDataFromLocalStorage() {
