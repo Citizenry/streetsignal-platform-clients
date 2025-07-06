@@ -4,6 +4,19 @@
 
 This Platform Client (Mzima) repo houses 2 clients: The web client and the mobile client. Find the installation instructions below.
 
+## Recent Updates
+
+### PHP 8 Modernization (January 2025)
+The platform has been modernized for PHP 8 compatibility with enhanced OAuth2 authentication. Key improvements include:
+
+- **OAuth2 Authentication**: Complete OAuth2 implementation for secure authentication
+- **Enhanced Security**: Improved authentication and authorization mechanisms
+- **Modern Architecture**: Updated frontend services and component patterns
+- **Type Safety**: Enhanced TypeScript definitions and error handling
+- **Testing**: Updated E2E test suite for modernized authentication flow
+
+For detailed information about the modernization work, see [`PHP8_MODERNIZATION_SUMMARY.md`](PHP8_MODERNIZATION_SUMMARY.md) and the [OAuth2 Authentication Guide](../platform/OAUTH_AUTHENTICATION_GUIDE.md).
+
 #
 
 ### Requirements

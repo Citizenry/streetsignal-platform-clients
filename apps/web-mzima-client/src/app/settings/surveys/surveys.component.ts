@@ -5,6 +5,7 @@ import { BreakpointService } from '@services';
 import { forkJoin, Observable, take } from 'rxjs';
 import { SurveysService, SurveyItem, apiHelpers } from '@mzima-client/sdk';
 import { ConfirmModalService } from '../../core/services/confirm-modal.service';
+import { LoggingService } from '../../core/services/logging.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()
@@ -34,6 +35,7 @@ export class SurveysComponent implements OnInit {
     private readonly translate: TranslateService,
     private readonly confirmModalService: ConfirmModalService,
     private readonly breakpointService: BreakpointService,
+    private readonly logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(untilDestroyed(this));
   }
@@ -72,7 +74,7 @@ export class SurveysComponent implements OnInit {
         this.getSurveys();
       },
       error: (err) => {
-        console.log(err);
+        this.logger.error('Failed to duplicate survey', err);
         this.isLoading = false;
       },
     });
@@ -113,7 +115,7 @@ export class SurveysComponent implements OnInit {
           this.selectedSurveys = [];
         },
         error: (e) => {
-          console.log(e);
+          this.logger.error('Failed to delete surveys', e);
           this.isLoading = false;
         },
       });

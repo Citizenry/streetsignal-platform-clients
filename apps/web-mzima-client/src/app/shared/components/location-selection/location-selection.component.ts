@@ -101,9 +101,8 @@ export class LocationSelectionComponent implements ControlValueAccessor {
     });
   }
 
-  onChange = (location: SelectedLocation) => {
-    console.log(location);
-  };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  onChange = (_location: SelectedLocation) => {};
 
   onTouched = () => {};
 

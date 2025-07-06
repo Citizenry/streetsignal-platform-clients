@@ -175,8 +175,6 @@ export class MapComponent extends MainViewComponent implements OnInit {
         animate: false,
       });
     }
-    // Later TODO: Check -> Does this check take care of when there are no posts with location info in deployment (at the time when bounds is null)?
-    //---------------------
 
     control.zoom({ position: 'bottomleft' }).addTo(map);
   }
@@ -300,12 +298,6 @@ export class MapComponent extends MainViewComponent implements OnInit {
           // Do we have any markers (layers) at all?
           const isFirstLayerEmpty = this.mapLayers.length === 0;
 
-          // Do the number of markers equal what we expect?
-          // const isLayerCountMismatch =
-          //   pageNumber > 1 &&
-          //   !isFirstLayerEmpty &&
-          //   this.mapLayers[0].getLayers().length !== geoPosts.getLayers().length;
-
           // Is the client in the middle of retrieving multiple pages of markers?
           const isThisInProgress =
             pageNumber > 1 && posts.meta.total !== this.mapLayers[0].getLayers().length;
@@ -370,10 +362,6 @@ export class MapComponent extends MainViewComponent implements OnInit {
               }
             }
           }
-
-          // if (posts.results.length && this.params.page <= this.params.limit) {
-          //   this.mapFitToBounds = geoPosts.getBounds();
-          // }
         },
         error: (err) => {
           if (err.message.match(/Http failure response for/)) {

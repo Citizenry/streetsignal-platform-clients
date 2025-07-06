@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { mergeMap, Observable } from 'rxjs';
+import { mergeMap, Observable, tap } from 'rxjs';
 import { generalHelpers, UsersService } from '@mzima-client/sdk';
 import { ResourceService } from './resource.service';
 import { EnvService } from './env.service';
@@ -45,9 +45,8 @@ export class AuthService extends ResourceService<any> {
       scope: generalHelpers.CONST.CLAIMED_USER_SCOPES.join(' '),
     };
     return super.post(payload).pipe(
-      mergeMap(async (authResponse) => {
+      tap((authResponse: any) => {
         const accessToken = authResponse.access_token;
-
         if (authResponse.expires_in) {
           this.sessionService.setSessionData({
             accessToken,
@@ -63,15 +62,14 @@ export class AuthService extends ResourceService<any> {
             tokenType: authResponse.token_type,
           });
         }
-        return this.userService.getCurrentUser().subscribe({
-          next: (userData: any) => {
-            const { result } = userData;
-            this.gtm.setUserLayer(result);
-            this.gtm.registerEvent({ event: EnumGtmEvent.Login });
-            this.setCurrentUserToSession(result);
-            this.userService.dispatchUserEvents({ result });
-          },
-        });
+      }),
+      mergeMap(() => this.userService.getCurrentUser()),
+      tap((userData: any) => {
+        const { result } = userData;
+        this.gtm.setUserLayer(result);
+        this.gtm.registerEvent({ event: EnumGtmEvent.Login });
+        this.setCurrentUserToSession(result);
+        this.userService.dispatchUserEvents({ result });
       }),
     );
   }

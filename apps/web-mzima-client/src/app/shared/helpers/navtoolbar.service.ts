@@ -19,9 +19,6 @@ export class NavToolbarService {
 
   constructor(private dialog: MatDialog) {}
 
-  // Removed other functions added here previously since we now have base.component.ts sharing needed data
-  // TODO: Should these remaining 2 also go into the base component ts file?
-
   public toggleBurgerMenu(value?: boolean): void {
     this.isBurgerMenuOpen = value ?? !this.isBurgerMenuOpen;
   }

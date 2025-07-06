@@ -5,6 +5,7 @@ import { AuthService, EventBusService, EventType, SessionService } from '@servic
 import { regexHelper } from '@helpers';
 import { ForgotPasswordComponent } from '@auth';
 import { Router } from '@angular/router';
+import { filter, switchMap, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login-form',
@@ -45,20 +46,26 @@ export class LoginFormComponent {
     const { email, password } = this.form.value;
     this.form.disable();
     this.submitted = true;
-    this.authService.login(email, password).subscribe({
-      next: (response) => {
-        if (this.sessionService.accessToSite) {
-          this.router.navigate(['/map']);
-        }
-        this.loggined.emit(response);
-      },
-      error: (err) => {
-        this.loginError = err.error.message;
-        this.submitted = false;
-        this.form.enable();
-        setTimeout(() => (this.loginError = ''), 4000);
-      },
-    });
+    this.sessionService.configLoaded$
+      .pipe(
+        filter((loaded) => loaded),
+        take(1),
+        switchMap(() => this.authService.login(email, password)),
+      )
+      .subscribe({
+        next: (response) => {
+          if (this.sessionService.accessToSite) {
+            this.router.navigate(['/map']);
+          }
+          this.loggined.emit(response);
+        },
+        error: (err) => {
+          this.loginError = err.error.message;
+          this.submitted = false;
+          this.form.enable();
+          setTimeout(() => (this.loginError = ''), 4000);
+        },
+      });
   }
 
   togglePasswordVisible() {

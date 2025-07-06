@@ -10,12 +10,11 @@ export class DeploymentFoundGuard implements CanActivate {
   constructor(private router: Router, private service: SessionService) {}
 
   canActivate(): Observable<boolean | UrlTree> {
-    return this.service.configLoaded$.pipe(
-      filter((configLoaded) => configLoaded !== false),
+    return this.service.deploymentInfo$.pipe(
+      filter((deploymentInfo) => deploymentInfo !== false),
       take(1),
-      switchMap((configLoaded) => {
-        const siteFound: boolean = this.service.siteFound;
-        if (configLoaded && siteFound) {
+      switchMap(() => {
+        if (this.service.siteFound) {
           return [true];
         }
         return [this.router.parseUrl('/notfound')];

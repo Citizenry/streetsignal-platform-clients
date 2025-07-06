@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, mergeMap } from 'rxjs';
-// import { EnvService, IntercomService, SessionService } from '@services';
+
 import { EnvService, SessionService } from '@services';
 import {
   EnvLoader,
@@ -20,7 +20,7 @@ export class AuthService extends ResourceService<any> {
     protected envLoader: EnvLoader,
     protected env: EnvService,
     private sessionService: SessionService,
-    private userService: UsersService, // + private intercomService: IntercomService,
+    private userService: UsersService,
   ) {
     super(httpClient, envLoader);
   }
@@ -103,6 +103,5 @@ export class AuthService extends ResourceService<any> {
     console.log('logout');
     this.sessionService.clearSessionData();
     this.sessionService.clearUserData();
-    // this.intercomService.logoutIntercom();
   }
 }

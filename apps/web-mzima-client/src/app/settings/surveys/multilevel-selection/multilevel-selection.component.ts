@@ -72,9 +72,8 @@ export class MultilevelSelectionComponent implements ControlValueAccessor, OnCha
   );
   public dataSource: any;
 
-  private onChange = (values: any) => {
-    console.log(values);
-  };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private onChange = (_values: any) => {};
   private onTouched = () => {};
 
   public hasChild = (_: number, node: CategoryFlatNode) => node.expandable;

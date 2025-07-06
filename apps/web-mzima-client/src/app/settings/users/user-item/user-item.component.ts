@@ -13,7 +13,7 @@ import {
   generalHelpers,
 } from '@mzima-client/sdk';
 import { ConfirmModalService } from '../../../core/services/confirm-modal.service';
-import { BreakpointService } from '@services';
+import { BreakpointService, LoggingService } from '@services';
 import { regexHelper } from '@helpers';
 
 @UntilDestroy()
@@ -41,6 +41,7 @@ export class UserItemComponent implements OnInit {
     private confirmModalService: ConfirmModalService,
     private breakpointService: BreakpointService,
     private location: Location,
+    private logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(untilDestroyed(this));
     this.isDesktop$.subscribe({
@@ -87,7 +88,7 @@ export class UserItemComponent implements OnInit {
           this.form.value.email ===
           localStorage.getItem(`${generalHelpers.CONST.LOCAL_STORAGE_PREFIX}email`);
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to get user information', err),
     });
   }
 
@@ -96,7 +97,7 @@ export class UserItemComponent implements OnInit {
       next: (response) => {
         this.roles = response.results;
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to get roles', err),
     });
   }
 
@@ -173,7 +174,7 @@ export class UserItemComponent implements OnInit {
   public async delete() {
     this.userService.deleteUser(this.form.value.id).subscribe({
       next: () => this.navigateToUsers(),
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to delete user', err),
     });
   }
 }

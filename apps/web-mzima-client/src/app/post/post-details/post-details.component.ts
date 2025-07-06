@@ -25,7 +25,7 @@ import {
   SurveysService,
 } from '@mzima-client/sdk';
 import { TranslateService } from '@ngx-translate/core';
-import { untilDestroyed } from '@ngneat/until-destroy';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { lastValueFrom, Subscription } from 'rxjs';
 import { BaseComponent } from '../../base.component';
 import { preparingVideoUrl } from '../../core/helpers/validators';
@@ -34,6 +34,7 @@ import { BreakpointService, EventBusService, EventType, SessionService } from '@
 import { LanguageService } from '../../core/services/language.service';
 import { PostTranslateComponent } from '../post-translate/post-translate.component';
 
+@UntilDestroy()
 @Component({
   selector: 'app-post-details',
   templateUrl: './post-details.component.html',
@@ -77,15 +78,15 @@ export class PostDetailsComponent extends BaseComponent implements OnChanges, On
     this.getUserData();
     this.checkPermission();
     this.userId = Number(this.user.userId);
-    this.router.events.subscribe((ev) => {
+    this.router.events.pipe(untilDestroyed(this)).subscribe((ev) => {
       if (ev instanceof ResolveEnd) {
-        this.dataSubscription.unsubscribe();
+        this.dataSubscription?.unsubscribe();
       }
     });
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
+    this.route.params.pipe(untilDestroyed(this)).subscribe((params) => {
       if (params['id']) {
         //----------------------
         this.postChanged = true;
@@ -105,7 +106,7 @@ export class PostDetailsComponent extends BaseComponent implements OnChanges, On
       this.postId = this.post.id;
       this.getSurvey();
     } else {
-      this.dataSubscription = this.route.data.subscribe((data) => {
+      this.dataSubscription = this.route.data.pipe(untilDestroyed(this)).subscribe((data) => {
         this.post = data['post'];
         if (this.post) this.getSurvey();
       });
@@ -326,12 +327,13 @@ export class PostDetailsComponent extends BaseComponent implements OnChanges, On
     });
   }
 
-  ngOnDestroy() {
+  override ngOnDestroy() {
     this.metaService.updateTag({
       property: 'og:title',
       content: sessionStorage.getItem('ogTitle')!,
     });
     this.metaService.removeTag("property='og:description'");
+    super.ngOnDestroy();
   }
 
   public getDate(value: any, format: string): string {
@@ -349,13 +351,16 @@ export class PostDetailsComponent extends BaseComponent implements OnChanges, On
       },
     });
 
-    dialogRef.afterClosed().subscribe((response) => {
-      if (response) {
-        this.post = response.post;
-        this.getData(this.post);
-        this.displayLanguage = response.displayLanguage.code;
-      }
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(untilDestroyed(this))
+      .subscribe((response) => {
+        if (response) {
+          this.post = response.post;
+          this.getData(this.post);
+          this.displayLanguage = response.displayLanguage.code;
+        }
+      });
   }
 
   public displayOriginalPost() {

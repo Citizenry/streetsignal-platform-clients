@@ -61,7 +61,7 @@ export class CreateCategoryFormComponent extends BaseComponent implements OnInit
     this.checkDesktop();
 
     this.languages = this.languageService.getLanguages();
-    this.defaultLanguage = this.languages.find((lang) => lang.code === 'en'); // FIXME
+    this.defaultLanguage = this.languages.find((lang) => lang.code === 'en') || this.languages[0];
 
     this.form = this.fb.group({
       id: [''],
@@ -126,8 +126,9 @@ export class CreateCategoryFormComponent extends BaseComponent implements OnInit
 
   loadData(): void {}
 
-  ngOnDestroy() {
+  override ngOnDestroy() {
     this.categoriesService.categoryErrors.next(null);
+    super.ngOnDestroy();
   }
 
   private formSubscribe() {
@@ -167,6 +168,7 @@ export class CreateCategoryFormComponent extends BaseComponent implements OnInit
   private getCategories() {
     this.categoriesService
       .getCategories({ only: apiHelpers.ONLY.TAG_ID_PARENTID_PARENT_SLUG })
+      .pipe(untilDestroyed(this))
       .subscribe({
         next: (data) => {
           this.categories = data.results
@@ -177,22 +179,25 @@ export class CreateCategoryFormComponent extends BaseComponent implements OnInit
   }
 
   private getRoles() {
-    this.rolesService.getRoles().subscribe({
-      next: (response) => {
-        this.roleOptions = formHelper.roleTransform({
-          roles: response.results,
-          userRole: this.userRole,
-          onlyMe: this.translate.instant('role.only_me'),
-          everyone: this.translate.instant('role.everyone'),
-          specificRoles: this.translate.instant('app.specific_roles'),
-          isShowIcons: false,
-        });
+    this.rolesService
+      .getRoles()
+      .pipe(untilDestroyed(this))
+      .subscribe({
+        next: (response) => {
+          this.roleOptions = formHelper.roleTransform({
+            roles: response.results,
+            userRole: this.userRole,
+            onlyMe: this.translate.instant('role.only_me'),
+            everyone: this.translate.instant('role.everyone'),
+            specificRoles: this.translate.instant('app.specific_roles'),
+            isShowIcons: false,
+          });
 
-        if (this.category) {
-          this.checkRoleOptions(this.category.parent?.id);
-        }
-      },
-    });
+          if (this.category) {
+            this.checkRoleOptions(this.category.parent?.id);
+          }
+        },
+      });
   }
 
   checkRoleOptions(parentId: number) {
@@ -273,14 +278,17 @@ export class CreateCategoryFormComponent extends BaseComponent implements OnInit
       },
     });
 
-    dialogRef.afterClosed().subscribe({
-      next: (result: LanguageInterface[]) => {
-        if (!result) return;
-        const defaultIndex = result.indexOf(this.defaultLanguage!);
-        result.splice(defaultIndex, 1);
-        this.activeLanguages = [this.defaultLanguage!, ...result];
-      },
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(untilDestroyed(this))
+      .subscribe({
+        next: (result: LanguageInterface[]) => {
+          if (!result) return;
+          const defaultIndex = result.indexOf(this.defaultLanguage!);
+          result.splice(defaultIndex, 1);
+          this.activeLanguages = [this.defaultLanguage!, ...result];
+        },
+      });
   }
 
   public chooseTranslation(lang: LanguageInterface): void {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { forkJoin, Observable } from 'rxjs';
-import { BreakpointService, NotificationService } from '@services';
+import { BreakpointService, NotificationService, LoggingService } from '@services';
 import { generalHelpers, UsersService } from '@mzima-client/sdk';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { TranslateService } from '@ngx-translate/core';
@@ -26,6 +26,7 @@ export class UserSettingsComponent implements OnInit {
     private notificationService: NotificationService,
     private translate: TranslateService,
     private router: Router,
+    private logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(untilDestroyed(this));
     this.userId = localStorage.getItem(`${generalHelpers.CONST.LOCAL_STORAGE_PREFIX}userId`)!;
@@ -87,7 +88,7 @@ export class UserSettingsComponent implements OnInit {
         this.showNotification('success');
       },
       error: (err) => {
-        console.log(err);
+        this.logger.error('Failed to save user settings', err);
         this.submitted = false;
         this.showNotification('error');
       },
@@ -141,13 +142,6 @@ export class UserSettingsComponent implements OnInit {
           },
           title: 'settings.user_settings.api_key_saved',
           buttons: [
-            // {
-            //   color: 'gray',
-            //   text: 'settings.user_settings.start_tagging',
-            //   handler: () => {
-            //     this.router.navigate(['/settings/hdx']);
-            //   },
-            // },
             {
               color: 'primary',
               text: 'notify.export.confirmation',

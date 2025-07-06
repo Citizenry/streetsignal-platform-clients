@@ -28,6 +28,7 @@ import {
   SessionService,
   LanguageService,
   ConfirmModalService,
+  LoggingService,
 } from '@services';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
@@ -92,7 +93,6 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
   public post?: any;
   public atLeastOneFieldHasValidationError: boolean;
   public formValidator = new formValidators.FormValidator();
-  // public locationRequired = false;
   public emptyLocation = false;
   public submitted = false;
   public filters;
@@ -118,6 +118,7 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
     private snackBar: MatSnackBar,
     private cdr: ChangeDetectorRef,
     private sanitizer: DomSanitizer,
+    private logger: LoggingService,
   ) {
     super(sessionService, breakpointService);
     this.checkDesktop();
@@ -340,7 +341,7 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
   }
 
   public toggleFocus(event: any, field: any) {
-    console.log(field);
+    this.logger.debug('Toggle focus on field', field);
     event.stopPropagation();
   }
 
@@ -521,18 +522,18 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
 
   private addFormArray(value: string, field: any) {
     return this.formBuilder.array(
-      [] || [new FormControl(value)],
+      [new FormControl(value)],
       field.required ? Validators.required : null,
     );
   }
 
   private addFormControl(value: any, field: any): FormControl {
     if (field.input === 'video') {
-      const videoValidators = [];
+      const videoValidators: ValidatorFn[] = [];
       if (field.required) {
         videoValidators.push(Validators.required);
       }
-      videoValidators.push(this.formValidator.videoValidator);
+      videoValidators.push(this.formValidator.videoValidator as ValidatorFn);
       return new FormControl(value, videoValidators);
     }
 
@@ -732,7 +733,7 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
     try {
       await this.preparationData();
     } catch (error: any) {
-      console.log(error);
+      this.logger.error('Failed to prepare post data', error);
       this.form.enable();
       this.submitted = false;
       this.showMessage(error, 'error');
@@ -783,7 +784,6 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
         }
       },
       complete: async () => {
-        // await this.postComplete();
         this.updated.emit();
         if (this.checkRoutes('feed')) this.backNavigation();
       },
@@ -862,12 +862,7 @@ export class PostEditComponent extends BaseComponent implements OnInit, OnChange
       this.postsService.unlockPost(this.postId).subscribe();
       this.cancel.emit();
     }
-    // else {
-    //   this.eventBusService.next({
-    //     type: EventType.AddPostButtonSubmit,
-    //     payload: true,
-    //   });
-    // }
+
     this.backNavigation();
   }
 

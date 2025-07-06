@@ -1,12 +1,8 @@
-import { Base, Login, Settings } from '../actions';
+import { Settings } from '../actions';
 
 describe('Initialize surveys page', () => {
-  before(() => {
-    Base.goHomePage();
-    Base.saveLocalStorage('USH_is_onboarding_done', 'true');
-    cy.get('app-cookies-notification').should('exist');
-    cy.get(`[data-qa="button-decline-cookies"]`).contains('Decline').click();
-    Login.loginForm();
+  beforeEach(() => {
+    cy.login();
   });
 
   it('Settings page exists', () => {

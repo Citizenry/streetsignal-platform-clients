@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { LanguageInterface } from '@mzima-client/sdk';
-import { UserInterface } from '@mzima-client/sdk';
+
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { TranslateService } from '@ngx-translate/core';
 import {
@@ -19,7 +19,6 @@ import {
 import { debounceTime, filter } from 'rxjs';
 import { BaseComponent } from './base.component';
 import { EnumGtmEvent } from './core/enums/gtm';
-import { Intercom } from '@supy-io/ngx-intercom';
 
 @UntilDestroy()
 @Component({
@@ -50,7 +49,6 @@ export class AppComponent extends BaseComponent implements OnInit {
     private eventBusService: EventBusService,
     private env: EnvService,
     private gtm: GtmTrackingService,
-    private intercom: Intercom,
   ) {
     super(sessionService, breakpointService);
     this.checkDesktop();
@@ -106,9 +104,7 @@ export class AppComponent extends BaseComponent implements OnInit {
         filter((configLoaded) => configLoaded === true),
       )
       .subscribe(() => {
-        if (this.sessionService.siteFound) {
-          this.deploymentFound = true;
-        }
+        this.deploymentFound = this.sessionService.siteFound;
       });
 
     const isOnboardingDone = localStorage.getItem(
@@ -215,37 +211,13 @@ export class AppComponent extends BaseComponent implements OnInit {
     sessionStorage.setItem('ogTitle', this.translate.instant(ogTitle));
   }
 
-  loadData(): void {
-    const user: UserInterface = this.user;
-    if (!user.userId) return this.intercom.shutdown();
-    const site = this.sessionService.getSiteConfigurations();
-    const parsedUrl = new URL(window.location.href);
-    const domain = parsedUrl.host;
-
-    const io = {
-      app_id: this.env.environment.intercom_appid,
-      custom_launcher_selector: '.intercom_custom_launcher',
-      email: user.email,
-      created_at: user.created?.getDate(),
-      user_id: `${domain}_${user.userId}`,
-      deployment_url: domain,
-      realname: user.realname,
-      last_login: user.last_login,
-      role: user.role,
-      company: {
-        company_id: domain,
-        name: String(site.name),
-        id: domain,
-        created_at: 0, // Faking this because we don't have this data
-        plan: site.tier,
-      },
-    };
-    this.intercom.boot(io);
-  }
-
   private removeTags(tags: string[]) {
     for (const tag of tags) {
       this.metaService.removeTag(`property='${tag}'`);
     }
+  }
+
+  loadData(): void {
+    // Intercom integration removed
   }
 }

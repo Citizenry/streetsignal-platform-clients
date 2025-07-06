@@ -8,6 +8,7 @@ import { BreakpointService } from '@services';
 import { Location } from '@angular/common';
 import { PermissionsService, RolesService, RoleResult, generalHelpers } from '@mzima-client/sdk';
 import { ConfirmModalService } from '../../../core/services/confirm-modal.service';
+import { LoggingService } from '../../../core/services/logging.service';
 
 const PERMISSIONS = {
   EDIT_THEIR_OWN_POSTS: 'Edit Their Own Posts',
@@ -42,6 +43,7 @@ export class RoleItemComponent implements OnInit {
     private breakpointService: BreakpointService,
     private location: Location,
     private changeDetectorRef: ChangeDetectorRef,
+    private logger: LoggingService,
   ) {
     this.isDesktop$ = this.breakpointService.isDesktop$.pipe(untilDestroyed(this));
     this.isDesktop$.subscribe({
@@ -85,7 +87,7 @@ export class RoleItemComponent implements OnInit {
           this.changeDetectorRef.detectChanges();
         }
       },
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to load role and permissions data', err),
     });
   }
 
@@ -154,7 +156,7 @@ export class RoleItemComponent implements OnInit {
   public async delete() {
     this.rolesService.deleteRole(this.role.id).subscribe({
       next: () => this.navigateToRoles(),
-      error: (err) => console.log(err),
+      error: (err) => this.logger.error('Failed to load role and permissions data', err),
     });
   }
 

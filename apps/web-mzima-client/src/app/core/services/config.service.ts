@@ -32,6 +32,7 @@ export class ConfigService {
   }
 
   private getConfig(): Observable<any> {
+    this.sessionService.configLoaded = false;
     return this.httpClient
       .get(`${this.env.environment.backend_url + this.getApiVersions() + this.getResourceUrl()}`)
       .pipe(
@@ -47,9 +48,9 @@ export class ConfigService {
             return data.result;
           },
           error: (error) => {
-            if (error.status === 404 && error.error.errors[0].message === 'Deployment not found')
-              this.sessionService.configLoaded = true;
-            else setTimeout(() => this.getConfig(), 5000);
+            if (error.status !== 404) {
+              setTimeout(() => this.getConfig(), 5000);
+            }
           },
         }),
       );

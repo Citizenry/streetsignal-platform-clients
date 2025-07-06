@@ -50,10 +50,7 @@ export class FeedComponent extends MainViewComponent implements OnInit, OnDestro
   private _routerEvent = Subscription.EMPTY;
   @ViewChild('feed') public feed: ElementRef;
   @ViewChild('masonry') public masonry: NgxMasonryComponent;
-  // private readonly getPostsSubject = new Subject<{
-  //   params: GeoJsonFilter;
-  //   add?: boolean;
-  // }>();
+
   public pagination = {
     page: 0,
     limit: 20,

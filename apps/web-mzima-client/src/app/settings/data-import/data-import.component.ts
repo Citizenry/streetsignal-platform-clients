@@ -18,6 +18,7 @@ import { NotificationService } from '../../core/services/notification.service';
 import { PollingService } from '../../core/services/polling.service';
 import { LoaderService } from '../../core/services/loader.service';
 import { ConfirmModalService } from '../../core/services/confirm-modal.service';
+import { LoggingService } from '../../core/services/logging.service';
 import { BreakpointService, SessionService } from '@services';
 import _ from 'lodash';
 
@@ -64,6 +65,7 @@ export class DataImportComponent extends BaseComponent implements OnInit {
     private confirm: ConfirmModalService,
     private formsService: FormsService,
     private surveysService: SurveysService,
+    private logger: LoggingService,
   ) {
     super(sessionService, breakpointService);
     this.checkDesktop();
@@ -312,7 +314,7 @@ export class DataImportComponent extends BaseComponent implements OnInit {
   }
 
   checkRequiredFields(fields: any) {
-    console.log(fields);
+    this.logger.debug('Checking required fields for data import', { fields });
     const missing: any = [];
     this.requiredFields.forEach((v, k) => {
       if (_.isNil(fields[k])) {
@@ -344,7 +346,6 @@ export class DataImportComponent extends BaseComponent implements OnInit {
     this.importService.update(this.uploadedCSV.id, this.uploadedCSV).subscribe(() => {
       this.importService.import({ id: this.uploadedCSV.id, action: 'import' }).subscribe({
         next: () => {
-          // this.pollingService.getImportJobs();
           this.router.navigate(['results'], {
             relativeTo: this.route,
             queryParams: { job: this.uploadedCSV.id },

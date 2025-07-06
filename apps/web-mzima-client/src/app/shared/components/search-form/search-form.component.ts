@@ -6,7 +6,13 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { NavigationStart, Router } from '@angular/router';
 import { searchFormHelper } from '@helpers';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { EventBusService, EventType, SessionService, BreakpointService } from '@services';
+import {
+  EventBusService,
+  EventType,
+  SessionService,
+  BreakpointService,
+  LoggingService,
+} from '@services';
 import {
   BehaviorSubject,
   debounceTime,
@@ -101,6 +107,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
     private notificationsService: NotificationsService,
     private snackBar: MatSnackBar,
     private translate: TranslateService,
+    private logger: LoggingService,
   ) {
     super(sessionService, breakpointService);
     this.checkDesktop();
@@ -183,7 +190,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
           }
         }, 1);
       },
-      error: (err) => console.log('isMainFiltersHidden:', err),
+      error: (err) => this.logger.error('Failed to update main filters visibility', err),
     });
 
     this.session.currentUserData$.pipe(untilDestroyed(this)).subscribe({
@@ -269,7 +276,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
         }),
       )
       .subscribe({
-        error: (err) => console.log('postsFilters:', err),
+        error: (err) => this.logger.error('Failed to get posts filters', err),
       });
   }
 
@@ -280,7 +287,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
           this.total = total;
         }
       },
-      error: (err) => console.log('totalGeoPosts:', err),
+      error: (err) => this.logger.error('Failed to get total geo posts', err),
     });
 
     this.postsService.totalPosts$.pipe(untilDestroyed(this)).subscribe({
@@ -289,7 +296,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
           this.total = total;
         }
       },
-      error: (err) => console.log('totalPosts:', err),
+      error: (err) => this.logger.error('Failed to get total posts', err),
     });
   }
 
@@ -354,7 +361,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
           }
         },
         error: (err) => {
-          console.log('getCategories:', err);
+          this.logger.error('Failed to get categories', err);
         },
       });
   }
@@ -429,7 +436,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
           });
           this.router.navigate([this.router.url.includes('/feed') ? '/feed' : '/map']);
         } else {
-          console.log('getCollectionInfo:', err);
+          this.logger.error('Failed to get collection info', err);
         }
       },
     });

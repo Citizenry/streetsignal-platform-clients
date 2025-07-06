@@ -3,6 +3,7 @@ import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/f
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { ConfirmModalService } from '../../core/services/confirm-modal.service';
+import { LoggingService } from '../../core/services/logging.service';
 import { formHelper } from '@helpers';
 
 @Component({
@@ -34,6 +35,7 @@ export class ImageUploaderComponent implements ControlValueAccessor {
     private sanitizer: DomSanitizer,
     private confirm: ConfirmModalService,
     private translate: TranslateService,
+    private logger: LoggingService,
   ) {}
 
   writeValue(obj: any): void {
@@ -93,7 +95,7 @@ export class ImageUploaderComponent implements ControlValueAccessor {
   }
 
   captionChanged() {
-    console.log(this.captionControl.value);
+    this.logger.debug('Caption changed', this.captionControl.value);
     this.onChange({
       caption: this.captionControl.value,
       photo: this.photo,
