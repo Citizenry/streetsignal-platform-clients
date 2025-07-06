@@ -85,6 +85,7 @@ export class GeneralComponent implements OnInit {
   }
 
   fileUploaded(event: any) {
+    // Store the preview image temporarily
     this.siteConfig.image_header = event.dataURI;
     this.uploadedFile = event.file;
     this.changesMade = true;
@@ -137,6 +138,17 @@ export class GeneralComponent implements OnInit {
           next: (updateResult) => {
             console.log('Settings update result:', updateResult);
             this.showSnackbar('Deployment logo saved successfully');
+            // Clear the uploaded file after successful save
+            this.uploadedFile = undefined;
+            // Refresh siteConfig from session service to ensure UI shows the updated image
+            const oldImageHeader = this.siteConfig.image_header;
+            this.siteConfig = this.sessionService.getSiteConfigurations();
+            console.log(
+              'General: Updated siteConfig.image_header from',
+              oldImageHeader,
+              'to',
+              this.siteConfig.image_header,
+            );
           },
           complete: () => {
             this.loader.hide();

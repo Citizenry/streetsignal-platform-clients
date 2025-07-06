@@ -1,4 +1,11 @@
-import { ElementRef, EventEmitter, ViewChild } from '@angular/core';
+import {
+  ElementRef,
+  EventEmitter,
+  ViewChild,
+  OnChanges,
+  SimpleChanges,
+  ChangeDetectorRef,
+} from '@angular/core';
 import { Component, Input, Output } from '@angular/core';
 import { formHelper, validateFile } from '@helpers';
 import { NotificationService } from '@services';
@@ -9,7 +16,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './file-uploader.component.html',
   styleUrls: ['./file-uploader.component.scss'],
 })
-export class FileUploaderComponent {
+export class FileUploaderComponent implements OnChanges {
   @Input() required = false;
   @Input() imageSrc: any;
   @Input() validation = 'image';
@@ -21,7 +28,21 @@ export class FileUploaderComponent {
   constructor(
     private notificationService: NotificationService,
     private translateService: TranslateService,
+    private cdr: ChangeDetectorRef,
   ) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['imageSrc']) {
+      console.log(
+        'FileUploader: imageSrc changed from',
+        changes['imageSrc'].previousValue,
+        'to',
+        changes['imageSrc'].currentValue,
+      );
+      // Force change detection when imageSrc changes
+      this.cdr.detectChanges();
+    }
+  }
 
   uploadFile($event: any) {
     if (!$event.target.files[0]) return;
