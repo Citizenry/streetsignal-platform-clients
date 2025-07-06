@@ -85,16 +85,7 @@ export const surveyFields = [
     },
     instructions: 'survey.relation_desc',
   },
-  {
-    label: 'survey.upload_image',
-    type: 'media',
-    input: 'image',
-    instructions: 'survey.upload_desc',
-    config: {
-      hasCaption: true,
-      maxUploadSize: 2,
-    },
-  },
+
   {
     label: 'survey.upload_audio',
     type: 'media',
@@ -114,10 +105,10 @@ export const surveyFields = [
     },
   },
   {
-    label: 'survey.upload_multiple_images',
+    label: 'survey.upload_image',
     type: 'media',
-    input: 'multiple_images',
-    instructions: 'survey.upload_multiple_images_desc',
+    input: 'upload_image',
+    instructions: 'survey.upload_desc',
     config: {
       hasCaption: true,
       maxUploadSize: 10,
@@ -127,10 +118,10 @@ export const surveyFields = [
     },
   },
   {
-    label: 'survey.upload_video',
+    label: 'survey.embed_video',
     type: 'media',
-    input: 'video_upload',
-    instructions: 'survey.upload_video_desc',
+    input: 'embed_video',
+    instructions: 'survey.video_desc',
     config: {
       hasCaption: true,
       maxUploadSize: 100,
@@ -138,12 +129,6 @@ export const surveyFields = [
       allowedTypes: ['video/mp4', 'video/webm', 'video/quicktime'],
       generateThumbnails: true,
     },
-  },
-  {
-    label: 'survey.embed_video',
-    type: 'varchar',
-    input: 'video',
-    instructions: 'survey.video_desc',
   },
   {
     label: 'survey.markdown',

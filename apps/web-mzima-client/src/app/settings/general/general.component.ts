@@ -87,11 +87,13 @@ export class GeneralComponent implements OnInit {
   fileUploaded(event: any) {
     this.siteConfig.image_header = event.dataURI;
     this.uploadedFile = event.file;
+    this.changesMade = true;
   }
 
   headerImageDeleted() {
     this.siteConfig.image_header = '';
     this.uploadedFile = undefined;
+    this.changesMade = true;
   }
 
   public async generateApiKey(): Promise<void> {
@@ -118,36 +120,52 @@ export class GeneralComponent implements OnInit {
     this.submitted = true;
     this.loader.show();
     if (this.uploadedFile) {
+      console.log('Uploading file:', this.uploadedFile.name);
       this.mediaService
         .uploadFile(this.uploadedFile)
         .pipe(
           mergeMap((newImage: any) => {
+            console.log('Upload response:', newImage);
+            if (!newImage?.result?.original_file_url) {
+              throw new Error('Invalid upload response: missing original_file_url');
+            }
             this.siteConfig.image_header = newImage.result.original_file_url;
             return this.updateSettings();
           }),
         )
         .subscribe({
+          next: (updateResult) => {
+            console.log('Settings update result:', updateResult);
+            this.showSnackbar('Deployment logo saved successfully');
+          },
           complete: () => {
             this.loader.hide();
             this.submitted = false;
+            this.changesMade = false;
           },
           error: (error) => {
+            console.error('Save error:', error);
             this.loader.hide();
             this.submitted = false;
-            this.notificationService.showError(error.message);
+            this.notificationService.showError(error.message || 'Failed to save deployment logo');
           },
         });
     } else {
       this.updateSettings().subscribe({
+        next: (updateResult: any) => {
+          console.log('Settings update result (no upload):', updateResult);
+          this.showSnackbar('Settings saved successfully');
+        },
         complete: () => {
           this.submitted = false;
           this.loader.hide();
           this.changesMade = false;
         },
-        error: (error) => {
+        error: (error: any) => {
+          console.error('Settings update error:', error);
           this.submitted = false;
           this.loader.hide();
-          this.notificationService.showError(error.message);
+          this.notificationService.showError(error.message || 'Failed to save settings');
         },
       });
     }

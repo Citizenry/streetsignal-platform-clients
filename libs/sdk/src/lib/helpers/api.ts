@@ -1,7 +1,14 @@
 export const getApiUrlByDomain = (deploymentInfo: { domain: string; api_domain?: string }) => {
   console.log('deploymentInfo', deploymentInfo);
+
+  // Handle undefined or invalid deploymentInfo
+  if (!deploymentInfo || !deploymentInfo.domain) {
+    console.error('Invalid deploymentInfo provided to getApiUrlByDomain:', deploymentInfo);
+    return '';
+  }
+
   if (deploymentInfo?.api_domain == undefined) {
-    deploymentInfo['api_domain'] = `api.${deploymentInfo?.domain}`;
+    deploymentInfo['api_domain'] = `api.${deploymentInfo.domain}`;
   }
   return `${location.protocol}//${location.hostname.replace(
     deploymentInfo.domain,
