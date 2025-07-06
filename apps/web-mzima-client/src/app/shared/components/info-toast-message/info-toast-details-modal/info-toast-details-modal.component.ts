@@ -18,8 +18,4 @@ export class InfoToastDetailsModalComponent {
   public closeModal(): void {
     this.matDialogRef.close();
   }
-
-  public openIntercom(): void {
-    this.closeModal();
-  }
 }

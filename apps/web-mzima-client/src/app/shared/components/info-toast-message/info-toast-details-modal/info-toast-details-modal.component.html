@@ -30,14 +30,6 @@
 </div>
 
 <mat-dialog-actions align="end">
-  <mzima-client-button
-    *ngIf="data.isAdmin"
-    [mat-dialog-close]="true"
-    (buttonClick)="openIntercom()"
-    class="intercom_custom_launcher"
-  >
-    {{ 'app.open_chat' | translate }}
-  </mzima-client-button>
   <mzima-client-button *ngIf="!data.isAdmin" [mat-dialog-close]="true">
     {{ 'message.button.default' | translate }}
   </mzima-client-button>

@@ -59,7 +59,7 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "@sentry/angular-ivy": "^7.44.2",
     "@sentry/tracing": "^7.44.2",
-    "@supy-io/ngx-intercom": "^14.2.12",
+    
     "@swimlane/ngx-charts": "^20.1.2",
     "angular-google-tag-manager": "^1.6.1",
     "capacitor-native-settings": "^6.0.1",

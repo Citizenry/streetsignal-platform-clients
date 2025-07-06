@@ -18,7 +18,6 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { ErrorsHandlerService } from './core/handlers/errors-handler.service';
 import { AuthInterceptor } from './core/interceptors';
-import { IntercomModule } from '@supy-io/ngx-intercom';
 
 import { RouterModule } from '@angular/router';
 import * as Sentry from '@sentry/angular-ivy';
@@ -101,9 +100,7 @@ export function playerFactory(): any {
     AuthModule,
     SharedModule,
     HttpClientModule,
-    IntercomModule.forRoot({
-      updateOnRouterChange: true, // will automatically run `update` on router event changes. Default: `false`
-    }),
+
     SdkModule.forRoot({
       loader: {
         provide: EnvLoader,

@@ -12,5 +12,4 @@ export interface EnvConfigInterface {
   sentry_dsn: string;
   sentry_environment?: string;
   sentry_debug_mode: boolean;
-  intercom_appid?: string;
 }
