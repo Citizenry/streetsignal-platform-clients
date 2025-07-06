@@ -41,4 +41,9 @@ export abstract class BaseComponent {
   public checkAllowedAccessToSite() {
     return this.sessionService.accessToSite;
   }
+
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
+  ngOnDestroy(): void {
+    // Empty implementation required for @UntilDestroy() decorator to work properly
+  }
 }
