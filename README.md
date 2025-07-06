@@ -1,4 +1,8 @@
-# Platform Client (Mzima)
+<div align="center">
+  <img src="logo-hz.png" alt="StreetSignal" width="300"/>
+</div>
+
+# StreetSignal Platform Client (Mzima)
 
 > This Platform Client (Mzima) workspace is generated using [Nx, a Smart, fast and extensible build system.](https://nx.dev)
 

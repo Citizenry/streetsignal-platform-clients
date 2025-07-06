@@ -1,3 +1,4 @@
+Copyright (C) 2025 Jascha Wanger / Tarnover, LLC
 Copyright (C) 2022 Ushahidi
 
 This program is free software: you can redistribute it and/or modify
