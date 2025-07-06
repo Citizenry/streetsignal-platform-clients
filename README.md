@@ -10,7 +10,7 @@ This Platform Client (Mzima) repo houses 2 clients: The web client and the mobil
 
 ## Recent Updates
 
-### PHP 8 Modernization (January 2025)
+### PHP 8 Modernization (June 2025)
 The platform has been modernized for PHP 8 compatibility with enhanced OAuth2 authentication. Key improvements include:
 
 - **OAuth2 Authentication**: Complete OAuth2 implementation for secure authentication
@@ -46,7 +46,7 @@ If you are using `SSH` url, the clone command with your url will look like this:
 git clone git@github.com:your-own-github-account-user-name-will-be-here-instead/platform-client-mzima.git
 ````
 
-> Also visit [how to make and submit changes to this repository](https://github.com/ushahidi/platform-client-mzima#how-to-make-and-submit-changes-to-this-repository)
+> Also visit [how to make and submit changes to this repository](https://github.com/streetsignal/platform-client-mzima#how-to-make-and-submit-changes-to-this-repository)
 
 #
 
@@ -56,16 +56,16 @@ git clone git@github.com:your-own-github-account-user-name-will-be-here-instead/
 If you are using `https` url, use:
 
 ````
-git clone https://github.com/ushahidi/platform-client-mzima.git
+git clone https://github.com/streetsignal/platform-client-mzima.git
 ````
 
 If you are using `SSH` url, use:
 
 ````
-git clone git@github.com:ushahidi/platform-client-mzima.git
+git clone git@github.com:streetsignal/platform-client-mzima.git
 ````
 
-> Also visit [how to make and submit changes to this repository](https://github.com/ushahidi/platform-client-mzima#how-to-make-and-submit-changes-to-this-repository)
+> Also visit [how to make and submit changes to this repository](https://github.com/streetsignal/platform-client-mzima#how-to-make-and-submit-changes-to-this-repository)
 
 #
 
@@ -95,7 +95,7 @@ The web client is currently connected to our staging API. This is set in the web
 "backend_url": "https://mzima-dev-api.staging.ush.zone/",
 ````
 
-You can choose to set up your own backend locally using our [backend platform API](https://github.com/ushahidi/platform), and connect it to the web client instead. To set up the backend for yourself, follow the installation instructions on the [backend API's readme](https://github.com/ushahidi/platform#setup-essentials). Then replace the `"backend_url"` value in the web client's `env.json` file with the url of the backend you have successfully setup.
+You can choose to set up your own backend locally using our [backend platform API](https://github.com/streetsignal/platform), and connect it to the web client instead. To set up the backend for yourself, follow the installation instructions on the [backend API's readme](https://github.com/streetsignal/platform#setup-essentials). Then replace the `"backend_url"` value in the web client's `env.json` file with the url of the backend you have successfully setup.
 
 
 #
