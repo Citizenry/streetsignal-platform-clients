@@ -128,7 +128,7 @@ export class GeneralComponent implements OnInit {
             if (!newImage?.result?.original_file_url) {
               throw new Error('Invalid upload response: missing original_file_url');
             }
-            this.siteConfig.image_header = this.fixImageUrl(newImage.result.original_file_url);
+            this.siteConfig.image_header = newImage.result.original_file_url;
             return this.updateSettings();
           }),
         )
@@ -222,16 +222,5 @@ export class GeneralComponent implements OnInit {
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
     });
-  }
-
-  private fixImageUrl(imageUrl: string): string {
-    if (!imageUrl) return '';
-
-    // Fix URLs that point to localhost:3000 to use the correct API port 8081
-    if (imageUrl.includes('localhost:3000')) {
-      return imageUrl.replace('localhost:3000', 'localhost:8081');
-    }
-
-    return imageUrl;
   }
 }
