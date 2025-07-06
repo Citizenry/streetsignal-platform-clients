@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject, tap } from 'rxjs';
 import { apiHelpers } from '../helpers';
@@ -87,5 +87,18 @@ export class UsersService extends ResourceService<any> {
 
   public deleteUser(id: number) {
     return super.delete(id);
+  }
+
+  public uploadAvatar(file: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('avatar', file);
+
+    const options = {
+      headers: new HttpHeaders({
+        // Don't set Content-Type for FormData, let browser set it with boundary
+      }),
+    };
+
+    return this.httpClient.post(`${this.apiUrl}/me/avatar`, formData, options);
   }
 }

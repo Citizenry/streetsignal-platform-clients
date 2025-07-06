@@ -26,6 +26,42 @@
       >
         <div class="tab-content" *ngIf="!isLoading; else spinner" mat-dialog-content>
           <form novalidate [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+            <!-- Avatar Section -->
+            <div class="form-row avatar-section">
+              <mat-label>{{ 'user.avatar' | translate }}</mat-label>
+              <div class="avatar-container">
+                <div class="avatar-display">
+                  <img
+                    [src]="
+                      avatarPreviewUrl || profile?.gravatar || 'assets/images/default-avatar.png'
+                    "
+                    alt="User Avatar"
+                    class="avatar-image"
+                  />
+                </div>
+                <div class="avatar-upload">
+                  <input
+                    type="file"
+                    #avatarInput
+                    accept="image/*"
+                    (change)="onAvatarFileSelected($event)"
+                    style="display: none"
+                  />
+                  <mzima-client-button
+                    type="button"
+                    fill="outline"
+                    (buttonClick)="avatarInput.click()"
+                    [expand]="false"
+                  >
+                    {{ 'user.change_avatar' | translate }}
+                  </mzima-client-button>
+                  <small class="avatar-help-text">
+                    {{ 'user.avatar_help' | translate }}
+                  </small>
+                </div>
+              </div>
+            </div>
+
             <div class="form-row">
               <mat-label>{{ 'user.role' | translate }}</mat-label>
               <mat-form-field appearance="outline">

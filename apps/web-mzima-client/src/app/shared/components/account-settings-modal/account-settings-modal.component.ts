@@ -54,6 +54,8 @@ export class AccountSettingsModalComponent implements OnInit {
   public isContactsChanged: boolean;
   public isAddAccountFormOpen: boolean;
   public matcher = new formHelper.FormErrorStateMatcher();
+  public selectedAvatarFile: File | null = null;
+  public avatarPreviewUrl: string | null = null;
   public accountTypes: AccountTypeInterface[] = [
     {
       name: 'Email',
@@ -149,6 +151,35 @@ export class AccountSettingsModalComponent implements OnInit {
       });
   }
 
+  public onAvatarFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        return;
+      }
+
+      // Validate file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        return;
+      }
+
+      this.selectedAvatarFile = file;
+
+      // Create preview URL
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        this.avatarPreviewUrl = e.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+
+      // Mark form as dirty to enable save button
+      this.profileForm.markAsDirty();
+    }
+  }
+
   public updateProfile(): void {
     if (this.profileForm.invalid) return;
 
@@ -164,12 +195,32 @@ export class AccountSettingsModalComponent implements OnInit {
     }
 
     this.profileForm.disable();
+
+    // Handle avatar upload first if a file is selected
+    if (this.selectedAvatarFile) {
+      this.usersService.uploadAvatar(this.selectedAvatarFile).subscribe({
+        next: () => {
+          // After avatar upload, update the profile
+          this.updateUserProfile(options);
+        },
+        error: () => {
+          this.profileForm.enable();
+        },
+      });
+    } else {
+      this.updateUserProfile(options);
+    }
+  }
+
+  private updateUserProfile(options: UserDataInterface): void {
     this.usersService.updateCurrentUser(options).subscribe({
       next: () => {
         this.getProfile();
         this.profileForm.controls['password'].setValue('');
         this.profileForm.controls['confirmPassword'].setValue('');
         this.updatePassword(false);
+        this.selectedAvatarFile = null;
+        this.avatarPreviewUrl = null;
         this.profileForm.enable();
         this.closeModal();
       },
