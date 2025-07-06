@@ -25,7 +25,7 @@ import {
   SurveysService,
 } from '@mzima-client/sdk';
 import { TranslateService } from '@ngx-translate/core';
-import { untilDestroyed } from '@ngneat/until-destroy';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { lastValueFrom, Subscription } from 'rxjs';
 import { BaseComponent } from '../../base.component';
 import { preparingVideoUrl } from '../../core/helpers/validators';
@@ -34,6 +34,7 @@ import { BreakpointService, EventBusService, EventType, SessionService } from '@
 import { LanguageService } from '../../core/services/language.service';
 import { PostTranslateComponent } from '../post-translate/post-translate.component';
 
+@UntilDestroy()
 @Component({
   selector: 'app-post-details',
   templateUrl: './post-details.component.html',
