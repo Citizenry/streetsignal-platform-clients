@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-$ushahidi-primary-palette: (
+$streetsignal-primary-palette: (
   300: var(--color-primary-70),
   400: var(--color-primary-60),
   500: var(--color-primary-50),
@@ -11,7 +11,7 @@ $ushahidi-primary-palette: (
   ),
 );
 
-$ushahidi-acccent-palette: (
+$streetsignal-acccent-palette: (
   400: var(--color-neutral-50),
   500: var(--color-neutral-40),
   600: var(--color-neutral-30),
@@ -22,7 +22,7 @@ $ushahidi-acccent-palette: (
   ),
 );
 
-$ushahidi-warn-palette: (
+$streetsignal-warn-palette: (
   400: var(--color-accent-shade),
   500: var(--color-accent),
   600: var(--color-accent-tint),
@@ -33,11 +33,11 @@ $ushahidi-warn-palette: (
   ),
 );
 
-$ushahidi-primary: mat.define-palette($ushahidi-primary-palette, 400, 300, 500);
-$ushahidi-acccent: mat.define-palette($ushahidi-acccent-palette, 500, 400, 500);
-$ushahidi-warn: mat.define-palette($ushahidi-warn-palette, 500, 400, 500);
+$streetsignal-primary: mat.define-palette($streetsignal-primary-palette, 400, 300, 500);
+$streetsignal-acccent: mat.define-palette($streetsignal-acccent-palette, 500, 400, 500);
+$streetsignal-warn: mat.define-palette($streetsignal-warn-palette, 500, 400, 500);
 
-$ushahidi-typography: mat.define-typography-config(
+$streetsignal-typography: mat.define-typography-config(
   $font-family: var(--font-family),
   $body-1: mat.define-typography-level(14px, 1.3, 400),
   $subheading-1: mat.define-typography-level(24px, 1.5, 500),
@@ -46,19 +46,19 @@ $ushahidi-typography: mat.define-typography-config(
   $input: mat.define-typography-level(16px, 1.5, 400),
 );
 
-$ushahidi-theme: mat.define-light-theme(
+$streetsignal-theme: mat.define-light-theme(
   (
     color: (
-      primary: $ushahidi-primary,
-      accent: $ushahidi-acccent,
-      warn: $ushahidi-warn,
+      primary: $streetsignal-primary,
+      accent: $streetsignal-acccent,
+      warn: $streetsignal-warn,
     ),
-    typography: $ushahidi-typography,
+    typography: $streetsignal-typography,
   )
 );
 
-@include mat.all-component-themes($ushahidi-theme);
-@include mat.core($ushahidi-theme);
+@include mat.all-component-themes($streetsignal-theme);
+@include mat.core($streetsignal-theme);
 
 .mat-typography {
   h1 {

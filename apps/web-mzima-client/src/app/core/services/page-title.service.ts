@@ -7,7 +7,7 @@ import { SessionService } from './session.service';
 @Injectable({
   providedIn: 'root',
 })
-export class UshahidiPageTitleStrategy extends TitleStrategy {
+export class StreetSignalPageTitleStrategy extends TitleStrategy {
   constructor(
     private readonly title: Title,
     private translateService: TranslateService,

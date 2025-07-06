@@ -1,7 +1,7 @@
 {
   "onboarding": {
     "greeting": "Hello {{username}}!",
-    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with Ushahidi features. The onboarding process will take couple of minutes.</p>",
+    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with StreetSignal features. The onboarding process will take couple of minutes.</p>",
     "ready": "You're ready!",
     "data_collection": {
       "title": "Data collection",
@@ -28,14 +28,14 @@
       "content": "<p>Change your deployment in Settings. You can manage your deployment details when it comes to Surveys,  Data Sources, Importing and Donation. </p><p>Also, it allows your to export data, create categories, manage users permissions and much more!</p>"
     },
     "final_step": {
-      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using Ushahidi platform.",
+      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using StreetSignal platform.",
       "desc_2": "Remember, in case of any question, don’t hesitate to reach out to our team by",
       "help": "Help & Support"
     }
   },
   "app": {
     "contact_email_address": "Contact email address:",
-    "powered_by_ushahidi": "یوشاہدی کا تیار کردہ",
+    "powered_by_streetsignal": "یوشاہدی کا تیار کردہ",
     "support": "یوشاہدی سپورٹم",
     "by": "کی طرف سے",
     "confirm": "Confirm",
@@ -76,11 +76,11 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Contact Ushahidi staff for chat support"
+      "description": "Contact StreetSignal staff for chat support"
     },
     "onboarding": {
       "title": "Onboarding",
-      "description": "Take a look at the Ushahidi onboarding again."
+      "description": "Take a look at the StreetSignal onboarding again."
     },
     "report_a_bug": {
       "title": "Report a bug",
@@ -89,7 +89,7 @@
     "edit_collection": "Edit collection",
     "features": {
       "title": "Features",
-      "description": "See what Ushahidi can do and how it works."
+      "description": "See what StreetSignal can do and how it works."
     },
     "forbidden": "Sorry, you're not allowed to do that.",
     "forbidden-login": "Please enter your login details to access the deployment.",
@@ -236,7 +236,7 @@
 },
   "cookies": {
     "we_use_cookies": "Howdy! We use cookies to make your experience better.",
-    "cookies_privacy": "If you want to know more or withdraw your consent, please go to our <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>.",
+    "cookies_privacy": "If you want to know more or withdraw your consent, please go to our <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>.",
     "decline": "Decline",
     "accept_cookies": "Accept cookies"
   },
@@ -755,7 +755,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Web monetization is enabled on this website. Thank you for your donation. You have donated",
       "thank_you_for_your_donation_end": "so far",
-      "web_monetization_text": "Ushahidi deployments are now web monetization enabled. Web monetization is a way of supporting the websites you love without playing advertisers game. All you need is to get your browser setup. Click the link below to learn how you can donate.",
+      "web_monetization_text": "StreetSignal deployments are now web monetization enabled. Web monetization is a way of supporting the websites you love without playing advertisers game. All you need is to get your browser setup. Click the link below to learn how you can donate.",
       "how_can_i_donate": "How can I donate?"
     }
   },
@@ -1322,11 +1322,11 @@
   },
   "settings": {
     "api_key": "API Key",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "Appearance Settings",
     "continue": "Continue",
     "create": "Create a new survey",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "Current background image",
     "customize_your_new_deployment": "Customize your new deployment",
     "embed": "Embed",
@@ -1341,7 +1341,7 @@
       "import": "Import",
       "import_desc": "Upload survey data to your deployment from a CSV file.",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Export data",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1353,7 +1353,7 @@
       "categories": "Categories",
       "categories_desc": "Create and manage the categories people can put posts into for improved organization.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "Plans",
       "plan_desc": "Your deployment's current plan is <strong>{{current_plan}}</strong>.",
       "donation": "Donation",
@@ -1549,7 +1549,7 @@
       "delete_their_own_posts": "Delete Their Own Posts",
       "registred_member": "Registered member",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://www.ushahidi.com/support/custom-roles#add-a-role\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://www.streetsignal.org/support/custom-roles#add-a-role\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "Delete this deployment",
     "deployment_delete": "Delete deployment",
@@ -1606,7 +1606,7 @@
     "csv_column": "CSV column",
     "choose_which_column": "Choose which CSV column should be assigned to each survey field",
     "each_survey_field": "Each of the survey's fields are listed below. Choose the column from your CSV file that you'd like to use to populate each of those fields.",
-    "status_explanation": "Ushahidi recognizes one of three post statuses: Published, Under review, and Archived. So be sure that each entry in the column you select has one of those three values.",
+    "status_explanation": "StreetSignal recognizes one of three post statuses: Published, Under review, and Archived. So be sure that each entry in the column you select has one of those three values.",
     "defined_column": "Defined by a column in your CSV file...",
     "imported_posts_status": "Imported posts should have their status...",
     "marked_as": "Marked as...",
@@ -1655,7 +1655,7 @@
     "title": "Export data",
     "title_hxl": "Export and tag data",
     "description": "Export all of your data as a CSV or choose specific survey fields you want to export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export History",
     "hxl_tags": "HXL tags",
@@ -2161,11 +2161,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi Terms of Service",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
-    "agree": "I agree to Ushahidi's Terms of Service.",
+    "title": "StreetSignal Terms of Service",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
+    "agree": "I agree to StreetSignal's Terms of Service.",
     "accept_and_continue": "Accept and Continue",
-    "i_agree": "I agree to Ushahidi's <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a> and\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a>."
+    "i_agree": "I agree to StreetSignal's <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a> and\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a>."
   },
   "translations": {
     "available_languages": "Available translations (select to see post):",

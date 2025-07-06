@@ -1,8 +1,8 @@
 {
   "app": {
     "contact_email_address": "Contact email address:",
-    "powered_by_ushahidi": "由Ushahidi 提供技术支持。",
-    "support": "Ushahidi 支持",
+    "powered_by_streetsignal": "由StreetSignal 提供技术支持。",
+    "support": "StreetSignal 支持",
     "by": "由",
     "submit": "递交",
     "anonymous": "Anonymous",
@@ -31,7 +31,7 @@
     },
     "documentation": {
       "title": "文档",
-      "description": "了解如何设置、配置和管理您的Ushahidi部署。"
+      "description": "了解如何设置、配置和管理您的StreetSignal部署。"
     },
     "donate": "Donate",
     "donation": "Donation",
@@ -41,11 +41,11 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Contact Ushahidi staff for chat support"
+      "description": "Contact StreetSignal staff for chat support"
     },
     "onboarding": {
       "title": "Onboarding",
-      "description": "Take a look at the Ushahidi onboarding again."
+      "description": "Take a look at the StreetSignal onboarding again."
     },
     "report_a_bug": {
       "title": "报告错误",
@@ -54,7 +54,7 @@
     "edit_collection": "编辑集合",
     "features": {
       "title": "\b功能",
-      "description": "看看Ushahidi可以做什么以及它如何工作。"
+      "description": "看看StreetSignal可以做什么以及它如何工作。"
     },
     "forbidden": "对不起，不允许您那么做。",
     "forbidden-login": "Please enter your login details to access the deployment.",
@@ -168,7 +168,7 @@
   },
   "cookies": {
     "we_use_cookies": "Howdy! We use cookies to make your experience better.",
-    "cookies_privacy": "If you want to know more or withdraw your consent, please go to our <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>.",
+    "cookies_privacy": "If you want to know more or withdraw your consent, please go to our <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>.",
     "decline": "Decline",
     "accept_cookies": "Accept cookies"
   },
@@ -195,7 +195,7 @@
     "view_unavailable": "您目前的计划中没有{{value}}视图。 <a href=\"/settings/plan\">\b将计划升级</a> 就有该视图啦!"
   },
   "limit": {
-    "plan_limit": "Ushahidi \b计划限制",
+    "plan_limit": "StreetSignal \b计划限制",
     "post_limit_reached": "您的计划中发帖数目已达上限",
     "admin_limit_reached": "您计划的管理员级别用户数目已达上限",
     "post_type_limit_reached": "您的计划已达调查数上限",
@@ -647,7 +647,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Web monetization is enabled on this website. Thank you for your donation. You have donated",
       "thank_you_for_your_donation_end": "so far",
-      "web_monetization_text": "Ushahidi deployments are now web monetization enabled. Web monetization is a way of supporting the websites you love without playing advertisers game. All you need is to get your browser setup. Click the link below to learn how you can donate.",
+      "web_monetization_text": "StreetSignal deployments are now web monetization enabled. Web monetization is a way of supporting the websites you love without playing advertisers game. All you need is to get your browser setup. Click the link below to learn how you can donate.",
       "how_can_i_donate": "How can I donate?"
     }
   },
@@ -1158,11 +1158,11 @@
   },
   "settings": {
     "api_key": "API Key",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "外观设置",
     "continue": "继续",
     "create": "Create a new survey",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "当前背景图片",
     "customize_your_new_deployment": "自定义您的新部署",
     "embed": "嵌入",
@@ -1177,7 +1177,7 @@
       "import": "导入",
       "import_desc": "从CSV文件上传调查数据到您的部署中。",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Export data",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1189,7 +1189,7 @@
       "categories": "类别",
       "categories_desc": "创建和管理人们可以将帖子归入的类别，系统更有条理。",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "计划",
       "plan_desc": "您的部署目前的计划为<strong> {{current_plan}} </ strong>。",
       "donation": "Donation",
@@ -1379,7 +1379,7 @@
       "delete_their_own_posts": "Delete Their Own Posts",
       "registred_member": "Registered member",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "删除此部署",
     "deployment_delete": "删除部署",
@@ -1436,7 +1436,7 @@
     "csv_column": "CSV列",
     "choose_which_column": "选择应为每个调查字段分配哪个CSV列",
     "each_survey_field": "每个调查的字段如下。 从CSV文件中选择要用于填充每个字段的列。",
-    "status_explanation": "三种帖子状态受Ushahidi认可：发布，审核中和存档。 因此，请确保您选择的列中的每个条目都有这三个值中的一个。",
+    "status_explanation": "三种帖子状态受StreetSignal认可：发布，审核中和存档。 因此，请确保您选择的列中的每个条目都有这三个值中的一个。",
     "defined_column": "通过在CSV文件中的一列来定义......",
     "imported_posts_status": "导入的帖子应该有状态......",
     "marked_as": "标记为......",
@@ -1485,7 +1485,7 @@
     "title": "Export data",
     "title_hxl": "Export and tag data",
     "description": "Export all of your data as a CSV or choose specific survey fields you want to export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export History",
     "hxl_tags": "HXL tags",
@@ -1972,11 +1972,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi Terms of Service",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
-    "agree": "I agree to Ushahidi's Terms of Service.",
+    "title": "StreetSignal Terms of Service",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
+    "agree": "I agree to StreetSignal's Terms of Service.",
     "accept_and_continue": "Accept and Continue",
-    "i_agree": "I agree to Ushahidi's <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a> and\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a>."
+    "i_agree": "I agree to StreetSignal's <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a> and\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a>."
   },
   "translations": {
     "languages": "Languages",

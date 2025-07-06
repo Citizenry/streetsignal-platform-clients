@@ -9,7 +9,7 @@ import {
   RedirectGuard,
 } from '@guards';
 import { PageNotFoundComponent } from './shared/components';
-import { UshahidiPageTitleStrategy } from '@services';
+import { StreetSignalPageTitleStrategy } from '@services';
 import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';
 import { PostNotFoundComponent } from './post/post-not-found/post-not-found.component';
 import { PostNotAllowedComponent } from './post/post-not-allowed/post-not-allowed.component';
@@ -160,6 +160,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule],
-  providers: [{ provide: TitleStrategy, useClass: UshahidiPageTitleStrategy }],
+  providers: [{ provide: TitleStrategy, useClass: StreetSignalPageTitleStrategy }],
 })
 export class AppRoutingModule {}

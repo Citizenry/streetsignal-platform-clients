@@ -38,7 +38,7 @@ export class SupportModalComponent extends BaseComponent {
         title: this.translate.instant('app.documentation.title'),
         description: this.translate.instant('app.documentation.description'),
         action: () => {
-          this.openUrl('https://docs.ushahidi.com/platform-user-manual');
+          this.openUrl('https://docs.streetsignal.org/platform-user-manual');
           this.closeModal();
         },
       },
@@ -54,7 +54,7 @@ export class SupportModalComponent extends BaseComponent {
         title: this.translate.instant('app.features.title'),
         description: this.translate.instant('app.features.description'),
         action: () => {
-          this.openUrl('https://www.ushahidi.com/features/');
+          this.openUrl('https://www.streetsignal.org/features/');
           this.closeModal();
         },
       },

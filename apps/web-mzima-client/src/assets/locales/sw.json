@@ -1,7 +1,7 @@
 {
   "onboarding": {
     "greeting": "Habari {{username}}!",
-    "intro": "<p>Umefaulu kuunda utendakazi wako. Sasa, tunapoiboresha, tafadhali, jitambulishe na vipengele vya Ushahidi. Mchakato wa kuabiri utachukua dakika kadhaa.</p>",
+    "intro": "<p>Umefaulu kuunda utendakazi wako. Sasa, tunapoiboresha, tafadhali, jitambulishe na vipengele vya StreetSignal. Mchakato wa kuabiri utachukua dakika kadhaa.</p>",
     "ready": "Uko tayari!",
     "data_collection": {
       "title": "Ukusanyaji wa data",
@@ -28,15 +28,15 @@
       "content": "<p>Badilisha utumiaji wako katika Mipangilio. Unaweza kudhibiti maelezo yako ya utumaji tunapozungumzia suala la Tafiti, Vyanzo vya Data, Uagizaji na Uchangiaji. </p><p>Pia, inaruhusu kuhamisha data, kuunda kategoria, kudhibiti ruhusa za watumiaji na mengi zaidi!</p>"
     },
     "final_step": {
-      "desc_1": "Furaha iliyoje! Sasa unajua vipengele muhimu zaidi na uko tayari kuanza kutumia jukwaa la Ushahidi.",
+      "desc_1": "Furaha iliyoje! Sasa unajua vipengele muhimu zaidi na uko tayari kuanza kutumia jukwaa la StreetSignal.",
       "desc_2": "Kumbuka, ikiwa kuna swali lolote, usisite kuwasiliana na timu yetu kupitia",
       "help": "Usaidizi na Msaada"
     }
   },
   "app": {
     "contact_email_address": "Anwani ya barua pepe ya mawasiliano:",
-    "powered_by_ushahidi": "Imetiwa nguvu na Ushahidi",
-    "support": "Usaidizi wa Ushahidi",
+    "powered_by_streetsignal": "Imetiwa nguvu na StreetSignal",
+    "support": "Usaidizi wa StreetSignal",
     "by": "kwa",
     "confirm": "Thibitisha",
     "submit": "Patiana",
@@ -66,7 +66,7 @@
     },
     "documentation": {
       "title": "Nyaraka",
-      "description": "Jifunze kuweka mipangilio, na ushughulikie utumizi wa Ushahidi."
+      "description": "Jifunze kuweka mipangilio, na ushughulikie utumizi wa StreetSignal."
     },
     "donate": "Kuchangia",
     "donation": "Mchango",
@@ -76,11 +76,11 @@
     "enable_monetization_info": "Uchumaji wa mapato kwa sasa umezimwa.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Wasiliana na wafanyikazi wa Ushahidi kwa usaidizi wa gumzo"
+      "description": "Wasiliana na wafanyikazi wa StreetSignal kwa usaidizi wa gumzo"
     },
     "onboarding": {
       "title": "Kuabiri",
-      "description": " Tazama tena mchakato wa kujiunga na Ushahidi."
+      "description": " Tazama tena mchakato wa kujiunga na StreetSignal."
     },
     "report_a_bug": {
       "title": "Ripoti hitilafu",
@@ -89,7 +89,7 @@
     "edit_collection": "Hariri mikusanyiko",
     "features": {
       "title": "Makala",
-      "description": "Tazama kile Ushahidi inaweza kutekeleza na jinsi inavyotenda kazi."
+      "description": "Tazama kile StreetSignal inaweza kutekeleza na jinsi inavyotenda kazi."
     },
     "forbidden": "Samahani, hauruhusiwi kufanya hivyo.",
     "forbidden-login": "Tafadhali ingiza maelezo yako ya kuingia ili kufikia utendakazi.",
@@ -236,7 +236,7 @@
 },
   "cookies": {
     "we_use_cookies": "Hujambo! Tunatumia kuki ili kufanya uzoefu wako uwe bora zaidi.",
-    "cookies_privacy": "Ikiwa unataka kujua zaidi au kuondoa idhini yako, tafadhali nenda kwenye <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Sera yetu ya Faragha</a>.",
+    "cookies_privacy": "Ikiwa unataka kujua zaidi au kuondoa idhini yako, tafadhali nenda kwenye <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Sera yetu ya Faragha</a>.",
     "decline": "Kataa",
     "accept_cookies": "Kubali kuki"
   },
@@ -263,7 +263,7 @@
     "view_unavailable": " {{value}} haiko katika mpango wako wa sasa. <a href=\"/mipangilio/mpango\">Boresha mpango wako</a> ili uipate!"
   },
   "limit": {
-    "plan_limit": "Ukingo wa Mpango wa Ushahidi",
+    "plan_limit": "Ukingo wa Mpango wa StreetSignal",
     "post_limit_reached": "Umefikia ukingo wa matangazo yaliyochapishwa kwa mpango wako",
     "admin_limit_reached": "Umefikia ukingo wa watumizi wakuu wa mpango wako.",
     "post_type_limit_reached": "Umefikia ukingo wa hojaji ya mpango wako.",
@@ -755,7 +755,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Uchumaji wa mapato ya wavuti umewezeshwa kwenye wavuti hii. Shukrani kwa ajili ya mchango wako. Umetoa mchango",
       "thank_you_for_your_donation_end": "hadi sasa",
-      "web_monetization_text": "Upelekaji wa ushahidi sasa umewezeshwa uchumaji wa wavuti. Uchumaji wa mapato ya wavuti ni njia ya kusaidia tovuti unazopenda bila kucheza mchezo wa watangazaji. Unachohitaji ni kupata usanidi wa kivinjari chako. Bofya kiungo hapa chini ili ujifunze jinsi unavyoweza kuchangia.",
+      "web_monetization_text": "Upelekaji wa streetsignal sasa umewezeshwa uchumaji wa wavuti. Uchumaji wa mapato ya wavuti ni njia ya kusaidia tovuti unazopenda bila kucheza mchezo wa watangazaji. Unachohitaji ni kupata usanidi wa kivinjari chako. Bofya kiungo hapa chini ili ujifunze jinsi unavyoweza kuchangia.",
       "how_can_i_donate": "Ninawezaje kuchangia?"
     }
   },
@@ -1322,11 +1322,11 @@
   },
   "settings": {
     "api_key": "Ufunguo wa API",
-    "api_key_desc": "Ufunguo wa API ni wa kipekee kwa utumiaji wako, unaweza kutumika kuruhusu mifumo ya wahusika wengine kuingiliana na utendakazi wako wa Ushahidi.",
+    "api_key_desc": "Ufunguo wa API ni wa kipekee kwa utumiaji wako, unaweza kutumika kuruhusu mifumo ya wahusika wengine kuingiliana na utendakazi wako wa StreetSignal.",
     "appearance": "Mipangilio ya Sura",
     "continue": "Endelea",
     "create": "Tengeneza hojaji mpya",
-    "create_open_or_targeted": "Unda hojaji wazi au unaolengwa ili kukusanya taarifa kuhusu Ushahidi.",
+    "create_open_or_targeted": "Unda hojaji wazi au unaolengwa ili kukusanya taarifa kuhusu StreetSignal.",
     "current_header": "Picha ya sasa",
     "customize_your_new_deployment": "Badilisha upya Utendakazi wako ",
     "embed": "Imeunganishwa",
@@ -1341,7 +1341,7 @@
       "import": "Ingiza",
       "import_desc": "Ingiza data za hojaji kwa utendakazi wako kutoka faili ya CSV.",
       "user_settings": "Sanidi API ya HDX",
-      "user_settings_desc": "Sanidi API yako ili data yako ya Ushahidi iliyotambulishwa iweze kupakiwa kwenye akaunti yako ya Humanitarian Data Exchange (HDX).",
+      "user_settings_desc": "Sanidi API yako ili data yako ya StreetSignal iliyotambulishwa iweze kupakiwa kwenye akaunti yako ya Humanitarian Data Exchange (HDX).",
       "export": "Hamisha data",
       "export_hxl": "Hamisha na tambulisha data",
       "export_desc_hxl": "Hamisha data yako kama faili ya CSV au kabidhi vitambulisho na sifa kwa data yako na upakie moja kwa moja kwenye akaunti ya Humanitarian Data Exchange (HDX) au uhamishe kama faili iliyotambulishwa ya CSV.",
@@ -1353,7 +1353,7 @@
       "categories": "Kategoria",
       "categories_desc": "Unda na udhibiti kategoria ambazo watu wanaweza kutilia matangazo kwa kuimarisha mipangilio.",
       "webhooks": "Vichochezi vya Wavuti",
-      "webhooks_desc": "Unda vichochezi vya wavuti vinavyotuma data ya Ushahidi Platform kwa programu za nje matukio mahususi yanapoanzishwa.",
+      "webhooks_desc": "Unda vichochezi vya wavuti vinavyotuma data ya StreetSignal Platform kwa programu za nje matukio mahususi yanapoanzishwa.",
       "plans": "Mipango",
       "plan_desc": "Mpango wako wa Utendakazi ni <nguvu>{{current_plan}}</nguvu>.",
       "donation": "Mchango",
@@ -1549,7 +1549,7 @@
       "delete_their_own_posts": "Futa machapisho yao wenyewe",
       "registred_member": "Mshiriki aliyesajiliwa",
       "administrator": "Msimamizi",
-      "roles_description": "Chaguo hizi hudhibiti ni aina gani ya jukumu inaweza kufanya mabadiliko. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Tembelea miongozo yetu ya usaidizi ili kujua zaidi."
+      "roles_description": "Chaguo hizi hudhibiti ni aina gani ya jukumu inaweza kufanya mabadiliko. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Tembelea miongozo yetu ya usaidizi ili kujua zaidi."
     },
     "deployment_delete_this": "Futa utendakazi huu",
     "deployment_delete": "Futa utendakazi ",
@@ -1606,7 +1606,7 @@
     "csv_column": "Kolamu ya CSV",
     "choose_which_column": "Chagua ni kolamu gani ya CSV inafaa kutiwa kwa kila uwanda wa hojaji",
     "each_survey_field": "Kila uwanda wa hojaji umeorodhesha hapa chini. Chagua kolamu kutoka kwa faili ya CSV yako ambayo unependa kutumia kujaza miwanda hiyo.",
-    "status_explanation": "Ushahidi inatambua hali tatu ya matangazo: iliyochapishwa, inatathminiwa, na Imehifadhiwa. Hakikisha kuwa kila ulichoweka kwenye kolamu umechagua thamani hizi tatu.",
+    "status_explanation": "StreetSignal inatambua hali tatu ya matangazo: iliyochapishwa, inatathminiwa, na Imehifadhiwa. Hakikisha kuwa kila ulichoweka kwenye kolamu umechagua thamani hizi tatu.",
     "defined_column": "Imefasiliwa na kolamu katika faili yako ya CSV...",
     "imported_posts_status": "Matangazo yaliyoingizwa lazima yawe na hali zao...",
     "marked_as": "Imetiwa alama kama...",
@@ -1655,7 +1655,7 @@
     "title": "Hamisha data",
     "title_hxl": "Hamisha na tambulisha data",
     "description": "Hamisha data yako yote kama CSV au uchague nyanja mahususi za hojaji unazotaka kusafirisha.",
-    "description_hxl": "Hamisha data yako yote kutoka Ushahidi kama CSV, chagua nyanja mahususi za hojaji ambazo ungependa kuhamisha kama CSV au kukabidhi.",
+    "description_hxl": "Hamisha data yako yote kutoka StreetSignal kama CSV, chagua nyanja mahususi za hojaji ambazo ungependa kuhamisha kama CSV au kukabidhi.",
     "export": "Hamisha",
     "export_history": "Hamisha Historia",
     "hxl_tags": "Vitambulisho vya HXL",
@@ -2161,11 +2161,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Masharti ya Huduma ya Ushahidi",
-    "terms_of_service": "Tumesasisha <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Sheria na Masharti</a> na <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Sera yetu ya Faragha</a>. Tafadhali kagua hati hizi kwa makini na ukubali sheria na masharti ili uendelee kutumia huduma za Ushahidi.",
-    "agree": "Ninakubali Sheria na Masharti ya Ushahidi.",
+    "title": "Masharti ya Huduma ya StreetSignal",
+    "terms_of_service": "Tumesasisha <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Sheria na Masharti</a> na <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Sera yetu ya Faragha</a>. Tafadhali kagua hati hizi kwa makini na ukubali sheria na masharti ili uendelee kutumia huduma za StreetSignal.",
+    "agree": "Ninakubali Sheria na Masharti ya StreetSignal.",
     "accept_and_continue": "Kubali na uendelee",
-    "i_agree": "Nakubaliana na<a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Sera ya Faragha</a> ya Ushahidi na\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Sheria na Masharti</a>."
+    "i_agree": "Nakubaliana na<a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Sera ya Faragha</a> ya StreetSignal na\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Sheria na Masharti</a>."
   },
   "translations": {
     "available_languages": "Available translations (select to see post):",

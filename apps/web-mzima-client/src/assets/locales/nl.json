@@ -1,8 +1,8 @@
 {
   "app": {
     "contact_email_address": "E-mailadres voor contact:",
-    "powered_by_ushahidi": "Aangedreven door Ushahidi.",
-    "support": "Ushahidi Support",
+    "powered_by_streetsignal": "Aangedreven door StreetSignal.",
+    "support": "StreetSignal Support",
     "by": "door",
     "submit": "Verstuur",
     "anonymous": "Anoniem",
@@ -31,7 +31,7 @@
     },
     "documentation": {
       "title": "Documentatie",
-      "description": "Leer hoe je een Ushahidi platform kunt inrichten, configureren en beheren."
+      "description": "Leer hoe je een StreetSignal platform kunt inrichten, configureren en beheren."
     },
     "donate": "Donate",
     "donation": "Donation",
@@ -41,11 +41,11 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Neem contact op met een Ushahidi medewerker voor ondersteuning"
+      "description": "Neem contact op met een StreetSignal medewerker voor ondersteuning"
     },
     "onboarding": {
       "title": "Onboarding",
-      "description": "Kijk nog eens naar de Ushahidi onboarding."
+      "description": "Kijk nog eens naar de StreetSignal onboarding."
     },
     "report_a_bug": {
       "title": "Meld een probleem",
@@ -54,7 +54,7 @@
     "edit_collection": "Collectie wijzigen",
     "features": {
       "title": "Kenmerken",
-      "description": "Ontdek wat Ushahidi kan doen en hoe het werkt."
+      "description": "Ontdek wat StreetSignal kan doen en hoe het werkt."
     },
     "forbidden": "Sorry, je bent niet gemachtigd om dit te doen.",
     "forbidden-login": "Voer uw inloggegevens in om toegang te krijgen tot de implementatie.",
@@ -168,7 +168,7 @@
   },
   "cookies": {
     "we_use_cookies": "Hallo! We gebruiken cookies om uw ervaring te verbeteren.",
-    "cookies_privacy": "Als u meer wilt weten of uw toestemming wilt intrekken, ga dan naar ons <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacybeleid</a>.",
+    "cookies_privacy": "Als u meer wilt weten of uw toestemming wilt intrekken, ga dan naar ons <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacybeleid</a>.",
     "decline": "Afwijzen",
     "accept_cookies": "Accepteer cookies"
   },
@@ -195,7 +195,7 @@
     "view_unavailable": "Het {{value}} overzicht is niet aanwezig in het huidige abonnement. <a href=\"/settings/plan\">Upgrade naar een ander abonnement</a> om er gebruik van te kunnen maken!"
   },
   "limit": {
-    "plan_limit": "Ushahidi abonnementslimiet",
+    "plan_limit": "StreetSignal abonnementslimiet",
     "post_limit_reached": "De limiet van het aantal gepubliceerde plaatsingen voor dit abonnement is bereikt.",
     "admin_limit_reached": "De limiet van het aantal beheerders voor dit abonnement is bereikt.",
     "post_type_limit_reached": "U heeft het maximaal aantal formulieren dat is toegestaan in dit abonnement bereikt.",
@@ -647,7 +647,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Het genereren van inkomsten via het web is ingeschakeld op deze website. Hartelijk dank voor uw donatie. Je hebt gedoneerd",
       "thank_you_for_your_donation_end": "tot nu toe",
-      "web_monetization_text": "Ushahidi-implementaties zijn nu ingeschakeld voor het genereren van inkomsten met het web. Het genereren van inkomsten met het web is een manier om de websites waar u van houdt te ondersteunen zonder het spel van adverteerders te spelen. Het enige dat u hoeft te doen, is uw browser instellen. Klik op de onderstaande link voor meer informatie over hoe u kunt doneren.",
+      "web_monetization_text": "StreetSignal-implementaties zijn nu ingeschakeld voor het genereren van inkomsten met het web. Het genereren van inkomsten met het web is een manier om de websites waar u van houdt te ondersteunen zonder het spel van adverteerders te spelen. Het enige dat u hoeft te doen, is uw browser instellen. Klik op de onderstaande link voor meer informatie over hoe u kunt doneren.",
       "how_can_i_donate": "Hoe kan ik doneren?"
     }
   },
@@ -1158,11 +1158,11 @@
   },
   "settings": {
     "api_key": "API Sleutel",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "Weergave instellingen",
     "continue": "Doorgaan",
     "create": "Formulier toevoegen",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "Huidige achtergrondafbeelding",
     "customize_your_new_deployment": "Customize your new deployment",
     "embed": "Invoegen",
@@ -1177,7 +1177,7 @@
       "import": "Importeren",
       "import_desc": "Upload survey data to your deployment from a CSV file.",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Gegevens exporteren",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Exporteer uw gegevens als een CSV-bestand of wijs tags en attributen toe aan uw gegevens en upload ze rechtstreeks naar een Humanitarian Data Exchange (HDX) -account of exporteer ze als een getagd CSV-bestand.",
@@ -1189,7 +1189,7 @@
       "categories": "Categorieën",
       "categories_desc": "Categorieën waar plaatsingen in kunnen worden onderverdeeld.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "Abonnementen",
       "plan_desc": "Het abonnement voor het platform is <strong>{{current_plan}}</strong>.",
       "donation": "Donation",
@@ -1379,7 +1379,7 @@
       "delete_their_own_posts": "Hun eigen berichten verwijderen",
       "registred_member": "Geregistreerd lid",
       "administrator": "Beheerder",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "Verwijder dit platform",
     "deployment_delete": "Platform verwijderen",
@@ -1436,7 +1436,7 @@
     "csv_column": "CSV kolom",
     "choose_which_column": "Selecteer welke kolommen uit het CSV bestand dienen te worden gekoppeld aan welk veld",
     "each_survey_field": "Each of the survey's fields are listed below. Choose the column from your CSV file that you'd like to use to populate each of those fields.",
-    "status_explanation": "Plaatsingen op het Ushahidi platform kunnen de volgende status hebben: Gepubliceerd, Wacht op beoordeling en gearchiveerd. Controleer of elke regel een van deze waarden bevat voor de geselecteerde kolom.",
+    "status_explanation": "Plaatsingen op het StreetSignal platform kunnen de volgende status hebben: Gepubliceerd, Wacht op beoordeling en gearchiveerd. Controleer of elke regel een van deze waarden bevat voor de geselecteerde kolom.",
     "defined_column": "Defined by a column in your CSV file...",
     "imported_posts_status": "Imported posts should have their status...",
     "marked_as": "Gemarkeerd als...",
@@ -1485,7 +1485,7 @@
     "title": "Export data",
     "title_hxl": "Gegevens exporteren en taggen",
     "description": "Exporteer alle gegevens naar een CSV bestand of selecteer specifieke velden voor de export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export geschiedenis",
     "hxl_tags": "HXL labels",
@@ -1972,11 +1972,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi gebruiksvoorwaarden",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
+    "title": "StreetSignal gebruiksvoorwaarden",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
     "agree": "Ik ga akkoord met de gebruiksvoorwaarden.",
     "accept_and_continue": "Accepteren en doorgaan",
-    "i_agree": "Ik ga akkoord met het <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">privacybeleid van</a> Ushahidi\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Algemene voorwaarden</a>."
+    "i_agree": "Ik ga akkoord met het <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">privacybeleid van</a> StreetSignal\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Algemene voorwaarden</a>."
   },
   "translations": {
     "languages": "Languages",

@@ -1,7 +1,7 @@
 {
   "onboarding": {
     "greeting": "Hello {{username}}!",
-    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with Ushahidi features. The onboarding process will take couple of minutes.</p>",
+    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with StreetSignal features. The onboarding process will take couple of minutes.</p>",
     "ready": "You're ready!",
     "data_collection": {
       "title": "Data collection",
@@ -28,15 +28,15 @@
       "content": "<p>Change your deployment in Settings. You can manage your deployment details when it comes to Surveys,  Data Sources, Importing and Donation. </p><p>Also, it allows your to export data, create categories, manage users permissions and much more!</p>"
     },
     "final_step": {
-      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using Ushahidi platform.",
+      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using StreetSignal platform.",
       "desc_2": "Remember, in case of any question, don’t hesitate to reach out to our team by",
       "help": "المساعدة والدعم"
     }
   },
   "app": {
     "contact_email_address": "عنوان البريد الإلكتروني للاتصال:",
-    "powered_by_ushahidi": "برعاية Ushahidi.",
-    "support": "دعم Ushahidi",
+    "powered_by_streetsignal": "برعاية StreetSignal.",
+    "support": "دعم StreetSignal",
     "by": "بواسطة",
     "confirm": "تأكيد",
     "submit": "إرسال",
@@ -66,7 +66,7 @@
     },
     "documentation": {
       "title": "الوثائق",
-      "description": "تعلم كيفية تنصيب و اعداد وادارة منصتك على Ushahidi و جعله متاح للاستخدام."
+      "description": "تعلم كيفية تنصيب و اعداد وادارة منصتك على StreetSignal و جعله متاح للاستخدام."
     },
     "donate": "تبرع",
     "donation": "التبرع",
@@ -76,11 +76,11 @@
     "enable_monetization_info": "الربح معطل حاليا",
     "intercom": {
       "intercom": "نظام الإتصال الداخلي",
-      "description": "قم بتواصل مع موظفين Ushahidi لتقديم الدعم"
+      "description": "قم بتواصل مع موظفين StreetSignal لتقديم الدعم"
     },
     "onboarding": {
       "title": "التوجيه",
-      "description": "ألق نظرة مرة أخرى على عملية انضمام لـ Ushahidi."
+      "description": "ألق نظرة مرة أخرى على عملية انضمام لـ StreetSignal."
     },
     "report_a_bug": {
       "title": "الإبلاغ عن خطأ",
@@ -89,7 +89,7 @@
     "edit_collection": "تعديل المجموعة",
     "features": {
       "title": "الميزات",
-      "description": "تعرف على ما يمكن أن ينجزه Ushahidi وطريقة عمله."
+      "description": "تعرف على ما يمكن أن ينجزه StreetSignal وطريقة عمله."
     },
     "forbidden": "عفوا، غير مسموح لك القيام بذلك.",
     "forbidden-login": "الرجاء إدخال تفاصيل تسجيل الدخول الخاصة بك للوصول إلى المنصة",
@@ -236,7 +236,7 @@
 },
   "cookies": {
     "we_use_cookies": "مرحبًا! نحن نستخدم ملفات تعريف الارتباط لجعل تجربتك أفضل.",
-    "cookies_privacy": "إذا كنت تريد معرفة المزيد أو سحب موافقتك ، فيرجى الانتقال إلى <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">سياسة الخصوصية</a> الخاصة بنا.",
+    "cookies_privacy": "إذا كنت تريد معرفة المزيد أو سحب موافقتك ، فيرجى الانتقال إلى <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">سياسة الخصوصية</a> الخاصة بنا.",
     "decline": "الغاء",
     "accept_cookies": "قبول ملفات تعريف الارتباط"
   },
@@ -263,7 +263,7 @@
     "view_unavailable": "عرض {{value}} غير متوفر في برنامجك الحالي. <a href=\"/settings/plan\"> قم بترفيع برنامجك </a>للحصول علىها !"
   },
   "limit": {
-    "plan_limit": "حدود خطة Ushahidi",
+    "plan_limit": "حدود خطة StreetSignal",
     "post_limit_reached": "لقد وصلت إلى الحد المسموح به من المشاركات المنشورة لمشروعك",
     "admin_limit_reached": "لقد وصلت إلى الحد المسموح للمستخدمين المسؤولين في خطتك.",
     "post_type_limit_reached": "لقد وصلت للحد المسموح به للاستطلاعات في خطتك.",
@@ -755,7 +755,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "تم تمكين الربح عبر الويب على هذا الموقع. شكرا لك على تبرعك. لقد تبرعت بـ",
       "thank_you_for_your_donation_end": "حتى الآن",
-      "web_monetization_text": "أصبحت منصات Ushahidi الآن تتيح امكانية تحقيق الدخل من الويب. تسييل الويب هو وسيلة لدعم مواقع الويب التي تحبها دون لعب لعبة المعلنين. كل ما تحتاجه هو الحصول على إعداد المتصفح الخاص بك. انقر على الرابط أدناه لمعرفة كيف يمكنك التبرع.",
+      "web_monetization_text": "أصبحت منصات StreetSignal الآن تتيح امكانية تحقيق الدخل من الويب. تسييل الويب هو وسيلة لدعم مواقع الويب التي تحبها دون لعب لعبة المعلنين. كل ما تحتاجه هو الحصول على إعداد المتصفح الخاص بك. انقر على الرابط أدناه لمعرفة كيف يمكنك التبرع.",
       "how_can_i_donate": "كيف يمكنني التبرع؟"
     }
   },
@@ -1322,11 +1322,11 @@
   },
   "settings": {
     "api_key": "مفتاح API",
-    "api_key_desc": "API هو مفتاح فريد لمنصتك، يمكن استعماله لسماح انظمة الطرف الثالث لكي يتفاعل مع منصتك على Ushahidi",
+    "api_key_desc": "API هو مفتاح فريد لمنصتك، يمكن استعماله لسماح انظمة الطرف الثالث لكي يتفاعل مع منصتك على StreetSignal",
     "appearance": "إعدادات المظهر",
     "continue": "متابعة",
     "create": "قم بإنشاء استبيان جديد",
-    "create_open_or_targeted": "قم بإنشاء استبيان مفتوح او مستهدف لجمع المعلومات عن Ushahidi",
+    "create_open_or_targeted": "قم بإنشاء استبيان مفتوح او مستهدف لجمع المعلومات عن StreetSignal",
     "current_header": "صورة الخلفية الحالية",
     "customize_your_new_deployment": "تخصيص منصتك الجديدة",
     "embed": "تضمين",
@@ -1341,7 +1341,7 @@
       "import": "استيراد",
       "import_desc": "تحميل بيانات الاستبيان إلى منصتك من ملف CSV",
       "user_settings": "تهيئة API HDX",
-      "user_settings_desc": "قم بتكوين واجهة برمجة التطبيقات\"API\" الخاصة بك بحيث يمكن تحميل بيانات Ushahidi المحددة إلى حسابك على منصة تبادل البيانات الإنسانية (HDX).",
+      "user_settings_desc": "قم بتكوين واجهة برمجة التطبيقات\"API\" الخاصة بك بحيث يمكن تحميل بيانات StreetSignal المحددة إلى حسابك على منصة تبادل البيانات الإنسانية (HDX).",
       "export": "تصدير البيانات",
       "export_hxl": "تصدير ووضع علامات على البيانات",
       "export_desc_hxl": "قم بتصدير بياناتك كملف CSV أو قم بتعيين علامات وصفات لبياناتك وقم بتحميلها مباشرةً إلى حساب Humanitarian Data Exchange (HDX) أو قم بتصديرها كملف CSV مع علامات.",
@@ -1353,7 +1353,7 @@
       "categories": "الفئات.",
       "categories_desc": "إنشاء وإدارة الفئات التي يمكن للناس وضع المنشورات فيها لتحسين التنظيم.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "إنشاء Webhooks لإرسال بيانات منصة Ushahidi إلى تطبيقات خارجية عند حدوث أحداث معينة.",
+      "webhooks_desc": "إنشاء Webhooks لإرسال بيانات منصة StreetSignal إلى تطبيقات خارجية عند حدوث أحداث معينة.",
       "plans": "الخطط",
       "plan_desc": "خطة منصتك الحالية هي  <strong>{{current_plan}}</strong>",
       "donation": "تبرع",
@@ -1549,7 +1549,7 @@
       "delete_their_own_posts": "حذف منشوراتهم الخاصة",
       "registred_member": "عضو مسجل",
       "administrator": "المشرف",
-      "roles_description": "تتحكم هذه الخيارات في ما يمكن لهذا النوع من الأدوار إجراء تغييرات عليه. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">تفضل بزيارة أدلة الدعم لدينا لمعرفة المزيد.."
+      "roles_description": "تتحكم هذه الخيارات في ما يمكن لهذا النوع من الأدوار إجراء تغييرات عليه. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">تفضل بزيارة أدلة الدعم لدينا لمعرفة المزيد.."
     },
     "deployment_delete_this": "حذف منصتك",
     "deployment_delete": "حذف منصة",
@@ -1606,7 +1606,7 @@
     "csv_column": "عمود CSV",
     "choose_which_column": "اختر عمود CSV الذي يجب تعيينه لكل حقل من حقول الاستبيان",
     "each_survey_field": "تم سرد كل حقول الاستبيان أدناه. اختر العمود من ملف CSV الخاص بك الذي ترغب في استخدامه لملء كل واحد من هذه الحقول.",
-    "status_explanation": "يُعرف Ushahidi ثلاث حالات للمنشورات: تم نشره، قيد المراجعة، مؤرشف. لذا تأكد من أن كل إدخال في العمود الذي تحدده يحتوي على أحد هذه القيم الثلاث.",
+    "status_explanation": "يُعرف StreetSignal ثلاث حالات للمنشورات: تم نشره، قيد المراجعة، مؤرشف. لذا تأكد من أن كل إدخال في العمود الذي تحدده يحتوي على أحد هذه القيم الثلاث.",
     "defined_column": "معرَّف بواسطة عمود في ملف CSV...",
     "imported_posts_status": "يجب أن تكون حالة المنشورات المستوردة..",
     "marked_as": "عليه علامة ك...",
@@ -1655,7 +1655,7 @@
     "title": "بيانات التصدير",
     "title_hxl": "تصدير ووضع علامات على البيانات",
     "description": "تصدير جميع بياناتك كملف CSV أو اختيار حقول استبيان محددة تريد تصديرها.",
-    "description_hxl": "تصدير جميع بياناتك من Ushahidi كملف CSV، أو اختيار حقول استبيان محددة تريد تصديرها كملف CSV أو تعيينها.",
+    "description_hxl": "تصدير جميع بياناتك من StreetSignal كملف CSV، أو اختيار حقول استبيان محددة تريد تصديرها كملف CSV أو تعيينها.",
     "export": "تصدير",
     "export_history": "سجل تاريخ التصدير",
     "hxl_tags": "وسوم HXL",
@@ -2161,11 +2161,11 @@
     }
   },
   "terms_of_service": {
-    "title": "شروط و خدمات Ushahidi",
-    "terms_of_service": "لقد قمنا بتجديد <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">شروط و الخدمات</a> و <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\"> سياسة الخصوصية</a>. رجاءا راجع هذ‌ه المستندات بعناية و قم بقبول الشروط لكي تستمر في استخدام خدمات Ushahidi",
-    "agree": "اقبل بشروط و خدمات Ushahidi",
+    "title": "شروط و خدمات StreetSignal",
+    "terms_of_service": "لقد قمنا بتجديد <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">شروط و الخدمات</a> و <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\"> سياسة الخصوصية</a>. رجاءا راجع هذ‌ه المستندات بعناية و قم بقبول الشروط لكي تستمر في استخدام خدمات StreetSignal",
+    "agree": "اقبل بشروط و خدمات StreetSignal",
     "accept_and_continue": "قبول و الاستمرار",
-    "i_agree": "أوافق على <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">سياسة الخصوصية</a> ل Ushahidi\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">الشروط والأحكام</a>."
+    "i_agree": "أوافق على <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">سياسة الخصوصية</a> ل StreetSignal\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">الشروط والأحكام</a>."
   },
   "translations": {
     "available_languages": "Available translations (select to see post):",

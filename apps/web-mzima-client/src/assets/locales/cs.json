@@ -1,7 +1,7 @@
 {
   "onboarding": {
     "greeting": "Dobrý den {{username}}!",
-    "intro": "<p>Úspěšně jste vytvořili nasazení. Nyní, zatímco ho budeme pilovat, seznamte se, prosím, s funkcemi Ushahidi. Proces nasazení zabere několik minut.</p>",
+    "intro": "<p>Úspěšně jste vytvořili nasazení. Nyní, zatímco ho budeme pilovat, seznamte se, prosím, s funkcemi StreetSignal. Proces nasazení zabere několik minut.</p>",
     "ready": "Jste připraveni!",
     "data_collection": {
       "title": "Sběr dat",
@@ -28,15 +28,15 @@
       "content": "<p>Změňte nasazení v Nastavení. Můžete spravovat podrobnosti o nasazení, pokud jde o průzkumy, zdroje dat, import a dárcovství.</p> <p> Také vám umožňuje exportovat data, vytvářet kategorie, spravovat oprávnění uživatelů a mnoho dalšího!</p>"
     },
     "final_step": {
-      "desc_1": "Jak vzrušující! Nyní znáte nejdůležitější funkce a jste připraveni začít platformu Ushahidi používat.",
+      "desc_1": "Jak vzrušující! Nyní znáte nejdůležitější funkce a jste připraveni začít platformu StreetSignal používat.",
       "desc_2": "Nezapomeňte, že v případě jakýchkoli dotazů se neváhejte obrátit na náš tým ",
       "help": "Nápověda & Podpora"
     }
   },
   "app": {
     "contact_email_address": "Kontaktní e-mailová adresa:",
-    "powered_by_ushahidi": "Běží na Ushahidi.",
-    "support": "Podpora Ushahidi",
+    "powered_by_streetsignal": "Běží na StreetSignal.",
+    "support": "Podpora StreetSignal",
     "by": "od",
     "confirm": "Potvrdit",
     "submit": "Odeslat",
@@ -66,7 +66,7 @@
     },
     "documentation": {
       "title": "Dokumentace",
-      "description": "Naučte se, jak nastavit, konfigurovat a spravovat nasazení systému Ushahidi."
+      "description": "Naučte se, jak nastavit, konfigurovat a spravovat nasazení systému StreetSignal."
     },
     "donate": "Darujte",
     "donation": "Dary",
@@ -76,11 +76,11 @@
     "enable_monetization_info": "Monetizace je v současné době vypnutá.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Kontaktovat pracovníky Ushahidi pro podporu chatu"
+      "description": "Kontaktovat pracovníky StreetSignal pro podporu chatu"
     },
     "onboarding": {
       "title": "Vstup do systému",
-      "description": "Podívejte se znovu na Ushahidi onboarding."
+      "description": "Podívejte se znovu na StreetSignal onboarding."
     },
     "report_a_bug": {
       "title": "Nahlásit chybu",
@@ -89,7 +89,7 @@
     "edit_collection": "Upravit kolekci",
     "features": {
       "title": "Funkce",
-      "description": "Podívejte se, co Ushahidi dokáže a jak to funguje."
+      "description": "Podívejte se, co StreetSignal dokáže a jak to funguje."
     },
     "forbidden": "Nemáte povoleno to udělat.",
     "forbidden-login": "Zadejte své přihlašovací údaje pro přístup k nasazení.",
@@ -236,7 +236,7 @@
 },
   "cookies": {
     "we_use_cookies": "Ahoj! Soubory cookie používáme, abychom vám vylepšili zážitek.",
-    "cookies_privacy": "Chcete-li se dozvědět více nebo odvolat svůj souhlas, přejděte na naše <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Zásady ochrany osobních údajů</a>.",
+    "cookies_privacy": "Chcete-li se dozvědět více nebo odvolat svůj souhlas, přejděte na naše <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Zásady ochrany osobních údajů</a>.",
     "decline": "Odmítnout",
     "accept_cookies": "Přijmout soubory cookie"
   },
@@ -263,7 +263,7 @@
     "view_unavailable": "Zobrazení {{value}} není v aktuálním plánu k dispozici. <a href=\"/settings/plan\">Upgradujte svůj plán</a> a získejte ho!"
   },
   "limit": {
-    "plan_limit": "Limit plánu Ushahidi",
+    "plan_limit": "Limit plánu StreetSignal",
     "post_limit_reached": "Dosáhl jste limitu publikovaných příspěvků pro svůj plán.",
     "admin_limit_reached": "Dosáhl jste limitu adminů pro svůj plán.",
     "post_type_limit_reached": "Dosáhl jste limitu průzkumů pro svůj plán.",
@@ -755,7 +755,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Na tomto webu je povoleno zpeněžení webu. Děkujeme za váš příspěvek. Přispěli jste",
       "thank_you_for_your_donation_end": "zatím",
-      "web_monetization_text": "Nasazení Ushahidi jsou teď povolená monetizace na webu. Zpeněžení webu je způsob, jak podpořit webové stránky, které máte rádi, aniž byste museli hrát hru inzerentů. Vše, co potřebujete, je nastavení prohlížeče. Kliknutím na níže uvedený odkaz se dozvíte, jak můžete darovat.",
+      "web_monetization_text": "Nasazení StreetSignal jsou teď povolená monetizace na webu. Zpeněžení webu je způsob, jak podpořit webové stránky, které máte rádi, aniž byste museli hrát hru inzerentů. Vše, co potřebujete, je nastavení prohlížeče. Kliknutím na níže uvedený odkaz se dozvíte, jak můžete darovat.",
       "how_can_i_donate": "Jak mohu darovat?"
     }
   },
@@ -1322,11 +1322,11 @@
   },
   "settings": {
     "api_key": "Klíč API",
-    "api_key_desc": "Klíč rozhraní API je jedinečný pro nasazení, lze jej použít k tomu, aby umožnil systémům třetích stran komunikovat s nasazením služby Ushahidi.",
+    "api_key_desc": "Klíč rozhraní API je jedinečný pro nasazení, lze jej použít k tomu, aby umožnil systémům třetích stran komunikovat s nasazením služby StreetSignal.",
     "appearance": "Nastavení vzhledu",
     "continue": "Pokračovat",
     "create": "Vytvořit nový průzkum",
-    "create_open_or_targeted": "Vytvořte otevřený nebo cílený průzkum, abyste získali informace o Ushahidi.",
+    "create_open_or_targeted": "Vytvořte otevřený nebo cílený průzkum, abyste získali informace o StreetSignal.",
     "current_header": "Současný obrázek na pozadí",
     "customize_your_new_deployment": "Přizpůsobit nové nasazení",
     "embed": "Vložit",
@@ -1341,7 +1341,7 @@
       "import": "Import",
       "import_desc": "Nahrajte data průzkumu do nasazení ze souboru CSV.",
       "user_settings": "Konfigurovat HDX API",
-      "user_settings_desc": "Nakonfigurujte rozhraní API tak, aby vaše data s označením Ushahidi mohla být nahrána na váš účet Humanitarian Data Exchange (HDX).",
+      "user_settings_desc": "Nakonfigurujte rozhraní API tak, aby vaše data s označením StreetSignal mohla být nahrána na váš účet Humanitarian Data Exchange (HDX).",
       "export": "Exportovat data",
       "export_hxl": "Exportovat a otagovat data",
       "export_desc_hxl": "Exportujte data jako soubor CSV nebo přiřaďte značky a atributy vašim datům a nahrajte je přímo na účet Human Data Exchange (HDX) nebo exportujte jako otagovaný soubor CSV.",
@@ -1353,7 +1353,7 @@
       "categories": "Kategorie",
       "categories_desc": "Vytvořte a spravujte kategorie, do kterých mohou lidé přidávat příspěvky pro lepší organizaci.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Vytvořit webhooks které odesílají data platformy Ushahidi externím aplikacím při spuštění určitých událostí.",
+      "webhooks_desc": "Vytvořit webhooks které odesílají data platformy StreetSignal externím aplikacím při spuštění určitých událostí.",
       "plans": "Plány",
       "plan_desc": "Současný plán nasazení je <strong>{{current_plan}}</strong>.",
       "donation": "Dar",
@@ -1549,7 +1549,7 @@
       "delete_their_own_posts": "Smazání vlastních příspěvků",
       "registred_member": "Registrovaný člen",
       "administrator": "Správce",
-      "roles_description": "Tyto možnosti nastavují, jaké může tento typ role provádět změny. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Navštivte naše příručky podpory, kde najdete další informace."
+      "roles_description": "Tyto možnosti nastavují, jaké může tento typ role provádět změny. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Navštivte naše příručky podpory, kde najdete další informace."
     },
     "deployment_delete_this": "Smazat toto Nasazení",
     "deployment_delete": "Smazat nasazení",
@@ -1606,7 +1606,7 @@
     "csv_column": "sloupec CSV",
     "choose_which_column": "Zvolte, který sloupec CSV by měl být přiřazen každému poli průzkumu",
     "each_survey_field": "Každé z polí průzkumu je uvedeno níže. Vyberte sloupec ze souboru CSV, který chcete použít k vyplnění každého z těchto polí.",
-    "status_explanation": "Ushahidi rozpozná jeden ze tří stavů: publikováno, přezkoumáno a archivováno. Ujistěte se, že každá položka ve vybraném sloupci má jednu z těchto tří hodnot.",
+    "status_explanation": "StreetSignal rozpozná jeden ze tří stavů: publikováno, přezkoumáno a archivováno. Ujistěte se, že každá položka ve vybraném sloupci má jednu z těchto tří hodnot.",
     "defined_column": "Definováno sloupcem ve vašem souboru CSV ...",
     "imported_posts_status": "Importované příspěvky by měly mít svůj status ...",
     "marked_as": "Označen jako ...",
@@ -1655,7 +1655,7 @@
     "title": "Exportovat data",
     "title_hxl": "Exportovat a otagovat data",
     "description": "Exportujte všechna data jako CSV nebo vyberte konkrétní políčka průzkumu, která chcete exportovat.",
-    "description_hxl": "Exportujte všechna data z aplikace Ushahidi jako CSV, vyberte konkrétní políčka, která chcete exportovat jako CSV nebo přiřadit",
+    "description_hxl": "Exportujte všechna data z aplikace StreetSignal jako CSV, vyberte konkrétní políčka, která chcete exportovat jako CSV nebo přiřadit",
     "export": "Export",
     "export_history": "Historie Exportu",
     "hxl_tags": "HXL tagy",
@@ -2161,11 +2161,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Smluvní podmínky služby Ushahidi",
-    "terms_of_service": "Aktualizovali jsme naše <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Smluvní podmínky</a> a <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Zásady ochrany osobních údajů</a>. Přečtěte si tyto dokumenty pečlivě a přijměte podmínky, abyste mohli nadále využívat služby společnosti Ushahidi.",
-    "agree": "Souhlasím se Smluvními podmínkami společnosti Ushahidi.",
+    "title": "Smluvní podmínky služby StreetSignal",
+    "terms_of_service": "Aktualizovali jsme naše <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Smluvní podmínky</a> a <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Zásady ochrany osobních údajů</a>. Přečtěte si tyto dokumenty pečlivě a přijměte podmínky, abyste mohli nadále využívat služby společnosti StreetSignal.",
+    "agree": "Souhlasím se Smluvními podmínkami společnosti StreetSignal.",
     "accept_and_continue": "Přijmout a pokračovat",
-    "i_agree": "Souhlasím se <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">zásadami ochrany osobních údajů</a> Ushahidi\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Obchodní podmínky</a>."
+    "i_agree": "Souhlasím se <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">zásadami ochrany osobních údajů</a> StreetSignal\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Obchodní podmínky</a>."
   },
   "translations": {
     "available_languages": "Dostupné překlady (vyberte pro zobrazení příspěvku):",

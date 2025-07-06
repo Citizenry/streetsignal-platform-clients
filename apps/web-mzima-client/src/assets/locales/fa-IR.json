@@ -1,7 +1,7 @@
 {
   "app": {
-    "powered_by_ushahidi": "طراحی شده توسط Ushahidi",
-    "support": "پشتیبانی Ushahidi",
+    "powered_by_streetsignal": "طراحی شده توسط StreetSignal",
+    "support": "پشتیبانی StreetSignal",
     "by": "توسط",
     "submit": "ارسال",
     "anonymous": "ناشناس",
@@ -20,7 +20,7 @@
     "date_updated": "تاریخ بروز رسانی",
     "documentation": {
       "title": "مستندات",
-      "description": "نحوه راه اندازی، پیکربندی و مدیریت گسترش Ushahidi را یاد بگیرید."
+      "description": "نحوه راه اندازی، پیکربندی و مدیریت گسترش StreetSignal را یاد بگیرید."
     },
     "donate": "Donate",
     "donation": "Donation",
@@ -30,7 +30,7 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "ارتباط داخلی",
-      "description": "تماس با کارمندان Ushahidi برای پشتیبانی از طریق چت"
+      "description": "تماس با کارمندان StreetSignal برای پشتیبانی از طریق چت"
     },
     "report_a_bug": {
       "title": "گزارش یک اشکال",
@@ -39,7 +39,7 @@
     "edit_collection": "ویرایش مجموعه",
     "features": {
       "title": "امکانات",
-      "description": "ببینید Ushahidi چه چیزی می تواند انجام دهد و چگونه کار میکند."
+      "description": "ببینید StreetSignal چه چیزی می تواند انجام دهد و چگونه کار میکند."
     },
     "forbidden": "با عرض پوزش، شما مجاز به انجام این کار نیستید.",
     "404": "این نشانی اینترنتی وجود ندارد",
@@ -170,12 +170,12 @@
   "demo_warnings": {
     "close": "Close",
     "visitor": {
-      "not_expired": "Deployment {{site_name}} is using a free trial of Ushahidi. You will only see the first 25 posts for the next {{days}} days.",
-      "expired": "Deployment {{site_name}} is using a free trial of Ushahidi. You will only see the first 25 posts."
+      "not_expired": "Deployment {{site_name}} is using a free trial of StreetSignal. You will only see the first 25 posts for the next {{days}} days.",
+      "expired": "Deployment {{site_name}} is using a free trial of StreetSignal. You will only see the first 25 posts."
     },
     "user": {
-      "expired": "Your 30 day trial is over. Upgrade now to make the most of Ushahidi.",
-      "not_expired": "You have {{days}} days left in your free trial. Upgrade now for unlimited posts and full access to Ushahidi.",
+      "expired": "Your 30 day trial is over. Upgrade now to make the most of StreetSignal.",
+      "not_expired": "You have {{days}} days left in your free trial. Upgrade now for unlimited posts and full access to StreetSignal.",
       "limit_reached": "Nice work! You have more than 25 posts. Upgrade now to see the rest of your posts or reach out to our team about a full-service enterprise partnership for your project."
     }
   },
@@ -190,7 +190,7 @@
     "view_unavailable": "نمای {{value}} درطرح فعلی شما موجود نیست. <a href=\"/settings/plan\">  طرح خود را ارتقا دهید </a> تا آن را دریافت کنید!"
   },
   "limit": {
-    "plan_limit": "محدوده طرح Ushahidi",
+    "plan_limit": "محدوده طرح StreetSignal",
     "post_limit_reached": "شما به حد نساب تعیین شده برای تعداد نوشته های منتشر شده در طرح تان رسیده اید.",
     "admin_limit_reached": "شما به حد نساب تعیین شده برای مدیریت کاربران در طرح تان رسیده اید.",
     "post_type_limit_reached": "شما به حد نساب تعیین شده برای نظرسنجی در طرح تان رسیده اید.",
@@ -637,7 +637,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "کسب درامد وب در این وب سایت فعال است. با تشکر از شما برای کمک مالی خود را. شما اهدا کرده اید",
       "thank_you_for_your_donation_end": "تا کنون",
-      "web_monetization_text": "استقرار Ushahidi در حال حاضر کسب درامد وب فعال است. کسب درامد از وب راهی برای حمایت از وب سایت هایی است که دوست دارید بدون بازی تبلیغ کنندگان بازی کنید. تنها چیزی که نیاز دارید این است که مرورگر خود را راه اندازی کنید. روی لینک زیر کلیک کنید تا یاد بگیرید چگونه می توانید اهدا کنید.",
+      "web_monetization_text": "استقرار StreetSignal در حال حاضر کسب درامد وب فعال است. کسب درامد از وب راهی برای حمایت از وب سایت هایی است که دوست دارید بدون بازی تبلیغ کنندگان بازی کنید. تنها چیزی که نیاز دارید این است که مرورگر خود را راه اندازی کنید. روی لینک زیر کلیک کنید تا یاد بگیرید چگونه می توانید اهدا کنید.",
       "how_can_i_donate": "چگونه می توانم اهدا کنم؟"
     }
   },
@@ -1131,11 +1131,11 @@
   },
   "settings": {
     "api_key": "کلید API",
-    "api_key_desc": "کلید API منحصر به حوزه شما است، می توانید از آن  برای اجازه دادن به سیستم های شخص ثالث برای برقراری ارتباط با حوزه Ushahidi خود استفاده کنید.",
+    "api_key_desc": "کلید API منحصر به حوزه شما است، می توانید از آن  برای اجازه دادن به سیستم های شخص ثالث برای برقراری ارتباط با حوزه StreetSignal خود استفاده کنید.",
     "appearance": "تنظیمات ظاهری",
     "continue": "ادامه دادن",
     "create": "ایجاد نظرسنجی جدید",
-    "create_open_or_targeted": "برای جمع آوری اطلاعات درباره Ushahidi، یک نظرسنجی باز یا هدفمند ایجاد کنید.",
+    "create_open_or_targeted": "برای جمع آوری اطلاعات درباره StreetSignal، یک نظرسنجی باز یا هدفمند ایجاد کنید.",
     "current_header": "تصویر پس زمینه فعلی",
     "customize_your_new_deployment": "حوزه جدید خود را بطور دلخواه تنظیم کنید",
     "embed": "جاسازی",
@@ -1150,7 +1150,7 @@
       "import": "وارد کردن",
       "import_desc": "داده های نظرسنجی ها را از یک فایل CSV به حوزه خود آپلود کنید.",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "داده های خروجی",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1162,7 +1162,7 @@
       "categories": "دسته بندی ها",
       "categories_desc": "برای سازمان دهی بهتر، دسته بندی هایی را که مردم می توانند در آنها پست بفرستند بیفزایید و مدیریت کنید.",
       "webhooks": "وب هوک ها",
-      "webhooks_desc": "وب هوک هایی ایجاد  کنید که هنگام وقوع رویداهای خاص، داده های پلتفرم Ushahidi را به طرح های خارجی ارسال می کند.",
+      "webhooks_desc": "وب هوک هایی ایجاد  کنید که هنگام وقوع رویداهای خاص، داده های پلتفرم StreetSignal را به طرح های خارجی ارسال می کند.",
       "plans": "طرح ها",
       "plan_desc": "طرح فعلی حوزه شما <strong>{{current_plan}}</strong> است.",
       "donation": "Donation",
@@ -1342,7 +1342,7 @@
       "edit_their_own_posts": "ویرایش نوشته های خودشان",
       "registred_member": "شماره ثبت شده",
       "administrator": "مدیریت",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more.",
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more.",
       "manage_collections_and_saved_searches": "مدیریت مجموعه ها و جستجوهای ذخیره شده",
       "delete_posts": "حذف نوشته",
       "delete_their_own_posts": "های خود را حذف کنید"
@@ -1410,7 +1410,7 @@
     "csv_column": "ستون CSV",
     "choose_which_column": "انتخاب کنید کدام ستون CSV باید به هر فیلد بررسی اختصاص داده شود",
     "each_survey_field": "هر یک از زمینه های نظرسنجی در زیر فهرست شده است. ستونی را از فایل CSV خود  برای پر کردن هر یک از این فیلدها انتخاب کنید.",
-    "status_explanation": "Ushahidi یکی از سه وضعیت پست را به رسمیت می شناسد: منتشر شده، تحت بررسی و بایگانی شده. بنابراین مطمئن شوید که هر ورودی در ستون انتخابی شما یکی از این سه مقدار است.",
+    "status_explanation": "StreetSignal یکی از سه وضعیت پست را به رسمیت می شناسد: منتشر شده، تحت بررسی و بایگانی شده. بنابراین مطمئن شوید که هر ورودی در ستون انتخابی شما یکی از این سه مقدار است.",
     "defined_column": "تعریف شده توسط یک ستون در فایل CSV شما ...",
     "imported_posts_status": "پست های وارد شده باید وضعیت خود را داشته باشند ...",
     "marked_as": "ثبت به عنوان...",
@@ -1458,7 +1458,7 @@
     "title": "داده های خروجی",
     "title_hxl": "Export and tag data",
     "description": "از تمام اطلاعات خود را به عنوان یک فایل CSV خروجی بگیرید و یا فیلدهای مورد نظر خاصی را که برای نظرسنجی می خواهید، برای خروجی انتخاب کنید.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "خروجی گرفتن",
     "export_history": "خروجی گرفتن از تاریخچه",
     "hxl_tags": "HXL tags",
@@ -1930,11 +1930,11 @@
     }
   },
   "terms_of_service": {
-    "title": "شرایط خدمات Ushahidi",
-    "terms_of_service": "<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\"> Terms and Conditions </a> ما و <a href=\"https://www. ushahidi.com/privacy-policy \"target =\" _ blank \"> Privacy Policy </a> بروزرسانی شد. لطفا این اسناد را به دقت بررسی کرده و شرایط را بپزیرید تا بتوانید کماکان از خدمات Ushahidi استفاده کنید.",
-    "agree": "شرایط خدمات Ushahidi را قبول می کنم.",
+    "title": "شرایط خدمات StreetSignal",
+    "terms_of_service": "<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\"> Terms and Conditions </a> ما و <a href=\"https://www. streetsignal.org/privacy-policy \"target =\" _ blank \"> Privacy Policy </a> بروزرسانی شد. لطفا این اسناد را به دقت بررسی کرده و شرایط را بپزیرید تا بتوانید کماکان از خدمات StreetSignal استفاده کنید.",
+    "agree": "شرایط خدمات StreetSignal را قبول می کنم.",
     "accept_and_continue": "پذیرفتن و ادامه",
-    "i_agree": "من با <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Ushahidi موافقم سیاست حفظ حریم خصوصی</a> \n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">شرایط و ضوابط</a>."
+    "i_agree": "من با <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">StreetSignal موافقم سیاست حفظ حریم خصوصی</a> \n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">شرایط و ضوابط</a>."
   },
   "translations": {
     "languages": "Languages",
@@ -2700,7 +2700,7 @@
   },
   "cookies": {
     "we_use_cookies": "سلام! ما از کوکی ها استفاده می کنیم تا تجربه شما را بهتر کنیم.",
-    "cookies_privacy": "اگر می خواهید بیشتر بدانید یا رضایت خود را پس بگیرید، لطفا به <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">سیاست حفظ حریم خصوصی</a> ما بروید.",
+    "cookies_privacy": "اگر می خواهید بیشتر بدانید یا رضایت خود را پس بگیرید، لطفا به <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">سیاست حفظ حریم خصوصی</a> ما بروید.",
     "decline": "رد کردن",
     "accept_cookies": "پذیرش کوکی ها"
   },
@@ -2714,9 +2714,9 @@
     "share_on_facebook": "اشتراک گذاری در فیسبوک"
   },
   "<a href=\"https://www": {
-    "ushahidi": {
+    "streetsignal": {
       "com/terms-of-service\" target=\"_blank\">Terms and Conditions</a>": {
-        "": "<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">شرایط و ضوابط</a>."
+        "": "<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">شرایط و ضوابط</a>."
       }
     }
   }

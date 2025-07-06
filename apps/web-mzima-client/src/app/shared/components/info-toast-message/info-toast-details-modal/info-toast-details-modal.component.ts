@@ -8,7 +8,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class InfoToastDetailsModalComponent {
   @Input() public isAdmin: boolean;
-  public adminEmail = 'support@ushahidi.com';
+  public adminEmail = 'support@streetsignal.org';
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,

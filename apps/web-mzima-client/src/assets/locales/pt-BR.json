@@ -1,7 +1,7 @@
 {
   "app": {
-    "powered_by_ushahidi": "Fornecido por Ushahidi.",
-    "support": "Suporte para Ushahidi",
+    "powered_by_streetsignal": "Fornecido por StreetSignal.",
+    "support": "Suporte para StreetSignal",
     "by": "por",
     "submit": "Enviar",
     "anonymous": "Anônimo",
@@ -20,7 +20,7 @@
     "date_updated": "Data atualizada",
     "documentation": {
       "title": "Documentação",
-      "description": "Aprenda como instalar, configurar e administrar a sua implantação Ushahidi."
+      "description": "Aprenda como instalar, configurar e administrar a sua implantação StreetSignal."
     },
     "donate": "Donate",
     "donation": "Donation",
@@ -30,7 +30,7 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Contact Ushahidi staff for chat support"
+      "description": "Contact StreetSignal staff for chat support"
     },
     "report_a_bug": {
       "title": "Relate um bug",
@@ -39,7 +39,7 @@
     "edit_collection": "Editar coleção",
     "features": {
       "title": "Funcionalidades",
-      "description": "Veja o que o Ushahidi pode fazer e como funciona."
+      "description": "Veja o que o StreetSignal pode fazer e como funciona."
     },
     "forbidden": "Desculpe, você não tem permissão para fazer isso.",
     "404": "Esse URL não existe",
@@ -148,7 +148,7 @@
     "contact_email_address": "Endereço de e-mail para contato:",
     "onboarding": {
       "title": "Integração",
-      "description": "Dê uma olhada no onboarding Ushahidi novamente."
+      "description": "Dê uma olhada no onboarding StreetSignal novamente."
     },
     "forbidden-login": "Insira seus detalhes de login para acessar a implantação.",
     "contact_with_admin": "Ou entre em contato com o administrador ",
@@ -170,12 +170,12 @@
   "demo_warnings": {
     "close": "Fechar",
     "visitor": {
-      "not_expired": "A implantação {{site_name}} está usando uma versão grátis do Ushahidi. Você poderá ver somente as primeiras 25 postagens pelos próximos {{days}} dias.",
-      "expired": "A implantação {{site_name}} está usando uma versão de testes do Ushahidi. Você somente verá as primeiras 25 postagens."
+      "not_expired": "A implantação {{site_name}} está usando uma versão grátis do StreetSignal. Você poderá ver somente as primeiras 25 postagens pelos próximos {{days}} dias.",
+      "expired": "A implantação {{site_name}} está usando uma versão de testes do StreetSignal. Você somente verá as primeiras 25 postagens."
     },
     "user": {
-      "expired": "Sua avaliação de 30 dias terminou. atualize agora para fazer muito mais com Ushahidi.",
-      "not_expired": "Você tem {{days}} dias sobrando em seu teste grátis. Atualize agora para ter postagens ilimitadas e total acesso ao Ushahidi.",
+      "expired": "Sua avaliação de 30 dias terminou. atualize agora para fazer muito mais com StreetSignal.",
+      "not_expired": "Você tem {{days}} dias sobrando em seu teste grátis. Atualize agora para ter postagens ilimitadas e total acesso ao StreetSignal.",
       "limit_reached": "Bom trabalho! Você tem mais que 25 postagens. Atualize agora para ver as suas outras postagens ou entre em contato com nossa equipe para o serviço enterprise ou parceria para o seu projeto."
     }
   },
@@ -190,7 +190,7 @@
     "view_unavailable": "A exibição de {{value}} não está disponível no seu plano atual. <a href=\"/settings/plan\">Atualize seu plano</a> para obtê-la."
   },
   "limit": {
-    "plan_limit": "Limite de Plano da Ushahidi",
+    "plan_limit": "Limite de Plano da StreetSignal",
     "post_limit_reached": "Limite de publicações atingido para seu plano.",
     "admin_limit_reached": "Limite de usuários administradores atingido para seu plano.",
     "post_type_limit_reached": "Limite de pesquisas atingido para seu plano.",
@@ -638,7 +638,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "A monetização da Web está habilitada neste site. Obrigado pela sua doação. Você doou",
       "thank_you_for_your_donation_end": "até agora",
-      "web_monetization_text": "As implantações do Ushahidi agora estão habilitadas para monetização da Web. A monetização da Web é uma maneira de apoiar os sites que você ama sem jogar o jogo dos anunciantes. Tudo o que você precisa é obter a configuração do seu navegador. Clique no link abaixo para saber como doar.",
+      "web_monetization_text": "As implantações do StreetSignal agora estão habilitadas para monetização da Web. A monetização da Web é uma maneira de apoiar os sites que você ama sem jogar o jogo dos anunciantes. Tudo o que você precisa é obter a configuração do seu navegador. Clique no link abaixo para saber como doar.",
       "how_can_i_donate": "Como posso doar?"
     }
   },
@@ -1132,11 +1132,11 @@
   },
   "settings": {
     "api_key": "API Key",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "Configurações de aparência",
     "continue": "Continuar",
     "create": "Criar nova pesquisa",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "Imagem de pano de fundo atual",
     "customize_your_new_deployment": "Personalizar sua nova implantação",
     "embed": "Inserir",
@@ -1151,7 +1151,7 @@
       "import": "Importar",
       "import_desc": "Carregar dados da pesquisa de um arquivo CSV para sua implantação.",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Export data",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1163,7 +1163,7 @@
       "categories": "Categorias",
       "categories_desc": "Criar e gerenciar as categorias nas quais as pessoas podem publicar para melhor organização.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "Planos",
       "plan_desc": "O plano atual da sua implantação é <strong>{{current_plan}}</strong>.",
       "donation": "Donation",
@@ -1343,7 +1343,7 @@
       "edit_their_own_posts": "Edit their own posts",
       "registred_member": "Registered member",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more.",
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more.",
       "manage_collections_and_saved_searches": "Gerenciar coleções e pesquisas salvas",
       "delete_posts": "Excluir postagens",
       "delete_their_own_posts": "Excluir suas próprias postagens"
@@ -1411,7 +1411,7 @@
     "csv_column": "Coluna CSV",
     "choose_which_column": "Escolha qual coluna CSV deve ser atribuída a cada campo de pesquisa",
     "each_survey_field": "Cada um dos campos de pesquisa está listado abaixo. Escolha a coluna do seu arquivo CSV que você deseja usar para preencher cada um desses campos.",
-    "status_explanation": "Ushahidi reconhece um dos três post status: Publicado, em revisão e arquivado. Portanto, certifique-se de que cada entrada na coluna selecionada tem um desses três valores.",
+    "status_explanation": "StreetSignal reconhece um dos três post status: Publicado, em revisão e arquivado. Portanto, certifique-se de que cada entrada na coluna selecionada tem um desses três valores.",
     "defined_column": "Definido por uma coluna de seu arquivo CSV...",
     "imported_posts_status": "As postagens importadas devem ter seus status ...",
     "marked_as": "Marcado como...",
@@ -1459,7 +1459,7 @@
     "title": "Export data",
     "title_hxl": "Export and tag data",
     "description": "Export all of your data as a CSV or choose specific survey fields you want to export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export History",
     "hxl_tags": "HXL tags",
@@ -1931,11 +1931,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi Terms of Service",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
-    "agree": "I agree to Ushahidi's Terms of Service.",
+    "title": "StreetSignal Terms of Service",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
+    "agree": "I agree to StreetSignal's Terms of Service.",
     "accept_and_continue": "Accept and Continue",
-    "i_agree": "Concordo com a <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Política de Privacidade</a> da Ushahidi\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Termos e Condições</a>."
+    "i_agree": "Concordo com a <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Política de Privacidade</a> da StreetSignal\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Termos e Condições</a>."
   },
   "translations": {
     "languages": "Languages",
@@ -2701,7 +2701,7 @@
   },
   "cookies": {
     "we_use_cookies": "Olá! Utilizamos cookies para melhorar a sua experiência.",
-    "cookies_privacy": "Se quiser saber mais ou retirar o seu consentimento, aceda à nossa <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Política de Privacidade</a>.",
+    "cookies_privacy": "Se quiser saber mais ou retirar o seu consentimento, aceda à nossa <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Política de Privacidade</a>.",
     "decline": "Recusar",
     "accept_cookies": "Aceitar cookies"
   },

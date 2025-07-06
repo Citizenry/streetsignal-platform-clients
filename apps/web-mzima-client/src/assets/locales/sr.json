@@ -1,7 +1,7 @@
 {
   "onboarding": {
     "greeting": "Hello {{username}}!",
-    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with Ushahidi features. The onboarding process will take couple of minutes.</p>",
+    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with StreetSignal features. The onboarding process will take couple of minutes.</p>",
     "ready": "You're ready!",
     "data_collection": {
       "title": "Data collection",
@@ -28,15 +28,15 @@
       "content": "<p>Change your deployment in Settings. You can manage your deployment details when it comes to Surveys,  Data Sources, Importing and Donation. </p><p>Also, it allows your to export data, create categories, manage users permissions and much more!</p>"
     },
     "final_step": {
-      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using Ushahidi platform.",
+      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using StreetSignal platform.",
       "desc_2": "Remember, in case of any question, don’t hesitate to reach out to our team by",
       "help": "Help & Support"
     }
   },
   "app": {
     "contact_email_address": "Contact email address:",
-    "powered_by_ushahidi": "Bazirano na Ushahidi platformi.",
-    "support": "Ushahidi podrška",
+    "powered_by_streetsignal": "Bazirano na StreetSignal platformi.",
+    "support": "StreetSignal podrška",
     "by": "po",
     "confirm": "Confirm",
     "submit": "Privhati",
@@ -66,7 +66,7 @@
     },
     "documentation": {
       "title": "Dokumentacija",
-      "description": "Naučite kako da podesite, konfigurišete i upravljate vašom Ushahidi implementacijom."
+      "description": "Naučite kako da podesite, konfigurišete i upravljate vašom StreetSignal implementacijom."
     },
     "donate": "Donate",
     "donation": "Donation",
@@ -76,11 +76,11 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "Interfon",
-      "description": "Obratite se osoblju Ushahidi-ja za podršku u chatu"
+      "description": "Obratite se osoblju StreetSignal-ja za podršku u chatu"
     },
     "onboarding": {
       "title": "Onboarding",
-      "description": "Take a look at the Ushahidi onboarding again."
+      "description": "Take a look at the StreetSignal onboarding again."
     },
     "report_a_bug": {
       "title": "Prijavite grešku",
@@ -89,7 +89,7 @@
     "edit_collection": "Uređivanje zbirke",
     "features": {
       "title": "Karakteristike",
-      "description": "Pogledajte šta Ushahidi može da radi i kako to funkcioniše."
+      "description": "Pogledajte šta StreetSignal može da radi i kako to funkcioniše."
     },
     "forbidden": "Izvinite, to vam nije dozvoljeno.",
     "forbidden-login": "Please enter your login details to access the deployment.",
@@ -236,7 +236,7 @@
 },
   "cookies": {
     "we_use_cookies": "Howdy! We use cookies to make your experience better.",
-    "cookies_privacy": "If you want to know more or withdraw your consent, please go to our <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>.",
+    "cookies_privacy": "If you want to know more or withdraw your consent, please go to our <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>.",
     "decline": "Decline",
     "accept_cookies": "Accept cookies"
   },
@@ -263,7 +263,7 @@
     "view_unavailable": "Prikaz {{value}} nije dostupan u vašem trenutnom planu. <a href=\"/settings/plan\">Nadogradite svoj plan</a> da biste ga iskoristili!"
   },
   "limit": {
-    "plan_limit": "Ushahidi limit plan",
+    "plan_limit": "StreetSignal limit plan",
     "post_limit_reached": "Dosegli ste ograničenje objavljenih postova za svoj plan.",
     "admin_limit_reached": "Dosegli ste ograničenje administrativnih korisnika za svoj plan.",
     "post_type_limit_reached": "Dosegli ste ograničenje ankete za svoj plan.",
@@ -755,7 +755,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Web monetization is enabled on this website. Thank you for your donation. You have donated",
       "thank_you_for_your_donation_end": "so far",
-      "web_monetization_text": "Ushahidi deployments are now web monetization enabled. Web monetization is a way of supporting the websites you love without playing advertisers game. All you need is to get your browser setup. Click the link below to learn how you can donate.",
+      "web_monetization_text": "StreetSignal deployments are now web monetization enabled. Web monetization is a way of supporting the websites you love without playing advertisers game. All you need is to get your browser setup. Click the link below to learn how you can donate.",
       "how_can_i_donate": "How can I donate?"
     }
   },
@@ -1322,11 +1322,11 @@
   },
   "settings": {
     "api_key": "API ključ",
-    "api_key_desc": "API ključ je jedinstven za vašu implementaciju, može se koristiti da sistemima trećih strana omogući interakciju sa vašom Ushahidi implementacijom.",
+    "api_key_desc": "API ključ je jedinstven za vašu implementaciju, može se koristiti da sistemima trećih strana omogući interakciju sa vašom StreetSignal implementacijom.",
     "appearance": "Podešavanja izgleda",
     "continue": "Nastavi",
     "create": "Kreirajte novu anketu",
-    "create_open_or_targeted": "Napravite otvorenu ili ciljanu anketu da biste prikupili informacije o Ushahidi.",
+    "create_open_or_targeted": "Napravite otvorenu ili ciljanu anketu da biste prikupili informacije o StreetSignal.",
     "current_header": "Trenutna pozadinska slika",
     "customize_your_new_deployment": "Prilagodite vašoj novoj primeni",
     "embed": "Ugrađivanje",
@@ -1341,7 +1341,7 @@
       "import": "Uvoz",
       "import_desc": "Otpremite podatke ankete u vašu implementaciju iz CSV datoteke.",
       "user_settings": "Konfigurišite HDX API",
-      "user_settings_desc": "Konfigurišite svoj API tako da se vaši Ushahidi označeni podaci mogu preneti na vaš nalog za Humanitarnu razmenu podataka (HDX).",
+      "user_settings_desc": "Konfigurišite svoj API tako da se vaši StreetSignal označeni podaci mogu preneti na vaš nalog za Humanitarnu razmenu podataka (HDX).",
       "export": "Izvezi podatke",
       "export_hxl": "Izvoz i označavanje podataka",
       "export_desc_hxl": "Izvezite svoje podatke u obliku CSV datoteke ili dodelite oznake i osobine vašim podacima i prenesite ih direktno na vaš nalog za Humanitarnu razmenu podataka (HDx) ili ih izvezite kao označenu CSV datoteku",
@@ -1353,7 +1353,7 @@
       "categories": "Kategorije",
       "categories_desc": "Kreirajte i upravljajte kategorijama u koje ljudi mogu postavljati objave radi poboljšanja organizacije.",
       "webhooks": "Web prikazi",
-      "webhooks_desc": "Kreirajte web prikaze koji šalju podatke Ushahidi platforme spoljnim aplikacijama kada se pokreću određeni događaji.",
+      "webhooks_desc": "Kreirajte web prikaze koji šalju podatke StreetSignal platforme spoljnim aplikacijama kada se pokreću određeni događaji.",
       "plans": "Planovi",
       "plan_desc": "Trenutni plan vaše implementacije je <strong>{{current_plan}}</strong>.",
       "donation": "Donation",
@@ -1549,7 +1549,7 @@
       "delete_their_own_posts": "Delete Their Own Posts",
       "registred_member": "Registrovani član",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://www.ushahidi.com/support/custom-roles#add-a-role\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://www.streetsignal.org/support/custom-roles#add-a-role\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "Izbrišite raspored",
     "deployment_delete": "Izbriši raspoređivanje",
@@ -1606,7 +1606,7 @@
     "csv_column": "CSV kolona",
     "choose_which_column": "Izaberite koju CSV kolonu treba dodeliti svakom polju ankete",
     "each_survey_field": "Svako od polja ankete je dole navedeno. Izaberite kolonu iz svoje CSV datoteke koju želite da upotriebite za popunjavanje svakog od ovih polja.",
-    "status_explanation": "Ushahidi prepoznaje jednu od tri statusa posta: Objavljeno, U pregledu i Arhivirano. Zato budite sigurni da svaki unos u koloni koju odaberete ima jednu od ove tri vrednosti.",
+    "status_explanation": "StreetSignal prepoznaje jednu od tri statusa posta: Objavljeno, U pregledu i Arhivirano. Zato budite sigurni da svaki unos u koloni koju odaberete ima jednu od ove tri vrednosti.",
     "defined_column": "Definisano kolonom u vašoj CSV datoteci ...",
     "imported_posts_status": "Uvezene objave trebale bi imati svoj status ...",
     "marked_as": "Označeno kao ...",
@@ -2161,11 +2161,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Uslovi usluge Ushahidi",
-    "terms_of_service": "Ažurirali smo naše <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Uslove i odredbe</a> i <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Politiku privatnosti</a>. Molimo pažljivo pregledajte ove dokumente i prihvatite uslove da biste i dalje koristili usluge Ushahidi.",
-    "agree": "Prihvatam uslove korišćenja usluge Ushahidi.",
+    "title": "Uslovi usluge StreetSignal",
+    "terms_of_service": "Ažurirali smo naše <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Uslove i odredbe</a> i <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Politiku privatnosti</a>. Molimo pažljivo pregledajte ove dokumente i prihvatite uslove da biste i dalje koristili usluge StreetSignal.",
+    "agree": "Prihvatam uslove korišćenja usluge StreetSignal.",
     "accept_and_continue": "Prihvati i nastavi",
-    "i_agree": "I agree to Ushahidi's <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a> and\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a>."
+    "i_agree": "I agree to StreetSignal's <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a> and\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a>."
   },
   "translations": {
     "available_languages": "Available translations (select to see post):",

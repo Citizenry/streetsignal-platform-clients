@@ -1,7 +1,7 @@
 {
   "onboarding": {
     "greeting": "Hello {{username}}!",
-    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with Ushahidi features. The onboarding process will take couple of minutes.</p>",
+    "intro": "<p>You’ve successfully created your deployment. Now, while we polish it up, please, get along with StreetSignal features. The onboarding process will take couple of minutes.</p>",
     "ready": "You're ready!",
     "data_collection": {
       "title": "Data collection",
@@ -28,15 +28,15 @@
       "content": "<p>Change your deployment in Settings. You can manage your deployment details when it comes to Surveys,  Data Sources, Importing and Donation. </p><p>Also, it allows your to export data, create categories, manage users permissions and much more!</p>"
     },
     "final_step": {
-      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using Ushahidi platform.",
+      "desc_1": "How exciting! Now you know the most important features and you’re ready to start using StreetSignal platform.",
       "desc_2": "Remember, in case of any question, don’t hesitate to reach out to our team by",
       "help": "Segítség & Támogatás"
     }
   },
   "app": {
     "contact_email_address": "Kapcsolattartási e-mail cím:",
-    "powered_by_ushahidi": "Az Ushahidi-re építve.",
-    "support": "Ushahidi támogatás",
+    "powered_by_streetsignal": "Az StreetSignal-re építve.",
+    "support": "StreetSignal támogatás",
     "by": "szerző:",
     "confirm": "Confirm",
     "submit": "Mentés",
@@ -66,7 +66,7 @@
     },
     "documentation": {
       "title": "Dokumentáció",
-      "description": "Itt megtudhatod, hogyan telepítsd, konfiguráld és menedzseld az Ushahidi alkalmazásod"
+      "description": "Itt megtudhatod, hogyan telepítsd, konfiguráld és menedzseld az StreetSignal alkalmazásod"
     },
     "donate": "Adományoz",
     "donation": "Adomány",
@@ -76,11 +76,11 @@
     "enable_monetization_info": "Monetization is currently disabled.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Lépj kapcsolatba az Ushahidi csapatával, hogy csetes támogatást kaphass"
+      "description": "Lépj kapcsolatba az StreetSignal csapatával, hogy csetes támogatást kaphass"
     },
     "onboarding": {
       "title": "Bevezetés",
-      "description": "Vessen egy pillantást ismét az Ushahidi fedélzetére."
+      "description": "Vessen egy pillantást ismét az StreetSignal fedélzetére."
     },
     "report_a_bug": {
       "title": "Hiba jelentése",
@@ -89,7 +89,7 @@
     "edit_collection": "Gyűjtemény szerkesztése",
     "features": {
       "title": "Funkciók",
-      "description": "Az Ushahidi funkciói és működése"
+      "description": "Az StreetSignal funkciói és működése"
     },
     "forbidden": "Sajnáljuk, ez a művelet nem engedélyezett!",
     "forbidden-login": "Kérjük, adja meg bejelentkezési adatait az üzembe helyezés eléréséhez.",
@@ -236,7 +236,7 @@
 },
   "cookies": {
     "we_use_cookies": "Szervusz! A felhasználói élmény javítása érdekében cookie-kat használunk.",
-    "cookies_privacy": "Ha többet szeretne megtudni, vagy visszavonja hozzájárulását, kérjük, olvassa el <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Adatvédelmi irányelveinket</a>.",
+    "cookies_privacy": "Ha többet szeretne megtudni, vagy visszavonja hozzájárulását, kérjük, olvassa el <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Adatvédelmi irányelveinket</a>.",
     "decline": "Elutasít",
     "accept_cookies": "Sütik elfogadása"
   },
@@ -263,7 +263,7 @@
     "view_unavailable": "{{value}} nézet nem elérhető a jelenleg előfizetett csomagban. <a href=\"/settings/plan\">Válts másik előfizetett csomagra</a>, hogy elérd!"
   },
   "limit": {
-    "plan_limit": "Ushahidi terv korlátja",
+    "plan_limit": "StreetSignal terv korlátja",
     "post_limit_reached": "Elérted a jelenlegi csomagod publikált Bejegyzések korlátját.",
     "admin_limit_reached": "Elérted a terved / előfizetésed szerinti maximális admin felhasználó számot",
     "post_type_limit_reached": "Elérted a jelenlegi csomagod kérdőív korlátját.",
@@ -755,7 +755,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "A webes bevételszerzés engedélyezve van ezen a webhelyen. Köszönjük adományát. Ön adományozott",
       "thank_you_for_your_donation_end": "eddig",
-      "web_monetization_text": "Az Ushahidi üzemelő példányok mostantól engedélyezve vannak a webes bevételszerzéshez. A webes bevételszerzés egy módja annak, hogy támogassa a szeretett webhelyeket anélkül, hogy hirdetői játékot játszana. Mindössze annyit kell tennie, hogy beállítja a böngészőt. Kattintson az alábbi linkre, hogy megtudja, hogyan adományozhat.",
+      "web_monetization_text": "Az StreetSignal üzemelő példányok mostantól engedélyezve vannak a webes bevételszerzéshez. A webes bevételszerzés egy módja annak, hogy támogassa a szeretett webhelyeket anélkül, hogy hirdetői játékot játszana. Mindössze annyit kell tennie, hogy beállítja a böngészőt. Kattintson az alábbi linkre, hogy megtudja, hogyan adományozhat.",
       "how_can_i_donate": "Hogyan adományozhatok?"
     }
   },
@@ -1322,18 +1322,18 @@
   },
   "settings": {
     "api_key": "API kulcs",
-    "api_key_desc": "A telepített változatodhoz tartozó API kulcs egyedi, felhasználható ahhoz, hogy külső rendszer interkacióba kerüljön az Általad használt Ushahidi alkalmazással.",
+    "api_key_desc": "A telepített változatodhoz tartozó API kulcs egyedi, felhasználható ahhoz, hogy külső rendszer interkacióba kerüljön az Általad használt StreetSignal alkalmazással.",
     "appearance": "Megjelenés beállításai",
     "continue": "Folytatás",
     "create": "Új kérdőív létrehozása",
-    "create_open_or_targeted": "Egy nyílt, vagy célzott kérdőív készítése, hogy információt gyűjts az Ushahidiről.",
+    "create_open_or_targeted": "Egy nyílt, vagy célzott kérdőív készítése, hogy információt gyűjts az StreetSignalről.",
     "current_header": "Jelenlegi háttérkép",
     "customize_your_new_deployment": "Telepítés testreszabása",
     "embed": "Beágyaz",
     "embed_info": "A térképed beágyazásához egy másik oldalon, használd az alábbi kódrészletet!",
     "settings_list": {
       "general": "Általános",
-      "general_desc": "Itt állíthatod be az Ushahidi-d nevét, leírását, logóját és egyéb részleteit.",
+      "general_desc": "Itt állíthatod be az StreetSignal-d nevét, leírását, logóját és egyéb részleteit.",
       "surveys": "Kérdőívek",
       "surveys_desc": "Hozz létre és állíts be kérdőíveket, amelyeket a portál gyűjteni fog.",
       "data_sources": "Adatforrások",
@@ -1341,7 +1341,7 @@
       "import": "Import",
       "import_desc": "Kérdőív/felmérés adatok feltöltése a program telepített változatába CSV fáljból",
       "user_settings": "HDX API konfigurálás",
-      "user_settings_desc": "Állítsd be az API-ed, így az általad megjelölt Ushahidi adatok feltölthetőek a Humanitárius Adat Tőzsde (Humanitarian Data Exchange (HDX)) felhasználódba.",
+      "user_settings_desc": "Állítsd be az API-ed, így az általad megjelölt StreetSignal adatok feltölthetőek a Humanitárius Adat Tőzsde (Humanitarian Data Exchange (HDX)) felhasználódba.",
       "export": "Adat exportálás",
       "export_hxl": "Adatok címkézése és exportálása",
       "export_desc_hxl": "Exportáld az adataid CSV fájlba vagy rendelj címkéket és tulajdonságokat az adataidhoz és töltsd fel közvetlenül a Humanitárius Adatcsere (HDX) fiókba vagy exportáld mint címkézett CSV fájlt.",
@@ -1353,7 +1353,7 @@
       "categories": "Kategóriák",
       "categories_desc": "A nagyobb szervezettség érdekében hozz létre karegóriákat melyekbe a bejelentéseket rendezheted!",
       "webhooks": "Webhookok",
-      "webhooks_desc": "Webhhok-ok létrehozása, amely az Ushahidi Platform adatait külső alkalmazásoknak küldi, bizonyos események megtörténtekor.",
+      "webhooks_desc": "Webhhok-ok létrehozása, amely az StreetSignal Platform adatait külső alkalmazásoknak küldi, bizonyos események megtörténtekor.",
       "plans": "Tervek",
       "plan_desc": "A telepítésed jelenlegi csomagja <strong>{{current_plan}}</strong>.",
       "donation": "Adomány",
@@ -1549,7 +1549,7 @@
       "delete_their_own_posts": "Saját bejegyzések törlése",
       "registred_member": "Regisztrált tag",
       "administrator": "Adminisztrátor",
-      "roles_description": "Ezen lehetőségek által lehet vezérelni, hogy ez a típusú szerep miben végezhet változtatásokat. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Keresd fel a támogatással kapcsolatos útmutatónkat még több információért."
+      "roles_description": "Ezen lehetőségek által lehet vezérelni, hogy ez a típusú szerep miben végezhet változtatásokat. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Keresd fel a támogatással kapcsolatos útmutatónkat még több információért."
     },
     "deployment_delete_this": "Telepített változat törlése",
     "deployment_delete": "Telepített változat törlése",
@@ -1606,7 +1606,7 @@
     "csv_column": "CSV oszlop",
     "choose_which_column": "Válaszd ki, melyik CSV oszlop tartozzon mely kérdőív mezőhöz",
     "each_survey_field": "A kérdőív minden mezője alant listába szedve. Válaszd ki a CSV-d tartalmából azokat, amelyeket meg szeretnél feleltetni.",
-    "status_explanation": "Az Ushahidi három bejegyzés típust ismer: Publikált, Ellenőrzés alatt és Archivált. Légy biztos abban, hogy minden bejegyzés az oszlopban valamelyik típushoz tartozik a 3 közül.",
+    "status_explanation": "Az StreetSignal három bejegyzés típust ismer: Publikált, Ellenőrzés alatt és Archivált. Légy biztos abban, hogy minden bejegyzés az oszlopban valamelyik típushoz tartozik a 3 közül.",
     "defined_column": "A CSV file-odban szereplő mező szerint meghatározott",
     "imported_posts_status": "Az immportált bejegyzéseknek kell legyen valamilyen állapotuk...",
     "marked_as": "Megjelölve vmiként",
@@ -1655,7 +1655,7 @@
     "title": "Adatok exportálása",
     "title_hxl": "Adatok exportálása és tag-elése",
     "description": "Minden adat exportálása CSV-be, vagy egyedi kérdőív mezők kiválasztása exportra",
-    "description_hxl": "Exportáld minden adatodat az Ushahidi-ből CSV fájlba, válassz ki felmérés/kérdőív mezőket, amelyeket szeretnél, hogy bekerüljön az exportba vagy jelöld ki",
+    "description_hxl": "Exportáld minden adatodat az StreetSignal-ből CSV fájlba, válassz ki felmérés/kérdőív mezőket, amelyeket szeretnél, hogy bekerüljön az exportba vagy jelöld ki",
     "export": "Exportálás",
     "export_history": "Exportálás története",
     "hxl_tags": "HXL tag-ek",
@@ -2161,11 +2161,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi ÁSZF",
-    "terms_of_service": "Frissítettük az <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Általános Szolgáltatási Feltételeinket </a> és az <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Adatkezelési tájékozatót</a>. Kérjük, tekintsd át ezeket a dokumentumokat alaposan, és fogadd el a feltételeket annak érdekében, hogy megkezdhesd az Ushahidi szolgáltatások használatát.",
-    "agree": "Elfogadom az Ushahidi ÁSZF-jét",
+    "title": "StreetSignal ÁSZF",
+    "terms_of_service": "Frissítettük az <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Általános Szolgáltatási Feltételeinket </a> és az <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Adatkezelési tájékozatót</a>. Kérjük, tekintsd át ezeket a dokumentumokat alaposan, és fogadd el a feltételeket annak érdekében, hogy megkezdhesd az StreetSignal szolgáltatások használatát.",
+    "agree": "Elfogadom az StreetSignal ÁSZF-jét",
     "accept_and_continue": "Elfogadás és folytatás",
-    "i_agree": "Elfogadom az Ushahidi <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">adatvédelmi irányelveit</a> a\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Általános Szerződési Feltételek</a>."
+    "i_agree": "Elfogadom az StreetSignal <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">adatvédelmi irányelveit</a> a\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Általános Szerződési Feltételek</a>."
   },
   "translations": {
     "available_languages": "Available translations (select to see post):",

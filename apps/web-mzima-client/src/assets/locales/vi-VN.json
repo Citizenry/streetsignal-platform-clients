@@ -1,7 +1,7 @@
 {
   "app": {
-    "powered_by_ushahidi": "Cung cấp bởi Ushahidi",
-    "support": "Hổ trợ bởi Ushahidi",
+    "powered_by_streetsignal": "Cung cấp bởi StreetSignal",
+    "support": "Hổ trợ bởi StreetSignal",
     "by": "bởi",
     "submit": "Đệ trình",
     "anonymous": "Anonymous",
@@ -20,11 +20,11 @@
     "date_updated": "Date updated",
     "documentation": {
       "title": "Tài liệu",
-      "description": "Học hỏi cách để thiết lập, cấu hình và quản trị triển khai Ushahidi của bạn "
+      "description": "Học hỏi cách để thiết lập, cấu hình và quản trị triển khai StreetSignal của bạn "
     },
     "intercom": {
       "intercom": "Intercom",
-      "description": "Contact Ushahidi staff for chat support"
+      "description": "Contact StreetSignal staff for chat support"
     },
     "report_a_bug": {
       "title": "Báo cáo một lỗi",
@@ -33,7 +33,7 @@
     "edit_collection": "Chỉnh sửa bộ sưu tập",
     "features": {
       "title": "Đặc điểm",
-      "description": "Xem những gì Ushahidi có thể làm và cách hoạt động"
+      "description": "Xem những gì StreetSignal có thể làm và cách hoạt động"
     },
     "forbidden": "Xin lỗi, bạn không có quyền làm việc này",
     "404": "That URL doesn't exist",
@@ -126,12 +126,12 @@
   "demo_warnings": {
     "close": "Close",
     "visitor": {
-      "not_expired": "Deployment {{site_name}} is using a free trial of Ushahidi. You will only see the first 25 posts for the next {{days}} days.",
-      "expired": "Deployment {{site_name}} is using a free trial of Ushahidi. You will only see the first 25 posts."
+      "not_expired": "Deployment {{site_name}} is using a free trial of StreetSignal. You will only see the first 25 posts for the next {{days}} days.",
+      "expired": "Deployment {{site_name}} is using a free trial of StreetSignal. You will only see the first 25 posts."
     },
     "user": {
-      "expired": "Your 30 day trial is over. Upgrade now to make the most of Ushahidi.",
-      "not_expired": "You have {{days}} days left in your free trial. Upgrade now for unlimited posts and full access to Ushahidi.",
+      "expired": "Your 30 day trial is over. Upgrade now to make the most of StreetSignal.",
+      "not_expired": "You have {{days}} days left in your free trial. Upgrade now for unlimited posts and full access to StreetSignal.",
       "limit_reached": "Nice work! You have more than 25 posts. Upgrade now to see the rest of your posts or reach out to our team about a full-service enterprise partnership for your project."
     }
   },
@@ -146,7 +146,7 @@
     "view_unavailable": "Lượt xem {{giá trị}} không có giá trị trong kế hoạch hiện nay của bạn <a href=\"/settings/plan\">Cập nhật kế hoạch của bạn</a> để có việc này!"
   },
   "limit": {
-    "plan_limit": "Giới hạn của kế hoạch Ushahidi",
+    "plan_limit": "Giới hạn của kế hoạch StreetSignal",
     "post_limit_reached": "Bạn đã đạt đến mức giới hạn của số bài đăng trong kế hoạch của Bạn",
     "admin_limit_reached": "Bạn đã tới giới hạn con số quản trị viên trong kế hoạch của Bạn",
     "post_type_limit_reached": "Bạn đã đạt đến con số thăm dò giới hạn trong kế hoạch của Bạn",
@@ -988,11 +988,11 @@
   },
   "settings": {
     "api_key": "API Key",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "Thiết lập hình dáng",
     "continue": "Tiếp tục",
     "create": "Create a new survey",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "Hình nền hiện nay",
     "customize_your_new_deployment": "Tùy chỉnh triển khai mới của bạn",
     "embed": "Cắm vào",
@@ -1007,7 +1007,7 @@
       "import": "Nhập vào",
       "import_desc": "Tải lên dữ kiện về thăm dò cho triển khai của Bạn, từ một hồ sơ CSV",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Export data",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1019,7 +1019,7 @@
       "categories": "Thể loại",
       "categories_desc": "Tạo ra và quản trị những thể loại mà người sử dụng có thể đăng vào nhằm gia tăng hiệu năng của tổ chức.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "Kế hoạch",
       "plan_desc": "Kế hoạch triển khai hiện nay là <strong>{{kế hoạch hiện nay}}</strong>"
     },
@@ -1144,7 +1144,7 @@
       "edit_their_own_posts": "Edit their own posts",
       "registred_member": "Registered member",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "Xóa bỏ triển khai này",
     "deployment_delete": "Xóa bỏ triển khai",
@@ -1196,7 +1196,7 @@
     "csv_column": "Cột CSV",
     "choose_which_column": "Lựa chọn cột CSV nào có thể được chỉ định cho mỗi ô thăm dò",
     "each_survey_field": "Mỗi ô thăm dò được liệt kê ra dưới đây. Xin chọn cột trong bảng CV là bạn muốn dùng để lấp đầy mỗi ô",
-    "status_explanation": "Ushahidi nhìn nhận một trong ba trạng thái: đăng, đang duyệt và lưu trữ. Do đó bạn cần chắc chắn là mỗi ngõ vào của cột bạn chọn có một trong ba giá trị trên.",
+    "status_explanation": "StreetSignal nhìn nhận một trong ba trạng thái: đăng, đang duyệt và lưu trữ. Do đó bạn cần chắc chắn là mỗi ngõ vào của cột bạn chọn có một trong ba giá trị trên.",
     "defined_column": "Quy định bởi một cột trong hồ sơ CV",
     "imported_posts_status": "Những bài đăng nhập vào cần phải có trạng thái của bài...",
     "marked_as": "Đánh dấu như...",
@@ -1238,7 +1238,7 @@
     "title": "Export data",
     "title_hxl": "Export and tag data",
     "description": "Export all of your data as a CSV or choose specific survey fields you want to export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export History",
     "hxl_tags": "HXL tags",
@@ -1649,9 +1649,9 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi Terms of Service",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
-    "agree": "I agree to Ushahidi's Terms of Service.",
+    "title": "StreetSignal Terms of Service",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
+    "agree": "I agree to StreetSignal's Terms of Service.",
     "accept_and_continue": "Accept and Continue"
   },
   "languages": {

@@ -1,8 +1,8 @@
 {
   "app": {
     "contact_email_address": "Kontakte adrès imèl:",
-    "powered_by_ushahidi": "Patrone pa Ushahidi",
-    "support": "Ushahidi Sipò",
+    "powered_by_streetsignal": "Patrone pa StreetSignal",
+    "support": "StreetSignal Sipò",
     "by": "avèk",
     "submit": "Soumèt",
     "anonymous": "Anonymous",
@@ -31,7 +31,7 @@
     },
     "documentation": {
       "title": "Dokimantasyon",
-      "description": "Aprann Kòman  pou defini, konfigire, ak jere deplwaman Ushahidi w"
+      "description": "Aprann Kòman  pou defini, konfigire, ak jere deplwaman StreetSignal w"
     },
     "donate": "Donate",
     "donation": "Donasyon",
@@ -41,7 +41,7 @@
     "enable_monetization_info": "Monetizasyon se kounye a andikape.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Contact Ushahidi staff for chat support"
+      "description": "Contact StreetSignal staff for chat support"
     },
     "onboarding": {
       "title": "Anbochaj",
@@ -54,7 +54,7 @@
     "edit_collection": "Modifye koleksyon",
     "features": {
       "title": "Karakteristik yo",
-      "description": "Gade kisa Ushahidi ka fè ak kijan li fonksyone."
+      "description": "Gade kisa StreetSignal ka fè ak kijan li fonksyone."
     },
     "forbidden": "Nou regrèt ou pa otorize pou fè sa",
     "forbidden-login": "Tanpri antre nan detay login ou jwenn aksè nan deplwaman an.",
@@ -168,7 +168,7 @@
   },
   "cookies": {
     "we_use_cookies": "Ala! Nou itilize bonbon fè eksperyans ou pi byen.",
-    "cookies_privacy": "Si ou vle konnen plis oswa retire konsantman ou, tanpri ale nan <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Règleman sou enfòmasyon prive</a> nou an.",
+    "cookies_privacy": "Si ou vle konnen plis oswa retire konsantman ou, tanpri ale nan <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Règleman sou enfòmasyon prive</a> nou an.",
     "decline": "refize",
     "accept_cookies": "Bonbon aksepte"
   },
@@ -195,7 +195,7 @@
     "view_unavailable": "{{value}} ou wè a pa disponib sou plan ou ye kounyè a. <a href=\"/ konfigirasyon/plan\"> ajoute plan </a> pou ka resevwa l!"
   },
   "limit": {
-    "plan_limit": "Ushahidi Plan Limit",
+    "plan_limit": "StreetSignal Plan Limit",
     "post_limit_reached": "Ou rive nan limit pòs ou k pipbliye pou plan w la.",
     "admin_limit_reached": "Ou rive nan limit administratè pou plan  w la.",
     "post_type_limit_reached": "Ou rive nan limit ankèt pou plan w la.",
@@ -1158,11 +1158,11 @@
   },
   "settings": {
     "api_key": "API Key",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "Paramèt aparans",
     "continue": "kontinye",
     "create": "Create a new survey",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "Imaj aryè plan aktyèl",
     "customize_your_new_deployment": "Pèsònalizde nouvo deplwaman ou",
     "embed": "Entegre",
@@ -1177,7 +1177,7 @@
       "import": "Enpòte",
       "import_desc": "òplod done ankèt deplwaman ou a de yon fichye CSV.",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Export data",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1189,7 +1189,7 @@
       "categories": "Kategori yo",
       "categories_desc": "Kreye e jere kategori moun k met pòs ladan yo pou amelyore ògnizasyon.",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "Plan yo",
       "plan_desc": "Plan deplwaman aktyèl ou a se <stong>{{current_plan}}</strong>.",
       "donation": "Donasyon",
@@ -1379,7 +1379,7 @@
       "delete_their_own_posts": "Efase pwòp posts yo",
       "registred_member": "Registered member",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "Efase deplwaman sa",
     "deployment_delete": "Efase deplwaman",
@@ -1436,7 +1436,7 @@
     "csv_column": "CSV kolònn",
     "choose_which_column": "Chwazi ki kolòn CSV ki dwe bay a chak chan d ankèt",
     "each_survey_field": "Chak chan d'analiz yo nan lis pi ba. Chwazi kolònn  nan fichye CSV ou a kew ta renmen itilize pou mitipliye chak nan chan sa yo",
-    "status_explanation": "Ushahidi rekonèt yon sèl nan twa statu pòs yo:Pibliye, sou analiz, epi achive. Donk rasire w ke chak antre ou chwazi nan kolònn nan gen youn nan 3 valè sa yo.",
+    "status_explanation": "StreetSignal rekonèt yon sèl nan twa statu pòs yo:Pibliye, sou analiz, epi achive. Donk rasire w ke chak antre ou chwazi nan kolònn nan gen youn nan 3 valè sa yo.",
     "defined_column": "Defini pa yon kolòn nan fichye CSV ou a",
     "imported_posts_status": "Pòs ki efase yo dwe gen estati pa yo.",
     "marked_as": "Make kòm",
@@ -1485,7 +1485,7 @@
     "title": "Export data",
     "title_hxl": "Export and tag data",
     "description": "Export all of your data as a CSV or choose specific survey fields you want to export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export History",
     "hxl_tags": "HXL tags",
@@ -1972,11 +1972,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi Terms of Service",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
-    "agree": "I agree to Ushahidi's Terms of Service.",
+    "title": "StreetSignal Terms of Service",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
+    "agree": "I agree to StreetSignal's Terms of Service.",
     "accept_and_continue": "Accept and Continue",
-    "i_agree": "Mwen dakò ak <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Règleman sou enfòmasyon prive</a> Ushidi\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Tèm ak Kondisyon yo</a>."
+    "i_agree": "Mwen dakò ak <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Règleman sou enfòmasyon prive</a> Ushidi\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Tèm ak Kondisyon yo</a>."
   },
   "translations": {
     "languages": "Lang",

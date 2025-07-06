@@ -1,8 +1,8 @@
 {
   "app": {
     "contact_email_address": "Địa chỉ email liên hệ:",
-    "powered_by_ushahidi": "Cung cấp bởi Ushahidi",
-    "support": "Hổ trợ bởi Ushahidi",
+    "powered_by_streetsignal": "Cung cấp bởi StreetSignal",
+    "support": "Hổ trợ bởi StreetSignal",
     "by": "bởi",
     "submit": "Đệ trình",
     "anonymous": "Anonymous",
@@ -31,7 +31,7 @@
     },
     "documentation": {
       "title": "Tài liệu",
-      "description": "Học hỏi cách để thiết lập, cấu hình và quản trị triển khai Ushahidi của bạn"
+      "description": "Học hỏi cách để thiết lập, cấu hình và quản trị triển khai StreetSignal của bạn"
     },
     "donate": "Ủng hộ",
     "donation": "Khoản ủng hộ",
@@ -41,11 +41,11 @@
     "enable_monetization_info": "Tính năng kiếm tiền hiện đang bị tắt.",
     "intercom": {
       "intercom": "Intercom",
-      "description": "Contact Ushahidi staff for chat support"
+      "description": "Contact StreetSignal staff for chat support"
     },
     "onboarding": {
       "title": "Tuyển dụng KTV",
-      "description": "Hãy xem Ushahidi trên tàu một lần nữa."
+      "description": "Hãy xem StreetSignal trên tàu một lần nữa."
     },
     "report_a_bug": {
       "title": "Báo cáo một lỗi",
@@ -54,7 +54,7 @@
     "edit_collection": "Chỉnh sửa bộ sưu tập",
     "features": {
       "title": "Đặc điểm",
-      "description": "Xem những gì Ushahidi có thể làm và làm sao hoạt động."
+      "description": "Xem những gì StreetSignal có thể làm và làm sao hoạt động."
     },
     "forbidden": "Xin lỗi, bạn không có quyền làm việc này",
     "forbidden-login": "Vui lòng nhập chi tiết đăng nhập của bạn để truy cập triển khai.",
@@ -168,7 +168,7 @@
   },
   "cookies": {
     "we_use_cookies": "Howdy! Chúng tôi sử dụng cookie để làm cho trải nghiệm của bạn tốt hơn.",
-    "cookies_privacy": "Nếu bạn muốn biết thêm hoặc rút lại sự đồng ý của mình, vui lòng truy cập <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Chính sách bảo mật</a> của chúng tôi.",
+    "cookies_privacy": "Nếu bạn muốn biết thêm hoặc rút lại sự đồng ý của mình, vui lòng truy cập <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Chính sách bảo mật</a> của chúng tôi.",
     "decline": "Từ chối",
     "accept_cookies": "Chấp nhận cookie"
   },
@@ -195,7 +195,7 @@
     "view_unavailable": "Lượt xem {{giá trị}} không có giá trị trong kế hoạch hiện nay của bạn <a href=\"/settings/plan\">Cập nhật kế hoạch của bạn</a> để có việc này!"
   },
   "limit": {
-    "plan_limit": "Giới hạn của kế hoạch Ushahidi",
+    "plan_limit": "Giới hạn của kế hoạch StreetSignal",
     "post_limit_reached": "Bạn đã đạt đến mức giới hạn của số bài đăng trong kế hoạch của Bạn",
     "admin_limit_reached": "Bạn đã tới giới hạn con số quản trị viên trong kế hoạch của Bạn",
     "post_type_limit_reached": "Bạn đã đạt đến con số thăm dò giới hạn trong kế hoạch của Bạn",
@@ -647,7 +647,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "Kiếm tiền từ web được bật trên trang web này. Cảm ơn sự đóng góp của bạn. Bạn đã quyên góp",
       "thank_you_for_your_donation_end": "cho đến nay",
-      "web_monetization_text": "Triển khai Ushahidi hiện đã được bật tính năng kiếm tiền trên web. Kiếm tiền trên web là một cách hỗ trợ các trang web bạn yêu thích mà không cần chơi trò chơi của nhà quảng cáo. Tất cả những gì bạn cần là thiết lập trình duyệt của mình. Nhấp vào liên kết bên dưới để tìm hiểu cách bạn có thể quyên góp.",
+      "web_monetization_text": "Triển khai StreetSignal hiện đã được bật tính năng kiếm tiền trên web. Kiếm tiền trên web là một cách hỗ trợ các trang web bạn yêu thích mà không cần chơi trò chơi của nhà quảng cáo. Tất cả những gì bạn cần là thiết lập trình duyệt của mình. Nhấp vào liên kết bên dưới để tìm hiểu cách bạn có thể quyên góp.",
       "how_can_i_donate": "Tôi có thể quyên góp bằng cách nào?"
     }
   },
@@ -1158,11 +1158,11 @@
   },
   "settings": {
     "api_key": "API Key",
-    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your Ushahidi deployment.",
+    "api_key_desc": "The API Key is unique to your deployment, it can be used to allow third party systems to interact with your StreetSignal deployment.",
     "appearance": "Thiết lập hình dáng",
     "continue": "Tiếp tục",
     "create": "Create a new survey",
-    "create_open_or_targeted": "Create an open or targeted survey to gather information about Ushahidi.",
+    "create_open_or_targeted": "Create an open or targeted survey to gather information about StreetSignal.",
     "current_header": "Hình nền hiện nay",
     "customize_your_new_deployment": "Tùy chỉnh triển khai mới của bạn",
     "embed": "Cắm vào",
@@ -1177,7 +1177,7 @@
       "import": "Nhập vào",
       "import_desc": "Tải lên dữ kiện thăm dò cho triển khai của bạn từ một hồ ơ CSV.",
       "user_settings": "Configure HDX API",
-      "user_settings_desc": "Configure your API so that your tagged Ushahidi data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
+      "user_settings_desc": "Configure your API so that your tagged StreetSignal data can be uploaded to your Humanitarian Data Exchange (HDX) account.",
       "export": "Export data",
       "export_hxl": "Export and tag data",
       "export_desc_hxl": "Export your data as a CSV file or assign tags and attributes to your data and upload directly to a Humanitarian Data Exchange (HDX) account or export as a tagged CSV file.",
@@ -1189,7 +1189,7 @@
       "categories": "Thể loại",
       "categories_desc": "Tạo ra và quản trị những loại người đã đóng góp bài đăng để cải tiến tổ chức",
       "webhooks": "Webhooks",
-      "webhooks_desc": "Create webhooks that send Ushahidi Platform data to external applications when specific events are triggered.",
+      "webhooks_desc": "Create webhooks that send StreetSignal Platform data to external applications when specific events are triggered.",
       "plans": "Kế hoạch",
       "plan_desc": "Kế hoạch triển khai hiện nay của bạn là <strong>{{kế hoạch hiện nay}}</strong>",
       "donation": "Khoản ủng hộ",
@@ -1379,7 +1379,7 @@
       "delete_their_own_posts": "Xóa bài đăng của chính họ",
       "registred_member": "Registered member",
       "administrator": "Administrator",
-      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.ushahidi.com/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
+      "roles_description": "These options control what this type of role can make changes to. <a href=\"https://docs.streetsignal.org/platform-user-manual/4.-managing-people-on-your-deployment\" target=\"_blank\">Visit our support guides to find out more."
     },
     "deployment_delete_this": "Xóa bỏ triển khai này",
     "deployment_delete": "Xóa bỏ triển khai",
@@ -1436,7 +1436,7 @@
     "csv_column": "Cột CSV",
     "choose_which_column": "Chọn những cột CSV nào được chỉ định cho mỗi ô thăm dò",
     "each_survey_field": "Mỗi ô của thăm dò được liệt kê ra dưới đây. Chọn cột trong bảng CSV của bạn mà bạn muốn dùng để điền vào mỗi ô đó.",
-    "status_explanation": "Ushahidi nhận biết một trong ba trạng thái: đăng tải, đang duyệt, và lưu trữ. Bạn cần chắc chắn là mỗi ngã vào của cột mà bạn lựa chọn có một trong ba giá trị đó.",
+    "status_explanation": "StreetSignal nhận biết một trong ba trạng thái: đăng tải, đang duyệt, và lưu trữ. Bạn cần chắc chắn là mỗi ngã vào của cột mà bạn lựa chọn có một trong ba giá trị đó.",
     "defined_column": "Quy định bởi một cột trong bảng CSV của bạn",
     "imported_posts_status": "Các bài đăng nhập vào cần phải có trạng thái",
     "marked_as": "Ghi nhận là...",
@@ -1485,7 +1485,7 @@
     "title": "Export data",
     "title_hxl": "Export and tag data",
     "description": "Export all of your data as a CSV or choose specific survey fields you want to export.",
-    "description_hxl": "Export all of your data from Ushahidi as a CSV, choose specific survey fields you want to export as a CSV or assign",
+    "description_hxl": "Export all of your data from StreetSignal as a CSV, choose specific survey fields you want to export as a CSV or assign",
     "export": "Export",
     "export_history": "Export History",
     "hxl_tags": "HXL tags",
@@ -1972,11 +1972,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Ushahidi Terms of Service",
-    "terms_of_service": "We have updated our <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use Ushahidi's services.",
-    "agree": "I agree to Ushahidi's Terms of Service.",
+    "title": "StreetSignal Terms of Service",
+    "terms_of_service": "We have updated our <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Terms and Conditions</a> and <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Privacy Policy</a>. Please review these documents carefully and accept the terms in order to continue to use StreetSignal's services.",
+    "agree": "I agree to StreetSignal's Terms of Service.",
     "accept_and_continue": "Accept and Continue",
-    "i_agree": "Tôi đồng ý với <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Chính sách bảo mật</a> của Ushahidi\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Điều khoản và Điều kiện</a>."
+    "i_agree": "Tôi đồng ý với <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Chính sách bảo mật</a> của StreetSignal\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Điều khoản và Điều kiện</a>."
   },
   "translations": {
     "languages": "Ngôn ngữ",

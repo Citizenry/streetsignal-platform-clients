@@ -16,7 +16,7 @@ export { ResourceService } from './resource.service';
 export { ConfirmModalService } from './confirm-modal.service';
 export { PollingService } from './polling.service';
 export { DonationService } from './donation.service';
-export { UshahidiPageTitleStrategy } from './page-title.service';
+export { StreetSignalPageTitleStrategy } from './page-title.service';
 export { TwitterService } from './twitter.service';
 export { SearchService } from './search.service';
 export { CustomTranslateHttpLoader } from './translate-http-loader';

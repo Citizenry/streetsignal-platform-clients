@@ -8,8 +8,8 @@
   "app": {
     "404": "Такої URL-адреси не існує",
     "contact_email_address": "Контактна електронна адреса:",
-    "powered_by_ushahidi": "При підтримці Ushahidi.",
-    "support": "Підтримка Ushahidi",
+    "powered_by_streetsignal": "При підтримці StreetSignal.",
+    "support": "Підтримка StreetSignal",
     "by": "створено",
     "confirm": "Підтвердити",
     "submit": "Відправити",
@@ -39,7 +39,7 @@
     },
     "documentation": {
       "title": "Документація",
-      "description": "Дізнайтеся про встановлення, налаштування та керування розгортанням Ushahidi."
+      "description": "Дізнайтеся про встановлення, налаштування та керування розгортанням StreetSignal."
     },
     "donate": "Пожертви",
     "donation": "Пожертви",
@@ -49,11 +49,11 @@
     "enable_monetization_info": "Монетизація вимкнена",
     "intercom": {
       "intercom": "Інтерком",
-      "description": "Зв'язатися з персоналом Ushahidi, щоб отримати підтримку в чаті"
+      "description": "Зв'язатися з персоналом StreetSignal, щоб отримати підтримку в чаті"
     },
     "onboarding": {
       "title": "Початок роботи",
-      "description": "Знову подівитися на підключення Ushahidi."
+      "description": "Знову подівитися на підключення StreetSignal."
     },
     "report_a_bug": {
       "title": "Повідомити про помилку",
@@ -62,7 +62,7 @@
     "edit_collection": "Редагувати колекцію",
     "features": {
       "title": "Характеристики",
-      "description": "Дізнайтеся, що може робити Ushahidi і як це працює."
+      "description": "Дізнайтеся, що може робити StreetSignal і як це працює."
     },
     "forbidden": "Вибачте, у вас немає дозволу це зробити.",
     "forbidden-login": "Будь ласка, введіть свої дані для входу, щоб отримати доступ до розгортання.",
@@ -179,7 +179,7 @@
   },
   "cookies": {
     "we_use_cookies": "Привіт! ",
-    "cookies_privacy": "Якщо ви хочете дізнатися більше або відкликати свою згоду, перейдіть на наш сайт <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Політика конфіденційності</a>.",
+    "cookies_privacy": "Якщо ви хочете дізнатися більше або відкликати свою згоду, перейдіть на наш сайт <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Політика конфіденційності</a>.",
     "decline": "відхилити",
     "accept_cookies": "Прийняти файли cookie"
   },
@@ -200,7 +200,7 @@
     "view_unavailable": "Неможливо відобразити {{value}} за умовами вашого тарифного плану. <a href=\"/settings/plan\">Оновіть ваш тарифний план </a> щоб отримати доступ!"
   },
   "limit": {
-    "plan_limit": "Лімітний план Ushahidi",
+    "plan_limit": "Лімітний план StreetSignal",
     "post_limit_reached": "Ви досягли максимальної кількості постів, доступних для вашого тарифного плану.",
     "admin_limit_reached": "Ви досягли максимальної кількості користувачів-адміністраторів, доступних для вашого тарифного плану.",
     "post_type_limit_reached": "Ви досягли максимальної кількості опитувань, доступних для вашого тарифного плану.",
@@ -681,7 +681,7 @@
     "donation": {
       "thank_you_for_your_donation_start": "На цьому веб-сайті ввімкнено веб-монетизацію. ",
       "thank_you_for_your_donation_end": "поки що",
-      "web_monetization_text": "У розгортаннях Ushahidi тепер увімкнено веб-монетизацію. ",
+      "web_monetization_text": "У розгортаннях StreetSignal тепер увімкнено веб-монетизацію. ",
       "how_can_i_donate": "Як я можу пожертвувати?"
     }
   },
@@ -1220,7 +1220,7 @@
     "appearance": "Налаштування відображення",
     "continue": "Продовжити",
     "create": "Створити нове опитування",
-    "create_open_or_targeted": "Створіть відкрите або цільове опитування, щоб зібрати інформацію про Ushahidi.",
+    "create_open_or_targeted": "Створіть відкрите або цільове опитування, щоб зібрати інформацію про StreetSignal.",
     "current_header": "Поточне фонове зображення",
     "customize_your_new_deployment": "Налаштуйте своє нове розгортання",
     "embed": "Вставити",
@@ -1235,7 +1235,7 @@
       "import": "Імпорт",
       "import_desc": "Завантажте на сайт дане опитування з файлом CSV.",
       "user_settings": "Налаштувати HDX API",
-      "user_settings_desc": "Налаштуйте API, щоб завантажити дані з Ushahidi до облікового запису Humanitarian Data Exchange (HDX).",
+      "user_settings_desc": "Налаштуйте API, щоб завантажити дані з StreetSignal до облікового запису Humanitarian Data Exchange (HDX).",
       "export": "Експортувати дані",
       "export_hxl": "Експорт і тегування даних",
       "export_desc_hxl": "Експортуйте свої дані у форматі CSV, або вкажіть теги та атрибути своїм даним і завантажте їх у обліковий запис гуманітарного обміну даними (Humanitarian Data Exchange, HDX), або експортуйте у форматі CSV з тегами.",
@@ -1247,7 +1247,7 @@
       "categories": "Категорії",
       "categories_desc": "Створюйте та керуйте категоріями, у які люди можуть розміщувати публікації, для кращої організації.",
       "webhooks": "Вебхуки",
-      "webhooks_desc": "Створити веб-хук, щоб при створенні певних подій надсилати дані з Ushahidi до сторонніх сервісів",
+      "webhooks_desc": "Створити веб-хук, щоб при створенні певних подій надсилати дані з StreetSignal до сторонніх сервісів",
       "plans": "Плани",
       "plan_desc": "Поточний план вашого розгортання: <strong>{{current_plan}}</strong>.",
       "donation": "Пожертвування",
@@ -1440,7 +1440,7 @@
       "delete_their_own_posts": "Видалити власні дописи",
       "registred_member": "Зареєстрований учасник",
       "administrator": "Адміністратор",
-      "roles_description": "Ці параметри визначають, до чого цей тип ролі може вносити зміни. <a href=\"https://www.ushahidi.com/support/custom-roles#add-a-role\" target=\"_blank\">Відвідайте наші посібники підтримки, щоб дізнатися більше."
+      "roles_description": "Ці параметри визначають, до чого цей тип ролі може вносити зміни. <a href=\"https://www.streetsignal.org/support/custom-roles#add-a-role\" target=\"_blank\">Відвідайте наші посібники підтримки, щоб дізнатися більше."
     },
     "deployment_delete_this": "Видалити це розгортання",
     "deployment_delete": "Видалити розгортання",
@@ -1497,7 +1497,7 @@
     "csv_column": "CSV стовпець",
     "choose_which_column": "Виберіть стовпець CSV, слід призначити кожне поле опитування",
     "each_survey_field": "Нижче зазначено шкірне з полів опитування. ",
-    "status_explanation": "Ushahidi розпізнає один із трьох статусів постів: Опублікований, Перевіряється та Заархівований. ",
+    "status_explanation": "StreetSignal розпізнає один із трьох статусів постів: Опублікований, Перевіряється та Заархівований. ",
     "defined_column": "Визначається стовпцем у вашому файлі CSV...",
     "imported_posts_status": "Імпортовані пости повинні мати свій статус...",
     "marked_as": "Позначено як...",
@@ -1546,7 +1546,7 @@
     "title": "Експортувати дані",
     "title_hxl": "Експорт і тегування даних",
     "description": "Експортуйте всі свої дані у форматі CSV або виберіть конкретні поля опитування, які потрібно експортувати.",
-    "description_hxl": "Експортуйте всі свої дані з Ushahidi у форматі CSV, оберіть конкретні поля опитування, які потрібно експортувати у форматі CSV, або призначте",
+    "description_hxl": "Експортуйте всі свої дані з StreetSignal у форматі CSV, оберіть конкретні поля опитування, які потрібно експортувати у форматі CSV, або призначте",
     "export": "Експортувати",
     "export_history": "Експортувати історію",
     "hxl_tags": "HXL теги",
@@ -2035,11 +2035,11 @@
     }
   },
   "terms_of_service": {
-    "title": "Умови обслуговування Ushahidi",
-    "terms_of_service": "Ми оновили наш <a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Правила та умови</a> і <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Політика конфіденційності</a>. ",
-    "agree": "Я погоджуюся з Загальними положеннями та умовами Ushahidi.",
+    "title": "Умови обслуговування StreetSignal",
+    "terms_of_service": "Ми оновили наш <a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Правила та умови</a> і <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Політика конфіденційності</a>. ",
+    "agree": "Я погоджуюся з Загальними положеннями та умовами StreetSignal.",
     "accept_and_continue": "Прийняти та продовжити",
-    "i_agree": "Я згоден з Ushahidi <a href=\"https://www.ushahidi.com/privacy-policy\" target=\"_blank\">Політика конфіденційності</a> і\n<a href=\"https://www.ushahidi.com/terms-of-service\" target=\"_blank\">Правила та умови</a>."
+    "i_agree": "Я згоден з StreetSignal <a href=\"https://www.streetsignal.org/privacy-policy\" target=\"_blank\">Політика конфіденційності</a> і\n<a href=\"https://www.streetsignal.org/terms-of-service\" target=\"_blank\">Правила та умови</a>."
   },
   "translations": {
     "languages": "Мови",
