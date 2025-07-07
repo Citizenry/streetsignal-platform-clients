@@ -1,5 +1,7 @@
 <ion-content class="page ion-padding-vertical" [fullscreen]="true">
-  <ion-title class="page-title ion-text-center ion-margin-bottom">Welcome to Ushahidi!</ion-title>
+  <ion-title class="page-title ion-text-center ion-margin-bottom"
+    >Welcome to StreetSignal!</ion-title
+  >
   <div class="main ion-padding-horizontal">
     <app-deployment-info (deploymentClick)="chooseDeployment()"></app-deployment-info>
     <form class="form" novalidate [formGroup]="form" (ngSubmit)="signUp()">
@@ -44,11 +46,11 @@
         <div class="agreement">
           <app-checkbox formControlName="agreement">
             {{"app.i_agree" | translate}}
-            <a (click)="openLink($event, 'https://www.ushahidi.com/privacy-policy')"
+            <a (click)="openLink($event, 'https://www.streetsignal.org/privacy-policy')"
               >{{"app.privacy_policy"|translate}}</a
             >
             {{"and_the" | translate}} <br />
-            <a (click)="openLink($event, 'https://www.ushahidi.com/terms-of-service')"
+            <a (click)="openLink($event, 'https://www.streetsignal.org/terms-of-service')"
               >{{"app.terms_and_conditions"|translate}}</a
             >.
           </app-checkbox>

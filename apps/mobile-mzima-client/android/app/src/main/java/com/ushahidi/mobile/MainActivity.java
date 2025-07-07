@@ -1,4 +1,4 @@
-package com.ushahidi.mobile;
+package com.streetsignal.mobile;
 
 import com.getcapacitor.BridgeActivity;
 

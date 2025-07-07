@@ -55,11 +55,11 @@ export class ChooseDeploymentComponent {
     this.searchSubject.pipe(debounceTime(500)).subscribe({
       next: (query: string) => {
         console.log('Search Subject', query);
-        this.deploymentService.searchDeployments(query).subscribe({
-          next: (deployments: any[]) => {
-            console.log(deployments);
+        this.deploymentService.addDeploymentByUrl(query).subscribe({
+          next: (deployment: any) => {
+            console.log(deployment);
             this.isDeploymentsLoading = false;
-            this.foundDeploymentList = deployments;
+            this.foundDeploymentList = [deployment];
           },
           error: (err: any) => {
             this.isDeploymentsLoading = false;
@@ -219,29 +219,16 @@ export class ChooseDeploymentComponent {
   }
 
   public searchDeployments(query: string | null): void {
-    console.log('Search Deployments', query);
-    if (query == null) {
+    console.log('Add StreetSignal URL', query);
+    if (query == null || query.length === 0) {
       this.isDeploymentsLoading = false;
       this.foundDeploymentList = [];
       this.domain = null;
-    } else if (
-      // query.indexOf('.') != -1 ||
-      query.indexOf('http:') != -1 ||
-      query.indexOf('https:') != -1
-    ) {
-      this.isDeploymentsLoading = false;
-      this.foundDeploymentList = [];
-      this.domain = query;
-      // const value = this.deploymentService.removeDomainForSearch(this.domain);
-      console.log('Domain for search', this.domain);
-      this.searchSubject.next(this.domain);
-    } else if (query.length > 0) {
-      this.isDeploymentsLoading = true;
-      this.domain = null;
-      this.searchSubject.next(query);
     } else {
-      this.isDeploymentsLoading = false;
-      this.foundDeploymentList = [];
+      this.isDeploymentsLoading = true;
+      this.domain = query;
+      console.log('URL for StreetSignal', this.domain);
+      this.searchSubject.next(this.domain);
     }
   }
 
@@ -256,12 +243,12 @@ export class ChooseDeploymentComponent {
     const deploymentCount = this.selectedDeployments.length;
     const header =
       deploymentCount > 1
-        ? deploymentCount + ' Deployments Added Successfully!'
-        : '1 Deployment Added Successfully!';
+        ? deploymentCount + ' StreetSignal Installations Added Successfully!'
+        : '1 StreetSignal Installation Added Successfully!';
     const message =
       deploymentCount > 1
-        ? 'You can now view these deployments and add posts to them'
-        : 'You can now view this deployment and add posts to it';
+        ? 'You can now view these installations and add posts to them'
+        : 'You can now view this installation and add posts to it';
 
     this.toastService.presentToast({
       header: header,

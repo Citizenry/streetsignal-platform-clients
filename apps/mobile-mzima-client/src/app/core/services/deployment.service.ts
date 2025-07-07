@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { getDeploymentAvatarPlaceholder } from '@helpers';
@@ -6,7 +6,7 @@ import { STORAGE_KEYS } from '@constants';
 import { Deployment } from '@mzima-client/sdk';
 import { DatabaseService, SessionService, StorageService } from '@services';
 
-const DEPLOYMENTS_URL = 'https://api.ushahidi.io/deployments';
+// Removed external deployments API - StreetSignal uses direct URL input
 
 @Injectable({
   providedIn: 'root',
@@ -33,49 +33,23 @@ export class DeploymentService {
     return input;
   }
 
-  public searchDeployments(search: string): Observable<any> {
-    const storeDeployments = this.getDeployments();
-
-    try {
-      return this.fetchBackendUrl(search).pipe(
-        map((backend_url: string) => {
-          const domain = backend_url.toLowerCase();
-          console.log(domain);
-          const isSelected = !!storeDeployments.find(
-            (deployment: any) => deployment.domain === domain,
-          );
-
-          return [
-            {
-              id: this.generateRandomId(),
-              domain: domain,
-              deployment_name: search.toLowerCase(),
-              selected: isSelected,
-              avatar: getDeploymentAvatarPlaceholder(domain),
-            },
-          ];
-        }),
-      );
-    } catch (error) {
-      console.log(error);
-      const params = new HttpParams().set('q', search);
-      return this.httpClient.get<any[]>(DEPLOYMENTS_URL, { params }).pipe(
-        map((deployments: any) =>
-          deployments
-            .filter((deployment: any) => deployment.status === 'deployed')
-            .map((deployment: any) => {
-              const isSelected = !!storeDeployments.find((item: any) => item.id === deployment.id);
-              return {
-                ...deployment,
-                selected: isSelected,
-                avatar: !deployment.image
-                  ? getDeploymentAvatarPlaceholder(deployment.deployment_name)
-                  : null,
-              };
-            }),
-        ),
-      );
-    }
+  public addDeploymentByUrl(url: string): Observable<Deployment> {
+    return this.fetchBackendUrl(url).pipe(
+      map((backend_url: string) => {
+        const domain = backend_url.toLowerCase();
+        const deployment: Deployment = {
+          id: this.generateRandomId(),
+          domain: domain,
+          deployment_name: url.toLowerCase(),
+          description: '',
+          fqdn: domain,
+          tier: '',
+          selected: false,
+          avatar: getDeploymentAvatarPlaceholder(domain),
+        };
+        return deployment;
+      }),
+    );
   }
 
   public setDeployments(data: Deployment[]) {

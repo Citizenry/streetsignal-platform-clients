@@ -5,7 +5,7 @@
   [isSearch]="showSearch"
   [header]="isProfile"
   (back)="backHandle()"
-  [placeholderText]="'Search for site or Enter URL'"
+  [placeholderText]="'Enter StreetSignal URL'"
   (search)="searchDeployments($event)"
   (searchFocus)="isSearchView = true"
   (searchBlur)="isSearchView = false"
@@ -15,7 +15,7 @@
     *ngIf="!isProfile"
     class="logo"
     [ngClass]="{ 'logo--hidden': isSearchView }"
-    name="ushahidi"
+    name="streetsignal"
   ></app-icon>
 
   <ng-container *ngIf="deploymentList.length && !isSearchView">
@@ -37,9 +37,7 @@
   <ng-container *ngIf="isSearchView">
     <ng-container *ngIf="!isDeploymentsLoading; else spinner">
       <ng-container *ngIf="foundDeploymentList.length; else emptyList">
-        <ion-text color="medium" class="title">
-          Found {{ foundDeploymentList.length }} items
-        </ion-text>
+        <ion-text color="medium" class="title"> StreetSignal installation found </ion-text>
         <ion-list class="search-list" [ngStyle]="{ background: 'none' }">
           <app-deployment-item
             class="search-result"
