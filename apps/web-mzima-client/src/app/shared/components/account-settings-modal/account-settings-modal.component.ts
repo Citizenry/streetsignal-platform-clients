@@ -200,7 +200,8 @@ export class AccountSettingsModalComponent implements OnInit {
     if (this.selectedAvatarFile) {
       this.usersService.uploadAvatar(this.selectedAvatarFile).subscribe({
         next: () => {
-          // After avatar upload, update the profile
+          // After avatar upload, refresh profile data and update the profile
+          this.getProfile();
           this.updateUserProfile(options);
         },
         error: () => {
