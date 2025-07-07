@@ -18,9 +18,9 @@ export function isSupportedFieldType(fieldType: string): boolean {
     'relation',
     'markdown',
     'multiple_images',
-    'video_upload'
+    'video_upload',
   ];
-  
+
   return supportedTypes.includes(fieldType);
 }
 
@@ -30,9 +30,9 @@ export function isMediaFieldType(fieldType: string): boolean {
 
 export function getFieldInputType(fieldType: string): string {
   const typeMapping: { [key: string]: string } = {
-    'multiple_images': 'multiple_images',
-    'video_upload': 'video_upload'
+    multiple_images: 'multiple_images',
+    video_upload: 'video_upload',
   };
-  
+
   return typeMapping[fieldType] || fieldType;
 }

@@ -15,6 +15,7 @@ import {
 } from '@services';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { ToastService } from '@services';
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 
 @UntilDestroy()
 @Component({
@@ -37,6 +38,7 @@ export class ChooseDeploymentComponent {
   public currentDeploymentId?: number | string;
   private domain: string | null = null;
   private readonly searchSubject = new Subject<string>();
+  public manualUrl: string = '';
 
   tap = 0;
 
@@ -64,6 +66,20 @@ export class ChooseDeploymentComponent {
           error: (err: any) => {
             this.isDeploymentsLoading = false;
             console.log(err);
+
+            // Provide specific error message for domain discovery
+            let errorMessage =
+              'Failed to find StreetSignal installation. Please check the domain and try again.';
+            if (err.message && err.message.includes('Could not find StreetSignal installation')) {
+              errorMessage =
+                'Could not find a StreetSignal installation at that domain. Please verify the domain is correct and has StreetSignal installed.';
+            }
+
+            this.toastService.presentToast({
+              header: 'Error',
+              message: errorMessage,
+              buttons: [],
+            });
           },
         });
       },
@@ -82,7 +98,7 @@ export class ChooseDeploymentComponent {
         this.tap++;
         console.log('Back Button Tap', this.tap);
         if (this.tap === 3) App.exitApp();
-        else if (this.tap === 2) this.doubleTapExistToast();
+        else if (this.tap === 2) this.doubleTapExitToast();
       });
     }
   }
@@ -264,13 +280,134 @@ export class ChooseDeploymentComponent {
     this.back.emit();
   }
 
-  protected async doubleTapExistToast() {
+  protected async doubleTapExitToast() {
     const result = await this.toastService.presentToast({
       message: 'Tap back button again to exit the App',
       buttons: [],
     });
     if (result) {
       this.tap = 0;
+    }
+  }
+
+  public submitManualUrl(): void {
+    if (!this.manualUrl || this.manualUrl.trim().length === 0) {
+      return;
+    }
+
+    const url = this.manualUrl.trim();
+    this.isDeploymentsLoading = true;
+
+    this.deploymentService.addDeploymentByUrl(url).subscribe({
+      next: (deployment: Deployment) => {
+        this.isDeploymentsLoading = false;
+        this.foundDeploymentList = [deployment];
+        this.manualUrl = '';
+      },
+      error: (err: any) => {
+        this.isDeploymentsLoading = false;
+        console.error('Error adding deployment by manual URL:', err);
+
+        // Provide specific error message for domain discovery
+        let errorMessage = 'Failed to add StreetSignal. Please check the URL and try again.';
+        if (err.message && err.message.includes('Could not find StreetSignal installation')) {
+          errorMessage =
+            'Could not find a StreetSignal installation at that domain. Please verify the domain is correct and has StreetSignal installed.';
+        }
+
+        this.toastService.presentToast({
+          header: 'Error',
+          message: errorMessage,
+          buttons: [],
+        });
+      },
+    });
+  }
+
+  public async addByQrCode(): Promise<void> {
+    try {
+      // Check camera permission
+      const status = await BarcodeScanner.checkPermission({ force: true });
+
+      if (status.granted) {
+        // Hide background to show camera
+        BarcodeScanner.hideBackground();
+
+        // Start scanning
+        const result = await BarcodeScanner.startScan();
+
+        // Show background again
+        BarcodeScanner.showBackground();
+
+        if (result.hasContent) {
+          const scannedUrl = result.content;
+          console.log('QR Code scanned:', scannedUrl);
+
+          // Validate if it's a valid URL
+          if (this.deploymentService.isValidUrl(scannedUrl)) {
+            this.isDeploymentsLoading = true;
+
+            // Use the deployment service to add the scanned URL
+            this.deploymentService.addDeploymentByUrl(scannedUrl).subscribe({
+              next: (deployment: Deployment) => {
+                this.isDeploymentsLoading = false;
+                this.foundDeploymentList = [deployment];
+
+                this.toastService.presentToast({
+                  header: 'QR Code Scanned Successfully',
+                  message: 'StreetSignal deployment found and ready to add.',
+                  buttons: [],
+                });
+              },
+              error: (err: any) => {
+                this.isDeploymentsLoading = false;
+                console.error('Error adding deployment from QR code:', err);
+
+                // Provide specific error message for domain discovery
+                let errorMessage =
+                  'Failed to add StreetSignal from QR code. Please check the URL and try again.';
+                if (
+                  err.message &&
+                  err.message.includes('Could not find StreetSignal installation')
+                ) {
+                  errorMessage =
+                    'Could not find a StreetSignal installation at that domain. Please verify the QR code contains a valid StreetSignal URL.';
+                }
+
+                this.toastService.presentToast({
+                  header: 'Error',
+                  message: errorMessage,
+                  buttons: [],
+                });
+              },
+            });
+          } else {
+            this.toastService.presentToast({
+              header: 'Invalid QR Code',
+              message: 'The scanned QR code does not contain a valid StreetSignal URL.',
+              buttons: [],
+            });
+          }
+        }
+      } else {
+        // Permission denied
+        this.toastService.presentToast({
+          header: 'Camera Permission Required',
+          message: 'Please allow camera access to scan QR codes.',
+          buttons: [],
+        });
+      }
+    } catch (error) {
+      console.error('QR Code scanning error:', error);
+
+      // Show background again in case of error
+      BarcodeScanner.showBackground();
+
+      this.toastService.presentToast({
+        header: 'Scanning Error',
+        message: 'An error occurred while scanning the QR code. Please try again.',
+        buttons: [],
+      });
     }
   }
 }

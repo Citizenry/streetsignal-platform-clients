@@ -34,7 +34,7 @@ export class DeploymentService {
   }
 
   public addDeploymentByUrl(url: string): Observable<Deployment> {
-    return this.fetchBackendUrl(url).pipe(
+    return this.discoverStreetSignal(url).pipe(
       map((backend_url: string) => {
         const domain = backend_url.toLowerCase();
         const deployment: Deployment = {
@@ -48,6 +48,42 @@ export class DeploymentService {
           avatar: getDeploymentAvatarPlaceholder(domain),
         };
         return deployment;
+      }),
+    );
+  }
+
+  public discoverStreetSignal(keyword: string): Observable<string> {
+    // Check if it's already a full URL with scheme
+    if (keyword.startsWith('http://') || keyword.startsWith('https://')) {
+      return this.fetchBackendUrl(keyword);
+    }
+
+    // For simple domain names, try HTTPS first, then HTTP
+    const httpsUrl = `https://${keyword}`;
+    const httpUrl = `http://${keyword}`;
+
+    return this.tryStreetSignalEndpoint(httpsUrl).pipe(
+      catchError(() => {
+        // If HTTPS fails, try HTTP
+        return this.tryStreetSignalEndpoint(httpUrl).pipe(
+          catchError((error) => {
+            console.error('StreetSignal discovery failed for both HTTPS and HTTP:', error);
+            throw new Error(`Could not find StreetSignal installation at ${keyword}`);
+          }),
+        );
+      }),
+    );
+  }
+
+  private tryStreetSignalEndpoint(baseUrl: string): Observable<string> {
+    return this.httpClient.get<any>(`${baseUrl}/api/v5/status`).pipe(
+      map(() => {
+        // If status endpoint responds successfully, return the base URL
+        return baseUrl;
+      }),
+      catchError((error) => {
+        console.error(`StreetSignal status check failed for ${baseUrl}:`, error);
+        throw error;
       }),
     );
   }

@@ -50,7 +50,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
     <key>NSCameraUsageDescription</key>
-    <string>To take photos, to post content</string>
+    <string>To take photos, to post content, and to scan StreetSignal QR codes</string>
     <key>NSPhotoLibraryAddUsageDescription</key>
     <string>Store photos to your device</string>
     <key>NSPhotoLibraryUsageDescription</key>

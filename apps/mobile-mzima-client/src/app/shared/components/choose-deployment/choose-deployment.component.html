@@ -55,6 +55,33 @@
         <ion-text class="empty" color="medium">
           {{ 'app.locate_deployment' | translate }}
         </ion-text>
+
+        <!-- Manual URL Entry Section -->
+        <div class="manual-url-section ion-padding">
+          <ion-item>
+            <ion-label position="stacked">Enter StreetSignal URL manually</ion-label>
+            <ion-input
+              [(ngModel)]="manualUrl"
+              placeholder="https://example.streetsignal.com"
+              type="url"
+              clearInput="true"
+            ></ion-input>
+          </ion-item>
+          <ion-button
+            expand="block"
+            fill="outline"
+            [disabled]="!manualUrl || manualUrl.trim().length === 0"
+            (click)="submitManualUrl()"
+            class="ion-margin-top"
+          >
+            Add StreetSignal
+          </ion-button>
+
+          <ion-button expand="block" fill="outline" (click)="addByQrCode()" class="ion-margin-top">
+            <ion-icon name="qr-code" slot="start"></ion-icon>
+            Add StreetSignal by QR Code
+          </ion-button>
+        </div>
       </ng-template>
     </ng-container>
   </ng-container>

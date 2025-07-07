@@ -30,6 +30,7 @@ import {
   ChooseCollectionComponent,
   CollectionItemComponent,
   PostControlsComponent,
+  ShareDeploymentModalComponent,
 } from './components';
 import { CalendarModule } from 'ion2-calendar';
 import { TextareaControlComponent } from './components/textarea-control/textarea-control.component';
@@ -61,6 +62,7 @@ const components = [
   ChooseCollectionComponent,
   CollectionItemComponent,
   PostControlsComponent,
+  ShareDeploymentModalComponent,
 ];
 
 @NgModule({

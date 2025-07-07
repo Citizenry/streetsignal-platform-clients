@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Share Deployment</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="qr-container">
+    <h3>Scan QR Code to Access Deployment</h3>
+    <div class="qr-code-wrapper">
+      <canvas #qrCanvas></canvas>
+    </div>
+    <p class="deployment-url">{{ deploymentUrl }}</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" fill="clear" (click)="closeModal()"> Close </ion-button>
+  </ion-toolbar>
+</ion-footer>

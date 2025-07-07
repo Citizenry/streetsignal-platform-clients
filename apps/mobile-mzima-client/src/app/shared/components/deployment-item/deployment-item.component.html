@@ -43,6 +43,14 @@
     <app-button
       fill="clear"
       color="medium"
+      *ngIf="shareButtonVisible"
+      (buttonClick)="shareDeployment($event, deployment)"
+    >
+      <app-icon slot="icon-only" name="share"></app-icon>
+    </app-button>
+    <app-button
+      fill="clear"
+      color="medium"
       *ngIf="buttonVisible"
       (buttonClick)="removeDeployment($event, deployment)"
     >
