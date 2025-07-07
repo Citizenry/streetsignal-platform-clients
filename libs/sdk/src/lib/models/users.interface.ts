@@ -10,6 +10,7 @@ export interface UserInterface {
   role?: string;
   permissions?: any[] | string;
   gravatar?: string;
+  avatar_url?: string;
   language?: string;
   allowed_privileges?: string[];
   contacts?: any[];
