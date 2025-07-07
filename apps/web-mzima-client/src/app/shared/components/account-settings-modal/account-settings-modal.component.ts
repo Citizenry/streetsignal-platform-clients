@@ -200,9 +200,24 @@ export class AccountSettingsModalComponent implements OnInit {
     if (this.selectedAvatarFile) {
       this.usersService.uploadAvatar(this.selectedAvatarFile).subscribe({
         next: () => {
-          // After avatar upload, refresh profile data and update the profile
-          this.getProfile();
-          this.updateUserProfile(options);
+          // After avatar upload, check if we need to update other profile data
+          const hasOtherChanges =
+            this.profileForm.dirty &&
+            (this.profileForm.get('display_name')?.dirty ||
+              this.profileForm.get('email')?.dirty ||
+              this.isUpdatingPassword);
+
+          if (hasOtherChanges) {
+            // Update other profile data
+            this.updateUserProfile(options);
+          } else {
+            // Only avatar was changed, just refresh and close
+            this.getProfile();
+            this.selectedAvatarFile = null;
+            this.avatarPreviewUrl = null;
+            this.profileForm.enable();
+            this.closeModal();
+          }
         },
         error: () => {
           this.profileForm.enable();
